@@ -8,7 +8,7 @@ function PersonalProjects() {
                     <h2>{project.projectName}</h2>
                     <h3>{project.technologies}</h3>
                     <p>{project.description}</p>
-                    <p>{project.image}</p>
+                    <img src={project.image} />
                 </div>
             ))}
         </div>
