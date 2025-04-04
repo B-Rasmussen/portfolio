@@ -1,6 +1,7 @@
 import "./App.css";
 import { SetStateAction, useState } from "react";
 import LandingPage from "./pages/LandingPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 function App() {
     const [currentScreen, setCurrentScreen] = useState("Landing");
@@ -14,8 +15,8 @@ function App() {
         switch (currentScreen) {
             case "Landing":
                 return <LandingPage navigateTo={navigateTo} />;
-            // case "Projects":
-            //     return <ProjectsPage />;
+            case "Projects":
+                return <ProjectsPage navigateTo={navigateTo} />;
             default:
                 return <div>Oops something went wrong</div>;
         }

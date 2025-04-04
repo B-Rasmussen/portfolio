@@ -7,7 +7,7 @@ type LandingPageProps = {
 function LandingPage({navigateTo}: LandingPageProps) {
     return (
         <div>
-            <button onClick={() => navigateTo("projects")}>Projects</button>
+            <button onClick={() => navigateTo("Projects")}>Projects</button>
             <WorkHistory />
         </div>
     );
