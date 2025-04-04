@@ -1,8 +1,13 @@
 import WorkHistory from "../components/WorkHistory";
 
-function LandingPage() {
+type LandingPageProps = {
+    navigateTo: (path: string) => void;
+}
+
+function LandingPage({navigateTo}: LandingPageProps) {
     return (
         <div>
+            <button onClick={() => navigateTo("projects")}>Projects</button>
             <WorkHistory />
         </div>
     );
