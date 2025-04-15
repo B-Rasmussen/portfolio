@@ -1,6 +1,18 @@
-const workHistory = [
+interface workHistory {
+    id: number;
+    companyName: string;
+    positionTitle: string;
+    startDate: string;
+    endDate?: string;
+    location: string;
+    bulletPoints: Array<string>;
+    image?: string;
+    imageAlt?: string;
+}
+
+const workHistory: workHistory[] = [
     {
-        id: "1",
+        id: 1,
         companyName: "Activision Blizzard",
         positionTitle: "Software Engineer",
         startDate: "January 2020",
@@ -14,9 +26,10 @@ const workHistory = [
             "Reduced the number of builds rejecteed by the external QA team by more than 90% ensuring that updates were delivered on time.",
             "Resolved numerous small to medium priority bug fixes in the Call of Duty Companion App, allowing the development team to focus on bigger features and app breaking bugs.",
         ],
+        imageAlt: "Activision Blizzard Logo",
     },
     {
-        id: "2",
+        id: 2,
         companyName: "SQA Squared",
         positionTitle: "Junior Software Engineer in Test",
         startDate: "May 2019",
@@ -27,9 +40,10 @@ const workHistory = [
             "Maintained app testing automation for OSHI Health, helping the dev team produce the best possible app while in development, and preventing any bugs from being found in production.",
             "Resolved issue regarding Android permission popups form blocking OSHI Health app ttesting, elimintating a major issue that prevented automation from accurately logging bugs and delaying fixes from the dev team.",
         ],
+        imageAlt: "SQA Squared Logo",
     },
     {
-        id: "3",
+        id: 3,
         companyName: "Moving Mindz",
         positionTitle: "Web Developer / Tutor",
         startDate: "June 2018",
@@ -39,6 +53,7 @@ const workHistory = [
             "Created front and back end for the Company's website. This allowed easy access for interested schools, potential new parents, and current parents to obtain more information about available after school programs and 1 on 1 tutoring sessions.",
             "Led after school clubs for children, teaching Python and helping build positive relations with partner schools and parents of children enrolled in classes.",
         ],
+        imageAlt: "Moving Mindz Logo",
     },
 ];
 
