@@ -1,3 +1,4 @@
+import "../style/navBarStyle.css";
 import Button from "./Button";
 
 type NavBarProps = {
@@ -6,7 +7,7 @@ type NavBarProps = {
 
 function NavBar({ navigateTo }: NavBarProps) {
     return (
-        <>
+        <div className="navBarContainer">
             <Button
                 buttonName={"Landing"}
                 onButtonPressed={() => navigateTo("Landing")}
@@ -19,7 +20,7 @@ function NavBar({ navigateTo }: NavBarProps) {
                 buttonName={"Experiment"}
                 onButtonPressed={() => navigateTo("Experiment")}
             />
-        </>
+        </div>
     );
 }
 

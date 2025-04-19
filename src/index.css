@@ -6,7 +6,7 @@
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
     /* background-color: #242424; */
-    background-color: var(--charcoal);
+    background-color: var(--rich-black);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -36,6 +36,11 @@
     --russian-violet: #2f195f;
     --rich-black: #0f1020;
     --pink-lavendar: #efc3f5;
+    /* scheme 5 */
+    --onyx: #32373b;
+    --outer-space: #4a5859;
+    --pale-dogwood: #F4D6CC;
+    --tiffany-blue: #84DCCF;
 }
 
 a {
@@ -67,13 +72,14 @@ button {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
+    background-color: var(--royal-purple);
     cursor: pointer;
     transition: border-color 0.25s;
 }
 button:hover {
     /* border-color: #646cff; */
-    border-color: var(--burnt-sienna);
+    border-color: var(--pink-lavendar);
 }
 button:focus,
 button:focus-visible {
