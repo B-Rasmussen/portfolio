@@ -1,6 +1,6 @@
 import zombie_gif from "../assets/zombies_project.gif";
 
-interface personalProjects {
+type personalProjects = {
     id: number;
     projectName: string;
     description: string;

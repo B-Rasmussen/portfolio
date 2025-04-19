@@ -1,4 +1,4 @@
-interface workHistory {
+type workHistory = {
     id: number;
     companyName: string;
     positionTitle: string;

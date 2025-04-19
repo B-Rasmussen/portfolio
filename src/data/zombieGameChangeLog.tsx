@@ -1,6 +1,6 @@
 import zombie_gif from "../assets/zombies_project.gif";
 
-interface ChangeLog {
+type ChangeLog = {
     id: number;
     versionNumber: string;
     changeLog: Array<string>;

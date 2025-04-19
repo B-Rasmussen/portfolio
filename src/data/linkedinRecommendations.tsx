@@ -1,4 +1,4 @@
-interface Recommendations {
+type Recommendations = {
     id: number;
     person: string;
     publishedDate?: string;
