@@ -1,21 +1,32 @@
+import "../style/navBarStyle.css";
+
 type customButtonProps = {
     buttonName: string;
+    imageName?: string;
     onButtonPressed: any;
-    buttonStyle?: any;
-    textStyle?: any;
+    isSocialMediaLink?: boolean;
 };
 
 const Button = ({
     buttonName,
+    imageName,
     onButtonPressed,
-    buttonStyle,
-    textStyle,
+    isSocialMediaLink = false,
 }: customButtonProps) => {
+    if (isSocialMediaLink) {
+        return (
+            <button onClick={onButtonPressed}>
+                <img src={imageName} alt={buttonName} className="social-logos" />
+            </button>
+        );
+    }
     return (
-    <button onClick={onButtonPressed} style={buttonStyle}>
-        <div style={textStyle}>{buttonName}</div>
-    </button>
-    )
+        <div>
+            <button onClick={onButtonPressed}>
+                <div>{buttonName}</div>
+            </button>
+        </div>
+    );
 };
 
 export default Button;

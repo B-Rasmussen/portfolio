@@ -1,4 +1,4 @@
-.navBarContainer {
+.nav-bar-container {
     background: "#00FF00";
     display: flex;
     position: fixed;
@@ -9,4 +9,15 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 10px;
+}
+
+.social-media-container {
+    display: flex-end;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.social-logos {
+    height: 25px;
+    width: 25px;
 }

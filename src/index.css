@@ -79,7 +79,7 @@ button {
 }
 button:hover {
     /* border-color: #646cff; */
-    border-color: var(--pink-lavendar);
+    border-color: var(--mexican-pink);
 }
 button:focus,
 button:focus-visible {

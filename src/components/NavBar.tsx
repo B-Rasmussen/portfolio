@@ -7,7 +7,7 @@ type NavBarProps = {
 
 function NavBar({ navigateTo }: NavBarProps) {
     return (
-        <div className="navBarContainer">
+        <div className="nav-bar-container">
             <Button
                 buttonName={"Landing"}
                 onButtonPressed={() => navigateTo("Landing")}
