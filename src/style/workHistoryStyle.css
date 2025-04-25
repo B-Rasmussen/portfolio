@@ -1,0 +1,7 @@
+.job-card-even {
+    background-color: rgba(160, 160, 160, 0.5);
+}
+
+.job-card-odd {
+    background-color: rgba(122, 122, 122, 0.5);
+}
