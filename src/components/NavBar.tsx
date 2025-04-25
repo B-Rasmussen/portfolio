@@ -16,10 +16,10 @@ function NavBar({ navigateTo }: NavBarProps) {
                 buttonName={"Projects"}
                 onButtonPressed={() => navigateTo("Projects")}
             />
-            <Button
+            {/* <Button
                 buttonName={"Experiment"}
                 onButtonPressed={() => navigateTo("Experiment")}
-            />
+            /> */}
         </div>
     );
 }

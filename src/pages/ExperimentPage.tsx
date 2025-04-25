@@ -1,4 +1,4 @@
 function ExperimentPage() {
-    return <div>asdf</div>;
+    return <div>{window.innerHeight}<p />{window.innerWidth}</div>;
 }
 export default ExperimentPage;

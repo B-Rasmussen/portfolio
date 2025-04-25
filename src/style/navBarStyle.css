@@ -1,9 +1,7 @@
 .nav-bar-container {
     background: "#00FF00";
     display: flex;
-    /* position: fixed; */
     top: 0;
-    /* justify-content: space-between; */
     align-items: center;
     padding: 10px;
     border-radius: 5px;
@@ -19,9 +17,7 @@
 
 .social-media-container {
     display: flex;
-    align-self: flex-end;
     gap: 10px;
-    margin-right: auto;
 }
 
 .social-logos {
