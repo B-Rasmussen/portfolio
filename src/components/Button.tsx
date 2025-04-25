@@ -15,7 +15,7 @@ const Button = ({
 }: customButtonProps) => {
     if (isSocialMediaLink) {
         return (
-            <button onClick={onButtonPressed}>
+            <button onClick={onButtonPressed} className="social-media-button">
                 <img src={imageName} alt={buttonName} className="social-logos" />
             </button>
         );

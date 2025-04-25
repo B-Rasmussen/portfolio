@@ -28,7 +28,7 @@ function App() {
     };
     return (
         <>
-            <div className="navbarContainer">
+            <div className="nav-bar-container">
                 <NavBar navigateTo={navigateTo} />
                 <SocialMediaBar />
             </div>
