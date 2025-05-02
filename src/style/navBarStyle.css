@@ -5,12 +5,13 @@
     align-items: center;
     padding: 10px;
     border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+    box-shadow: 0px 1px 10px var(--emerald);
     margin: 10px;
 }
 
 button {
     border-radius: 50px;
+    box-shadow: 0px 1px 10px var(--royal-purple);
     background-color: var(--carolina-blue);
 }
 

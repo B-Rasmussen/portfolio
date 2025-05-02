@@ -5,8 +5,29 @@
     /* color: var(--carolina-blue); */
 }
 
+.company-name-even {
+    text-align: center;
+    background-color: rgba(160, 160, 160, 0.1);
+    box-shadow: 0px 1px 10px var(--royal-purple);
+    border-radius: 10px;
+    /* color: var(--royal-purple); */
+    /* color: var(--emerald); */
+    /* color: var(--carolina-blue); */
+}
+
+.company-name-odd {
+    text-align: center;
+    background-color: rgba(122, 122, 122, 0.05);
+    box-shadow: 0px 1px 10px var(--emerald);
+    border-radius: 10px;
+    /* color: var(--royal-purple); */
+    /* color: var(--emerald); */
+    /* color: var(--carolina-blue); */
+}
+
 .position{
     text-align: center;
+    text-decoration: underline;
     /* color: var(--royal-purple); */
     /* color: var(--emerald); */
     color: var(--carolina-blue);
@@ -38,16 +59,18 @@
 }
 
 .job-card-even {
-    background-color: rgba(160, 160, 160, 0.1);
+    /* background-color: rgba(160, 160, 160, 0.1);
     box-shadow: 0px 1px 10px var(--royal-purple);
+    border-radius: 10px; */
     width: 50%;
     margin: auto;
     color: var(--emerald);
 }
 
 .job-card-odd {
-    background-color: rgba(122, 122, 122, 0.05);
+    /* background-color: rgba(122, 122, 122, 0.05);
     box-shadow: 0px 1px 10px var(--emerald);
+    border-radius: 10px; */
     width: 50%;
     margin: auto;
     color: var(--royal-purple);
