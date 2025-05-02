@@ -5,42 +5,16 @@
 
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    /* background-color: #242424; */
     background-color: var(--rich-black);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* scheme 1 */
-    --charcoal: #264653;
-    --persian-green: #2a9d8f;
-    --saffron: #e9c46a;
-    --sandy-brown: #f4a261;
-    --burnt-sienna: #e76f51;
-    /* scheme 2 */
-    --desert-sand: #d2ab99;
-    --ash-gray: #bdbea9;
-    --cambridge-blue: #8db38b;
-    --viridian: #56876d;
-    --dark-spring-green: #04724d;
-    /* scheme 3 */
-    --periwinkle: #ccccff;
-    --mauve: #e0b0ff;
-    --mexican-pink: #ee0088;
-    --space-cadet: #2b2d42;
-    --cerulean: #007ea7;
-    /* scheme 4 */
-    --mauve-2: #faa6ff;
-    --royal-purple: #7353ba;
-    --russian-violet: #2f195f;
-    --rich-black: #0f1020;
-    --pink-lavendar: #efc3f5;
-    /* scheme 5 */
-    --onyx: #32373b;
-    --outer-space: #4a5859;
-    --pale-dogwood: #F4D6CC;
-    --tiffany-blue: #84DCCF;
+    --raisin-black: #212227;
+    --carolina-blue: #86bbd8;
+    --royal-purple: #7353BA;
+    --emerald: #2DD881;
 }
 
 a {
@@ -72,29 +46,14 @@ button {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    /* background-color: #1a1a1a; */
     background-color: var(--royal-purple);
     cursor: pointer;
     transition: border-color 0.25s;
 }
 button:hover {
-    /* border-color: #646cff; */
-    border-color: var(--mexican-pink);
+    border-color: var(--carolina-blue);
 }
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
 }

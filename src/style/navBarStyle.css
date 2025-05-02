@@ -1,15 +1,19 @@
 .nav-bar-container {
-    background: "#00FF00";
+    background: var(--raisin-black);
     display: flex;
     top: 0;
     align-items: center;
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
     margin: 10px;
 }
 
-.internal-links-container{
+button {
+    border-radius: 50px;
+}
+
+.internal-links-container {
     display: flex;
     gap: 10px;
     margin-right: auto;
