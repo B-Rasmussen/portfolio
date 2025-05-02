@@ -1,26 +1,36 @@
 .company-name{
     text-align: center;
+    /* color: var(--royal-purple); */
+    /* color: var(--emerald); */
+    /* color: var(--carolina-blue); */
 }
 
 .position{
     text-align: center;
+    /* color: var(--royal-purple); */
+    /* color: var(--emerald); */
+    color: var(--carolina-blue);
 }
 
 .job-details{
+    color: #FFF;
     display: flex;
 }
 
 #job-location{
+    color: #FFF;
     margin-left: 10px;
 }
 
 #job-date{
+    color: #FFF;
     margin-left: auto;
     margin-right: 10px;
 }
 
 .job-list-container{
     padding-bottom: 10px;
+    color: #FFF;
 }
 
 .job-bullet-points{
@@ -32,6 +42,7 @@
     box-shadow: 0px 1px 10px var(--royal-purple);
     width: 50%;
     margin: auto;
+    color: var(--emerald);
 }
 
 .job-card-odd {
@@ -39,4 +50,5 @@
     box-shadow: 0px 1px 10px var(--emerald);
     width: 50%;
     margin: auto;
+    color: var(--royal-purple);
 }

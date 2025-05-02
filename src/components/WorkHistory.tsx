@@ -5,16 +5,19 @@ function WorkHistory() {
     return (
         <div>
             {workHistory.map((job) => (
-                <div key={job.id} className={job.id % 2 ? "job-card-even" : "job-card-odd"}>
-                    <h2>{job.companyName}</h2>
-                    <h3>{job.positionTitle}</h3>
-                    <p>
-                        {job.startDate} - {job.endDate}
-                    </p>
-                    <p>{job.location}</p>
-                    <ul>
+                <div
+                    key={job.id}
+                    className={job.id % 2 ? "job-card-even" : "job-card-odd"}
+                >
+                    <h2 className="company-name">{job.companyName}</h2>
+                    <h3 className="position">{job.positionTitle}</h3>
+                    <div className="job-details">
+                        <div id="job-location">{job.location}</div>
+                        <div id="job-date">{job.startDate} - {job.endDate}</div>
+                    </div>
+                    <ul className="job-list-container">
                         {job.bulletPoints?.map((item, index) => (
-                            <li key={index}>{item}</li>
+                            <li key={index} className="job-bullet-points">{item}</li>
                         ))}
                     </ul>
                 </div>

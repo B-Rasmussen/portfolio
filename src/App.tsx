@@ -5,6 +5,8 @@ import ProjectsPage from "./pages/ProjectsPage";
 import NavBar from "./components/NavBar";
 // import ExperimentPage from "./pages/ExperimentPage";
 import SocialMediaBar from "./components/SocialMediaBar";
+import Intro from "./components/Intro";
+import LanguagesList from "./components/LanguagesList";
 
 function App() {
     const [currentScreen, setCurrentScreen] = useState("Landing");
@@ -17,7 +19,13 @@ function App() {
     const renderPage = () => {
         switch (currentScreen) {
             case "Landing":
-                return <LandingPage />;
+                return (
+                    <div>
+                        <Intro />
+                        <LanguagesList />
+                        <LandingPage />
+                    </div>
+                );
             case "Projects":
                 return <ProjectsPage />;
             // case "Experiment":

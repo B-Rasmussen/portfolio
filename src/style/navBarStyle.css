@@ -11,6 +11,7 @@
 
 button {
     border-radius: 50px;
+    background-color: var(--carolina-blue);
 }
 
 .internal-links-container {

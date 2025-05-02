@@ -4,7 +4,7 @@
     font-weight: 400;
 
     color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
+    color: #FFF;
     background-color: var(--rich-black);
 
     font-synthesis: none;
@@ -12,6 +12,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     --raisin-black: #212227;
+    /* --carolina-blue: #61dbfb; */
     --carolina-blue: #86bbd8;
     --royal-purple: #7353BA;
     --emerald: #2DD881;
@@ -49,9 +50,10 @@ button {
     background-color: var(--royal-purple);
     cursor: pointer;
     transition: border-color 0.25s;
+    color: #000;
 }
 button:hover {
-    border-color: var(--carolina-blue);
+    border-color: #000;
 }
 button:focus,
 button:focus-visible {
