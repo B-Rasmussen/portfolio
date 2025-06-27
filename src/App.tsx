@@ -5,7 +5,6 @@ import ProjectsPage from "./pages/ProjectsPage";
 import NavBar from "./components/NavBar";
 // import ExperimentPage from "./pages/ExperimentPage";
 import SocialMediaBar from "./components/SocialMediaBar";
-import Intro from "./components/Intro";
 import LanguagesList from "./components/LanguagesList";
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
             case "Landing":
                 return (
                     <div>
-                        <Intro />
                         <LanguagesList />
                         <LandingPage />
                     </div>
@@ -36,6 +34,7 @@ function App() {
     };
     return (
         <>
+            {/* {currentScreen == "Landing" ? <Hero /> : null} */}
             <div className="nav-bar-container">
                 <NavBar navigateTo={navigateTo} />
                 <SocialMediaBar />
@@ -46,3 +45,29 @@ function App() {
 }
 
 export default App;
+
+
+/*
+*******************************************************************************
+* This is a simple HTML5 canvas drawing of a desert sunset with Joshua trees. *
+*******************************************************************************
+*/
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="UTF-8" />
+//   <title>Desert Sunset with Joshua Trees</title>
+//   <style>
+//     canvas {
+//       display: block;
+//       margin: 0 auto;
+//       background: linear-gradient(to top, #EDC9Af, #FF4500); /* fallback */
+//     }
+//   </style>
+// </head>
+// <body>
+//   <canvas id="desertCanvas" width="800" height="400"></canvas>
+
+// </body>
+// </html>
