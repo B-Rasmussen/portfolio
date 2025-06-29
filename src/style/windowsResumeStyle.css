@@ -1,0 +1,61 @@
+body {
+    border-top: 20px solid var(--windows-beige);
+    border-left: 20px solid var(--windows-beige);
+    border-right: 20px solid var(--windows-beige);
+    border-bottom: 40px solid var(--windows-beige);
+    height: 100%;
+    /* border-radius: 20px; */
+    /* padding: 20px; */
+    /* background-color: var(--windows-beige); */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.windows-container {
+    height: 100%;
+}
+
+#computer-model{
+    position: fixed;
+    bottom: 0.1%;
+    left: 43%;
+    font-size: 24px;
+    color: #000; /* Black text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for authenticity */
+}
+
+.text-file-container{
+    cursor: pointer;
+    left: 50%;
+}
+
+.text-file-icon {
+    left: 50%;
+    width: 48px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    background-color: #d3d3d3; /* Pale gray */
+    border: 3px solid #333; /* Dark gray border */
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.text-file-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 15px solid #333;
+    border-left: 15px solid transparent; /* Folded corner effect */
+}
+
+.text-file-icon .lines {
+    position: absolute;
+    top: 20px; /* Position the lines */
+    left: 8px;
+    width: 32px;
+    height: 2px;
+    background-color: #000; /* Black lines */
+}
+
+.text-file-icon .lines + .lines { /* Space between lines */
+    margin-top: 5px;
+}

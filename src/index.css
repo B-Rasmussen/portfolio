@@ -16,6 +16,9 @@
     --carolina-blue: #86bbd8;
     --royal-purple: #7353BA;
     --emerald: #2DD881;
+
+    /* Windows Resume Styles */
+    --windows-beige: #F5F5DC;
 }
 
 a {
@@ -30,9 +33,9 @@ a:hover {
 body {
     margin: 0;
     display: flex;
-    place-items: center;
+    /* place-items: center; */
     min-width: 320px;
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
 }
 
 h1 {

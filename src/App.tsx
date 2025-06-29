@@ -2,6 +2,7 @@ import "./App.css";
 import { SetStateAction, useState } from "react";
 import LandingPage from "./pages/LandingPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import WindowResumePage from "./pages/WindowsResumePage";
 import NavBar from "./components/NavBar";
 // import ExperimentPage from "./pages/ExperimentPage";
 import SocialMediaBar from "./components/SocialMediaBar";
@@ -26,6 +27,8 @@ function App() {
                 );
             case "Projects":
                 return <ProjectsPage />;
+            case "Windows":
+                return <WindowResumePage />;
             // case "Experiment":
             //     return <ExperimentPage />;
             default:
@@ -35,10 +38,12 @@ function App() {
     return (
         <>
             {/* {currentScreen == "Landing" ? <Hero /> : null} */}
-            <div className="nav-bar-container">
-                <NavBar navigateTo={navigateTo} />
-                <SocialMediaBar />
-            </div>
+            {currentScreen == "Windows" ? null : (
+                <div className="nav-bar-container">
+                    <NavBar navigateTo={navigateTo} />
+                    <SocialMediaBar />
+                </div>
+            )}
             {renderPage()}
         </>
     );
@@ -46,12 +51,11 @@ function App() {
 
 export default App;
 
-
 /*
-*******************************************************************************
-* This is a simple HTML5 canvas drawing of a desert sunset with Joshua trees. *
-*******************************************************************************
-*/
+ *******************************************************************************
+ * This is a simple HTML5 canvas drawing of a desert sunset with Joshua trees. *
+ *******************************************************************************
+ */
 
 // <!DOCTYPE html>
 // <html lang="en">
