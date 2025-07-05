@@ -9,7 +9,7 @@ import SocialMediaBar from "./components/SocialMediaBar";
 import LanguagesList from "./components/LanguagesList";
 
 function App() {
-    const [currentScreen, setCurrentScreen] = useState("Landing");
+    const [currentScreen, setCurrentScreen] = useState("Windows");
     // const [isDarkMode, setIsDarkMode] = useState(false);
 
     const navigateTo = (screenName: SetStateAction<string>) => {
@@ -29,8 +29,6 @@ function App() {
                 return <ProjectsPage />;
             case "Windows":
                 return <WindowResumePage />;
-            // case "Experiment":
-            //     return <ExperimentPage />;
             default:
                 return <div>Oops something went wrong</div>;
         }

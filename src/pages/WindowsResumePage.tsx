@@ -57,26 +57,15 @@ function WindowsResumePage() {
                 // sqa squared will have python, java, javascript
                 // moving mindz will have javascript, php, mysql
                 <div
-                    style={{
-                        position: "fixed",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        backgroundColor: "black",
-                        border: "1px solid gray",
-                        padding: "20px",
-                        zIndex: 1000,
-                        height: "90vh",
-                    }}
+                    className="text-file-window"
                 >
                     <h2>This is a new window inside the current window!</h2>
                     <p>Content of your new window goes here.</p>
-                    <button
-                        style={{ position: "fixed", top: "1%", right: "1%" }}
-                        onClick={closeWindow}
-                    >
-                        X
-                    </button>
+                    <div className="title-bar-button" onClick={closeWindow}>
+                        <div className="title-bar-icon" id="close-icon">X</div>
+                        <div className="title-bar-icon" id="minimize-icon">_</div>
+                        <div className="title-bar-icon" id="maximize-icon">□</div>
+                    </div>
                 </div>
             )}
             <div id="computer-model">🍎 Brandotosh</div>

@@ -88,3 +88,46 @@ body {
     margin-top: 5px;
 }
 */
+
+.text-file-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 1px solid gray;
+    padding: 20px;
+    z-index: 1000;
+    height: 90vh;
+}
+
+.title-bar-button {
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 1%;
+    left: 1%;
+}
+
+.title-bar-icon {
+    padding: 0px 5px;
+    border-radius: 40%;
+}
+
+#minimize-icon {
+    background-color: yellow;
+    color: black;
+    margin: 0px 10px;
+}
+
+#maximize-icon {
+    background-color: green;
+    color: black;
+}
+
+#close-icon {
+    background-color: red;
+    color: black;
+    
+}
