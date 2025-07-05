@@ -1,4 +1,4 @@
-.nav-bar-container {
+/* .nav-bar-container {
     background: var(--raisin-black);
     display: flex;
     top: 0;
@@ -7,18 +7,22 @@
     border-radius: 50px;
     box-shadow: 0px 1px 10px var(--emerald);
     margin: 10px;
-}
+} */
 
-button {
+/* button {
     border-radius: 50px;
     box-shadow: 0px 1px 10px var(--royal-purple);
     background-color: var(--carolina-blue);
-}
+} */
 
-.internal-links-container {
+/* .internal-links-container {
     display: flex;
     gap: 10px;
     margin-right: auto;
+} */
+
+.social-media-button {
+    cursor: pointer;
 }
 
 .social-media-container {
@@ -27,6 +31,6 @@ button {
 }
 
 .social-logos {
-    height: 25px;
-    width: 25px;
+    height: 48px;
+    width: 48px;
 }

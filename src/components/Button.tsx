@@ -15,16 +15,17 @@ const Button = ({
 }: customButtonProps) => {
     if (isSocialMediaLink) {
         return (
-            <button onClick={onButtonPressed} className="social-media-button">
+            <div onClick={onButtonPressed} className="social-media-button">
                 <img src={imageName} alt={buttonName} className="social-logos" />
-            </button>
+                <div>{buttonName}</div>
+            </div>
         );
     }
     return (
         <div>
-            <button onClick={onButtonPressed}>
+            <div onClick={onButtonPressed}>
                 <div>{buttonName}</div>
-            </button>
+            </div>
         </div>
     );
 };
