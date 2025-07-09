@@ -5,10 +5,11 @@ type workHistory = {
     startDate: string;
     endDate?: string;
     location: string;
+    languagesUsed: Array<string>;
     bulletPoints: Array<string>;
     image?: string;
     imageAlt?: string;
-}
+};
 
 const workHistory: workHistory[] = [
     {
@@ -18,6 +19,17 @@ const workHistory: workHistory[] = [
         startDate: "January 2020",
         endDate: "January 2024",
         location: "Santa Monica, California",
+        languagesUsed: [
+            "JavaScript",
+            "React",
+            "React Native",
+            "HTML",
+            "CSS",
+            "Python",
+            "Selenium",
+            "Appium",
+            "Shell Scripting",
+        ],
         bulletPoints: [
             "Created Zombies leaderboard screen for Call of Duty: Modern Warfare III, allowing users to compare themselves against friends, their favorite streamers, and the top players in the community.",
             "Collaborated with the marketing team to promote new features that were introduced with each season, creating Mess of the Day highlighting new features (including Black Cell Battle Pass, Limited Time Game Modes) that were launched with each new season of Modern Warfare II and Modern Warfare III.",
@@ -35,6 +47,7 @@ const workHistory: workHistory[] = [
         startDate: "May 2019",
         endDate: "January 2020",
         location: "Los Alamitos, California",
+        languagesUsed: ["Python", "JavaScript", "Java", "Selenium", "Appium"],
         bulletPoints: [
             "Maintained web testing automation for Ticketmaster, ensuring website remained bug-free, maintaining a hassle-free ticket buying process for customers.",
             "Maintained app testing automation for OSHI Health, helping the dev team produce the best possible app while in development, and preventing any bugs from being found in production.",
@@ -49,6 +62,7 @@ const workHistory: workHistory[] = [
         startDate: "June 2018",
         endDate: "March 2020",
         location: "Long Beach, California",
+        languagesUsed: ["HTML", "CSS", "JavaScript", "JQuery", "PHP", "MySQL"],
         bulletPoints: [
             "Created front and back end for the Company's website. This allowed easy access for interested schools, potential new parents, and current parents to obtain more information about available after school programs and 1 on 1 tutoring sessions.",
             "Led after school clubs for children, teaching Python and helping build positive relations with partner schools and parents of children enrolled in classes.",

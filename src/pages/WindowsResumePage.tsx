@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Button from "../components/Button";
+import WindowsTextFile from "../components/WindowsTextFile";
+import WindowsFolder from "../components/WindowsFolder";
 
 import "../style/windowsResumeStyle.css";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
@@ -7,6 +9,15 @@ import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
 function WindowsResumePage() {
     const [isWindowOpen, setIsWindowOpen] = useState(false);
+    const [isWorkHistoryFolderOpen, setIsWorkHistoryFolderOpen] = useState(false);
+
+    const handleOpenWorkHistory = () => {
+        setIsWorkHistoryFolderOpen(true);
+    };
+
+    const closeWorkHistoryFolder = () => {
+        setIsWorkHistoryFolderOpen(false);
+    };
 
     const handleDoubleClick = () => {
         setIsWindowOpen(true);
@@ -15,18 +26,20 @@ function WindowsResumePage() {
     const closeWindow = () => {
         setIsWindowOpen(false);
     };
+
     return (
         <div className="windows-container">
-            <div
-                onClick={handleDoubleClick}
-                className="text-file-container"
-            >
+            <div onClick={handleDoubleClick} className="text-file-container">
                 <div className="text-file-icon" />
                 <div className="line1" />
                 <div className="line2" />
                 <div className="line3" />
                 <div className="line4" />
                 <text>example.txt</text>
+            </div>
+            <div onClick={handleOpenWorkHistory}>
+                <div className="text-file-icon" />
+                <text>Work History</text>
             </div>
             <div>
                 <Button
@@ -51,22 +64,24 @@ function WindowsResumePage() {
                     isSocialMediaLink={true}
                 />
             </div>
+
+            {isWorkHistoryFolderOpen && (
+                <WindowsFolder
+                    closeWorkHistoryFolder={closeWorkHistoryFolder}
+                    folderTitle="Work History"
+                />
+            )}
+
             {isWindowOpen && (
-                // each job history item will have a section that shows what technologies were used
-                // ex activision will have javascript, react, react native
-                // sqa squared will have python, java, javascript
-                // moving mindz will have javascript, php, mysql
-                <div
+                <WindowsTextFile
+                    closeWindow={closeWindow}
+                    companyName="acti"
+                    location="lb"
+                    startDate="2020-01-01"
+                    endDate="2021-01-01"
+                    bulletPoints={["a", "b", "c"]}
                     className="text-file-window"
-                >
-                    <h2>This is a new window inside the current window!</h2>
-                    <p>Content of your new window goes here.</p>
-                    <div className="title-bar-button" onClick={closeWindow}>
-                        <div className="title-bar-icon" id="close-icon">X</div>
-                        <div className="title-bar-icon" id="minimize-icon">_</div>
-                        <div className="title-bar-icon" id="maximize-icon">□</div>
-                    </div>
-                </div>
+                />
             )}
             <div id="computer-model">🍎 Brandotosh</div>
         </div>

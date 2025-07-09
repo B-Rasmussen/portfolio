@@ -110,6 +110,14 @@ body {
     left: 1%;
 }
 
+.title-bar-text{
+    position: fixed;
+    top: 1%;
+    left: 40%;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+}
+
 .title-bar-icon {
     padding: 0px 5px;
     border-radius: 40%;
