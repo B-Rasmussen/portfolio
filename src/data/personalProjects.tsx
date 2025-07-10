@@ -12,14 +12,14 @@ type personalProjects = {
 
 const personalProjects: personalProjects[] = [
     {
-        id: 1,
+        id: 0,
         projectName: "WIP: Zombie survival game",
         description: "A endless zombie survival game created in Godot 4.",
         technologies: ["Godot 4", "GDScript"],
         image: zombie_gif,
     },
     {
-        id: 2,
+        id: 1,
         projectName: "Idle Clicker Game",
         description: "An idle clicker game created in React Native.",
         technologies: ["React Native", "JavaScript", "TypeScript"],

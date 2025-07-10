@@ -3,15 +3,20 @@ import Button from "../components/Button";
 import WindowsTextFile from "../components/WindowsTextFile";
 import WindowsFolder from "../components/WindowsFolder";
 
+import workHistory from "../data/workHistory";
+import personalProjects from "../data/personalProjects";
+import linkedinRecommendations from "../data/linkedinRecommendations";
+
 import "../style/windowsResumeStyle.css";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
 function WindowsResumePage() {
-    const [isWindowOpen, setIsWindowOpen] = useState(false);
     const [isWorkHistoryFolderOpen, setIsWorkHistoryFolderOpen] = useState(false);
+    const [isProjectsFolderOpen, setIsProjectsFolderOpen] = useState(false);
+    const [isLinkedInRecommendationsOpen, setIsLinkedInRecommendationsOpen] = useState(false);
 
-    const handleOpenWorkHistory = () => {
+    const openWorkHistory = () => {
         setIsWorkHistoryFolderOpen(true);
     };
 
@@ -19,27 +24,45 @@ function WindowsResumePage() {
         setIsWorkHistoryFolderOpen(false);
     };
 
-    const handleDoubleClick = () => {
-        setIsWindowOpen(true);
+    const openPersonalProjects = () => {
+        setIsProjectsFolderOpen(true);
     };
 
-    const closeWindow = () => {
-        setIsWindowOpen(false);
+    const closePersonalProjectsFolder = () => {
+        setIsProjectsFolderOpen(false);
+    };
+
+    const openLinkedInRecommendations = () => {
+        setIsLinkedInRecommendationsOpen(true);
+    };
+
+    const closeLinkedInRecommendations = () => {
+        setIsLinkedInRecommendationsOpen(false);
     };
 
     return (
         <div className="windows-container">
-            <div onClick={handleDoubleClick} className="text-file-container">
+            {/* <div className="text-file-container">
                 <div className="text-file-icon" />
                 <div className="line1" />
                 <div className="line2" />
                 <div className="line3" />
                 <div className="line4" />
                 <text>example.txt</text>
-            </div>
-            <div onClick={handleOpenWorkHistory}>
+            </div> */}
+            <div onClick={openWorkHistory}>
                 <div className="text-file-icon" />
                 <text>Work History</text>
+            </div>
+            <div onClick={openPersonalProjects}>
+                <div className="text-file-icon" />
+                <text>Personal Projects</text>
+            </div>
+            <div onClick={openLinkedInRecommendations}>
+                <div className="text-file-icon" />
+                <text>LinkedIn</text>
+                <br />
+                <text>Recommendations</text>
             </div>
             <div>
                 <Button
@@ -67,22 +90,28 @@ function WindowsResumePage() {
 
             {isWorkHistoryFolderOpen && (
                 <WindowsFolder
-                    closeWorkHistoryFolder={closeWorkHistoryFolder}
+                    closeFolder={closeWorkHistoryFolder}
                     folderTitle="Work History"
+                    data={workHistory}
                 />
             )}
 
-            {isWindowOpen && (
-                <WindowsTextFile
-                    closeWindow={closeWindow}
-                    companyName="acti"
-                    location="lb"
-                    startDate="2020-01-01"
-                    endDate="2021-01-01"
-                    bulletPoints={["a", "b", "c"]}
-                    className="text-file-window"
+            {isProjectsFolderOpen && (
+                <WindowsFolder
+                    closeFolder={closePersonalProjectsFolder}
+                    folderTitle="Personal Projects"
+                    data = {personalProjects}
                 />
             )}
+
+            {isLinkedInRecommendationsOpen && (
+                <WindowsFolder
+                    closeFolder={closeLinkedInRecommendations}
+                    folderTitle="Personal Projects"
+                    data = {linkedinRecommendations}
+                />
+            )}
+
             <div id="computer-model">🍎 Brandotosh</div>
         </div>
     );

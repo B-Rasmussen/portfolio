@@ -1,7 +1,12 @@
-import workHistory from "../data/workHistory";
+// import workHistory from "../data/workHistory";
 import "../style/workHistoryStyle.css";
 
+// TODO: move title bar to a separate component
+// TODO: add company logo image?
+// TODO: Create 3 different text files for work history, personal projects, and LinkedIn recommendations?
+
 function WindowsTextFile({
+    index,
     closeWindow,
     companyName,
     location,
@@ -12,17 +17,12 @@ function WindowsTextFile({
 }: any) {
     return (
         <div>
-            {/*
-            each job history item will have a section that shows what technologies were used
-            ex activision will have javascript, react, react native // sqa squared will have python, java, javascript
-            moving mindz will have javascript, php, mysql
-            */}
             {
                 <div className="text-file-window">
                     <div
                         className="title-bar-button"
                         onClick={() => {
-                            closeWindow();
+                            closeWindow(index);
                         }}
                     >
                         <div className="title-bar-icon" id="close-icon">
@@ -40,6 +40,18 @@ function WindowsTextFile({
                         <div>{location}</div>
                         <div>
                             {startDate} - {endDate}
+                        </div>
+                        <div>
+                            {langaugesUsed?.map(
+                                (item: string, index: number) => (
+                                    <span key={index}>
+                                        {item}
+                                        {index < langaugesUsed.length - 1
+                                            ? ", "
+                                            : ""}
+                                    </span>
+                                )
+                            )}
                         </div>
                         <ul className="job-list-container">
                             {bulletPoints?.map((item: any, index: any) => (

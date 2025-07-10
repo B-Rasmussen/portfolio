@@ -7,7 +7,7 @@ type Recommendations = {
 
 const linkedinRecommendations: Recommendations[] = [
     {
-        id: 1,
+        id: 0,
         person: "Tim Jung",
         bodyText: [
             "I worked with Brandon on engineering projects at Activision and he's a great engineer.",
@@ -28,7 +28,7 @@ const linkedinRecommendations: Recommendations[] = [
         ],
     },
     {
-        id: 2,
+        id: 1,
         person: "Shadae Kawaguchi",
         bodyText: [
             "I have had the pleasure of working with Brandon over the past few years, and have worked on multiple projects together several of which can be viewed in-game.",

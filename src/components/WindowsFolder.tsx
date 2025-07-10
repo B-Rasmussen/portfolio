@@ -1,31 +1,39 @@
 import { useState } from "react";
-import workHistory from "../data/workHistory";
+// import workHistory from "../data/workHistory";
 import "../style/workHistoryStyle.css";
 import WindowsTextFile from "./WindowsTextFile";
 
-function WindowsFolder({ closeWorkHistoryFolder, folderTitle }: any) {
-    const [isWindowOpen, setIsWindowOpen] = useState(false);
+function WindowsFolder({ closeFolder, folderTitle, data }: any) {
+    const [isWindowOpen, setIsWindowOpen] = useState(
+        Array(data.length).fill(false)
+    );
 
-    const handleDoubleClick = () => {
-        setIsWindowOpen(true);
+    const handleOpen = (index: number) => {
+        setIsWindowOpen((prev) => {
+            const newState = [...prev];
+            newState[index] = !newState[index];
+            return newState;
+        });
+        // console.log(isWindowOpen[index]);
     };
 
-    const closeWindow = () => {
-        setIsWindowOpen(false);
-    };
+    // const handleClick = (index: number) => {
+    //     setIsWindowOpen(isWindowOpen.map((i) => i === index));
+    //     console.log(isWindowOpen[index])
+    // };
+
+    // const closeWindow = (index: number) => {
+    //     setIsWindowOpen(isWindowOpen.map((open, i) => (i === index ? false : open)));
+    // };
+
     return (
         <div>
-            {/*
-            each job history item will have a section that shows what technologies were used
-            ex activision will have javascript, react, react native // sqa squared will have python, java, javascript
-            moving mindz will have javascript, php, mysql
-            */}
             {
                 <div className="text-file-window">
                     <div
                         className="title-bar-button"
                         onClick={() => {
-                            closeWorkHistoryFolder();
+                            closeFolder();
                         }}
                     >
                         <div className="title-bar-icon" id="close-icon">
@@ -39,55 +47,72 @@ function WindowsFolder({ closeWorkHistoryFolder, folderTitle }: any) {
                         </div>
                         <div className="title-bar-text">{folderTitle}</div>
                     </div>
-                    {workHistory.map((job) => (
-                        <div>
+
+                    <div className="folder-content">
+                        {data.map((item: any, index: number) =>
+                            // TODO: clean up this mess... eventually
+                            folderTitle === "Work History" ? (
+                                <div
+                                    key={item.id}
+                                    onClick={() => {
+                                        handleOpen(index);
+                                        console.log(item);
+                                    }}
+                                >
+                                    <div className="text-file-icon" />
+                                    <text>{item.companyName}</text>
+                                    {isWindowOpen[index] && (
+                                        <WindowsTextFile
+                                            fileType={folderTitle}
+                                            index={index}
+                                            closeWindow={() =>
+                                                handleOpen(index)
+                                            }
+                                            companyName={item.companyName}
+                                            location={item.location}
+                                            startDate={item.startDate}
+                                            endDate={item.endDate}
+                                            langaugesUsed={item.languagesUsed}
+                                            bulletPoints={item.bulletPoints}
+                                            className="text-file-window"
+                                        />
+                                    )}
+                                </div>
+                            ) : null,
+
+                            folderTitle === "Personal Projects" ? (
+                                <div>preojcetzs</div>
+                            ) : null,
+
+                            folderTitle === "LinkedIn Recommendations" ? (
+                                <div>linedkasdf</div>
+                            ) : null
+                        )}
+                    </div>
+
+                    {/*
+                    {workHistory.map((job, index) => (
+                        <div key={job.id} onClick={() => handleOpen(index)}>
                             <div className="text-file-icon" />
                             <text>{job.companyName}</text>
+                            {isWindowOpen[index] && (
+                                <WindowsTextFile
+                                    index={index}
+                                    closeWindow={() => handleOpen(index)}
+                                    companyName={job.companyName}
+                                    location={job.location}
+                                    startDate={job.startDate}
+                                    endDate={job.endDate}
+                                    langaugesUsed={job.languagesUsed}
+                                    bulletPoints={job.bulletPoints}
+                                    className="text-file-window"
+                                />
+                            )}
                         </div>
-                        // <WindowsTextFile
-                        //     closeWindow={closeWindow}
-                        //     companyName={job.companyName}
-                        //     location={job.location}
-                        //     startDate={job.startDate}
-                        //     endDate={job.endDate}
-                        //     langaugesUsed={job.languagesUsed}
-                        //     bulletPoints={job.bulletPoints}
-                        //     className="text-file-window"
-                        // />
                     ))}
+                    */}
                 </div>
             }
-            {/* {workHistory.map((job) => (
-                <div
-                    key={job.id}
-                    className={job.id % 2 ? "job-card-even" : "job-card-odd"}
-                >
-                    <h2 className="company-name">{job.companyName}</h2>
-                    <h2
-                        className={
-                            job.id % 2
-                                ? "company-name-even"
-                                : "company-name-odd"
-                        }
-                    >
-                        {job.companyName}
-                    </h2>
-                    <h3 className="position">{job.positionTitle}</h3>
-                    <div className="job-details">
-                        <div id="job-location">{job.location}</div>
-                        <div id="job-date">
-                            {job.startDate} - {job.endDate}
-                        </div>
-                    </div>
-                    <ul className="job-list-container">
-                        {job.bulletPoints?.map((item, index) => (
-                            <li key={index} className="job-bullet-points">
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))} */}
         </div>
     );
 }

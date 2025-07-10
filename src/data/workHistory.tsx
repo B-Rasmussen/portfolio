@@ -13,7 +13,7 @@ type workHistory = {
 
 const workHistory: workHistory[] = [
     {
-        id: 1,
+        id: 0,
         companyName: "Activision Blizzard",
         positionTitle: "Software Engineer",
         startDate: "January 2020",
@@ -41,7 +41,7 @@ const workHistory: workHistory[] = [
         imageAlt: "Activision Blizzard Logo",
     },
     {
-        id: 2,
+        id: 1,
         companyName: "SQA Squared",
         positionTitle: "Junior Software Engineer in Test",
         startDate: "May 2019",
@@ -56,7 +56,7 @@ const workHistory: workHistory[] = [
         imageAlt: "SQA Squared Logo",
     },
     {
-        id: 3,
+        id: 2,
         companyName: "Moving Mindz",
         positionTitle: "Web Developer / Tutor",
         startDate: "June 2018",
