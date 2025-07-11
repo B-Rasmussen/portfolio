@@ -77,7 +77,6 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
                                             endDate={item.endDate}
                                             langaugesUsed={item.languagesUsed}
                                             bulletPoints={item.bulletPoints}
-                                            className="text-file-window"
                                         />
                                     )}
                                 </div>

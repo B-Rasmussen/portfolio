@@ -2,8 +2,19 @@
 import "../style/workHistoryStyle.css";
 
 // TODO: move title bar to a separate component
-// TODO: add company logo image?
-// TODO: update data type from any to specific type
+
+type WorkTextFileProps = {
+    index: number;
+    closeWindow: (index: number) => void;
+    companyName: string;
+    companyLogo?: string;
+    companyLogoAlt?: string;
+    location: string;
+    startDate: string;
+    endDate: string;
+    langaugesUsed?: string[];
+    bulletPoints?: string[];
+};
 
 function WorkTextFile({
     index,
@@ -16,7 +27,7 @@ function WorkTextFile({
     endDate,
     langaugesUsed,
     bulletPoints,
-}: any) {
+}: WorkTextFileProps) {
     return (
         <div>
             {

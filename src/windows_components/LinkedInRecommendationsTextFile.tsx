@@ -1,14 +1,19 @@
 // import workHistory from "../data/workHistory";
 import "../style/workHistoryStyle.css";
 
-// TODO: update data type from any to specific type
+type LinkedInRecommendationsTextFileProps = {
+    index: number;
+    closeWindow: (index: number) => void;
+    person: string;
+    bodyText: string[];
+};
 
 function LinkedInRecommendationsTextFile({
     index,
     closeWindow,
     person,
     bodyText,
-}: any) {
+}: LinkedInRecommendationsTextFileProps) {
     return (
         <div>
             {

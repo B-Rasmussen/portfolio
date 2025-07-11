@@ -1,7 +1,15 @@
 // import workHistory from "../data/workHistory";
 import "../style/workHistoryStyle.css";
 
-// TODO: update data type from any to specific type
+type PersonalProjectTextFileProps = {
+    index: number;
+    closeWindow: (index: number) => void;
+    projectName: string;
+    technologies: string[];
+    description: string;
+    image?: string;
+    imageAlt?: string;
+};
 
 function PersonalProjectTextFile({
     index,
@@ -11,7 +19,7 @@ function PersonalProjectTextFile({
     description,
     image,
     imageAlt,
-}: any) {
+}: PersonalProjectTextFileProps) {
     return (
         <div>
             {
