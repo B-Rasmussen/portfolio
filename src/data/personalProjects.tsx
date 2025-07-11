@@ -17,6 +17,7 @@ const personalProjects: personalProjects[] = [
         description: "A endless zombie survival game created in Godot 4.",
         technologies: ["Godot 4", "GDScript"],
         image: zombie_gif,
+        imageAlt: "Zombie survival game gif",
     },
     {
         id: 1,

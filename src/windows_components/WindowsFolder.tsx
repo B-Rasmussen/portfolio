@@ -1,0 +1,142 @@
+import { useState } from "react";
+// import workHistory from "../data/workHistory";
+import "../style/workHistoryStyle.css";
+import WorkTextFile from "./WorkTextFile";
+import PersonalProjectTextFile from "./PersonalProjectsTextFile";
+import LinkedInRecommendationsTextFile from "./LinkedInRecommendationsTextFile";
+
+function WindowsFolder({ closeFolder, folderTitle, data }: any) {
+    const [isWindowOpen, setIsWindowOpen] = useState(
+        Array(data.length).fill(false)
+    );
+
+    const handleOpen = (index: number) => {
+        setIsWindowOpen((prev) => {
+            const newState = [...prev];
+            newState[index] = !newState[index];
+            return newState;
+        });
+        // console.log(isWindowOpen[index]);
+    };
+
+    // const handleClick = (index: number) => {
+    //     setIsWindowOpen(isWindowOpen.map((i) => i === index));
+    //     console.log(isWindowOpen[index])
+    // };
+
+    // const closeWindow = (index: number) => {
+    //     setIsWindowOpen(isWindowOpen.map((open, i) => (i === index ? false : open)));
+    // };
+
+    return (
+        <div>
+            {
+                <div className="text-file-window">
+                    <div
+                        className="title-bar-button"
+                        onClick={() => {
+                            closeFolder();
+                        }}
+                    >
+                        <div className="title-bar-icon" id="close-icon">
+                            X
+                        </div>
+                        <div className="title-bar-icon" id="minimize-icon">
+                            _
+                        </div>
+                        <div className="title-bar-icon" id="maximize-icon">
+                            □
+                        </div>
+                        <div className="title-bar-text">{folderTitle}</div>
+                    </div>
+
+                    <div className="folder-content">
+                        {folderTitle === "Work History"
+                            ? data.map((item: any, index: number) => (
+                                  <div
+                                      key={item.id}
+                                      onClick={() => {
+                                          handleOpen(index);
+                                          console.log(item);
+                                      }}
+                                  >
+                                      <div className="text-file-icon" />
+                                      <text>{item.companyName}</text>
+                                      {isWindowOpen[index] && (
+                                          <WorkTextFile
+                                              index={index}
+                                              closeWindow={() =>
+                                                  handleOpen(index)
+                                              }
+                                              companyName={item.companyName}
+                                              location={item.location}
+                                              startDate={item.startDate}
+                                              endDate={item.endDate}
+                                              langaugesUsed={item.languagesUsed}
+                                              bulletPoints={item.bulletPoints}
+                                              className="text-file-window"
+                                          />
+                                      )}
+                                  </div>
+                              ))
+                            : null}
+                        {folderTitle === "Personal Projects"
+                            ? data.map((item: any, index: number) => (
+                                  <div
+                                      key={item.id}
+                                      onClick={() => {
+                                          handleOpen(index);
+                                          console.log(item);
+                                      }}
+                                  >
+                                      <div className="text-file-icon" />
+                                      <text>{item.projectName}</text>
+                                      {isWindowOpen[index] && (
+                                          <PersonalProjectTextFile
+                                              index={index}
+                                              closeWindow={() =>
+                                                  handleOpen(index)
+                                              }
+                                              projectName={item.projectName}
+                                              technologies={item.technologies}
+                                              description={item.description}
+                                              image={item.image}
+                                              imageAlt={item.imageAlt}
+                                          />
+                                      )}
+                                  </div>
+                              ))
+                            : null}
+
+                        {folderTitle === "LinkedIn Recommendations"
+                            ? data.map((item: any, index: number) => (
+                                  <div
+                                      key={item.id}
+                                      onClick={() => {
+                                          handleOpen(index);
+                                          console.log(item);
+                                      }}
+                                  >
+                                      <div className="text-file-icon" />
+                                      <text>{item.person} review.txt</text>
+                                      {isWindowOpen[index] && (
+                                          <LinkedInRecommendationsTextFile
+                                              index={index}
+                                              closeWindow={() =>
+                                                  handleOpen(index)
+                                              }
+                                              person={item.person}
+                                              bodyText={item.bodyText}
+                                          />
+                                      )}
+                                  </div>
+                              ))
+                            : null}
+                    </div>
+                </div>
+            }
+        </div>
+    );
+}
+
+export default WindowsFolder;

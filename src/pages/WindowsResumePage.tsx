@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Button from "../components/Button";
-import WindowsTextFile from "../components/WorkTextFile";
-import WindowsFolder from "../components/WindowsFolder";
+import WindowsFolder from "../windows_components/WindowsFolder";
 
 import workHistory from "../data/workHistory";
 import personalProjects from "../data/personalProjects";
@@ -17,6 +16,8 @@ function WindowsResumePage() {
     const [isLinkedInRecommendationsOpen, setIsLinkedInRecommendationsOpen] = useState(false);
 
     const openWorkHistory = () => {
+        setIsProjectsFolderOpen(false);
+        setIsLinkedInRecommendationsOpen(false);
         setIsWorkHistoryFolderOpen(true);
     };
 
@@ -25,6 +26,8 @@ function WindowsResumePage() {
     };
 
     const openPersonalProjects = () => {
+        setIsWorkHistoryFolderOpen(false);
+        setIsLinkedInRecommendationsOpen(false);
         setIsProjectsFolderOpen(true);
     };
 
@@ -33,6 +36,8 @@ function WindowsResumePage() {
     };
 
     const openLinkedInRecommendations = () => {
+        setIsWorkHistoryFolderOpen(false);
+        setIsProjectsFolderOpen(false);
         setIsLinkedInRecommendationsOpen(true);
     };
 
@@ -107,7 +112,7 @@ function WindowsResumePage() {
             {isLinkedInRecommendationsOpen && (
                 <WindowsFolder
                     closeFolder={closeLinkedInRecommendations}
-                    folderTitle="Personal Projects"
+                    folderTitle="LinkedIn Recommendations"
                     data = {linkedinRecommendations}
                 />
             )}
