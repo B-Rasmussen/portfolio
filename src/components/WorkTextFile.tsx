@@ -5,7 +5,7 @@ import "../style/workHistoryStyle.css";
 // TODO: add company logo image?
 // TODO: Create 3 different text files for work history, personal projects, and LinkedIn recommendations?
 
-function WindowsTextFile({
+function WorkTextFile({
     index,
     closeWindow,
     companyName,
@@ -98,4 +98,4 @@ function WindowsTextFile({
     );
 }
 
-export default WindowsTextFile;
+export default WorkTextFile;

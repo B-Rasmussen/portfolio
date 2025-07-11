@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import workHistory from "../data/workHistory";
 import "../style/workHistoryStyle.css";
-import WindowsTextFile from "./WindowsTextFile";
+import WorkTextFile from "./WorkTextFile";
 
 function WindowsFolder({ closeFolder, folderTitle, data }: any) {
     const [isWindowOpen, setIsWindowOpen] = useState(
@@ -62,7 +62,7 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
                                     <div className="text-file-icon" />
                                     <text>{item.companyName}</text>
                                     {isWindowOpen[index] && (
-                                        <WindowsTextFile
+                                        <WorkTextFile
                                             fileType={folderTitle}
                                             index={index}
                                             closeWindow={() =>

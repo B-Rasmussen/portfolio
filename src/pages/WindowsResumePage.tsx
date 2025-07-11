@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../components/Button";
-import WindowsTextFile from "../components/WindowsTextFile";
+import WindowsTextFile from "../components/WorkTextFile";
 import WindowsFolder from "../components/WindowsFolder";
 
 import workHistory from "../data/workHistory";
