@@ -3,12 +3,14 @@ import "../style/workHistoryStyle.css";
 
 // TODO: move title bar to a separate component
 // TODO: add company logo image?
-// TODO: Create 3 different text files for work history, personal projects, and LinkedIn recommendations?
+// TODO: update data type from any to specific type
 
 function WorkTextFile({
     index,
     closeWindow,
     companyName,
+    companyLogo,
+    companyLogoAlt,
     location,
     startDate,
     endDate,
@@ -37,6 +39,14 @@ function WorkTextFile({
                         <div className="title-bar-text">{companyName}.txt</div>
                     </div>
                     <div>
+                        <h2 className="company-name">{companyName}</h2>
+                        {companyLogo && (
+                            <img
+                                src={companyLogo}
+                                alt={`${companyLogoAlt}`}
+                                className="company-logo"
+                            />
+                        )}
                         <div>{location}</div>
                         <div>
                             {startDate} - {endDate}

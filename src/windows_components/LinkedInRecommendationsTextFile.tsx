@@ -1,6 +1,8 @@
 // import workHistory from "../data/workHistory";
 import "../style/workHistoryStyle.css";
 
+// TODO: update data type from any to specific type
+
 function LinkedInRecommendationsTextFile({
     index,
     closeWindow,
