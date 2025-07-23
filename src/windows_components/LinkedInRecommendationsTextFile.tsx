@@ -1,4 +1,4 @@
-// import workHistory from "../data/workHistory";
+import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/workHistoryStyle.css";
 
 type LinkedInRecommendationsTextFileProps = {
@@ -18,25 +18,8 @@ function LinkedInRecommendationsTextFile({
         <div>
             {
                 <div className="text-file-window">
-                    <div
-                        className="title-bar-button"
-                        onClick={() => {
-                            closeWindow(index);
-                        }}
-                    >
-                        <div className="title-bar-icon" id="close-icon">
-                            X
-                        </div>
-                        <div className="title-bar-icon" id="minimize-icon">
-                            _
-                        </div>
-                        <div className="title-bar-icon" id="maximize-icon">
-                            □
-                        </div>
-                        <div className="title-bar-text">
-                            {person}_review.txt
-                        </div>
-                    </div>
+                    <TitleBarIcon closeWindow={closeWindow} index={index} />
+                    <div className="title-bar-text">{person}_review.txt</div>
                     <div>
                         <div>{person}</div>
                         <div>

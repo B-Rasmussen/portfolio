@@ -1,5 +1,7 @@
-// import workHistory from "../data/workHistory";
+import Draggable from "react-draggable";
+import { useState, useRef, SetStateAction } from "react";
 import "../style/workHistoryStyle.css";
+import TitleBarIcon from "../components/TitleBarIcon";
 
 type PersonalProjectTextFileProps = {
     index: number;
@@ -20,27 +22,28 @@ function PersonalProjectTextFile({
     image,
     imageAlt,
 }: PersonalProjectTextFileProps) {
+    const nodeRef = useRef(null);
+    const [x, setX] = useState(0);
+    const [y, setY] = useState(0);
+
+    const handleStop = (
+        event: any,
+        dragElement: { x: SetStateAction<number>; y: SetStateAction<number> }
+    ) => {
+        setX(dragElement.x);
+        setY(dragElement.y);
+    };
     return (
-        <div>
+        <Draggable
+            bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
+            onStop={handleStop}
+            position={{ x, y }}
+            nodeRef={nodeRef}
+        >
             {
-                <div className="text-file-window">
-                    <div
-                        className="title-bar-button"
-                        onClick={() => {
-                            closeWindow(index);
-                        }}
-                    >
-                        <div className="title-bar-icon" id="close-icon">
-                            X
-                        </div>
-                        <div className="title-bar-icon" id="minimize-icon">
-                            _
-                        </div>
-                        <div className="title-bar-icon" id="maximize-icon">
-                            □
-                        </div>
-                        <div className="title-bar-text">{projectName}.txt</div>
-                    </div>
+                <div className="text-file-window" ref={nodeRef}>
+                    <TitleBarIcon closeWindow={closeWindow} index={index} />
+                    <div className="title-bar-text">{projectName}.txt</div>
                     <div>
                         <div>{description}</div>
                         <div>
@@ -59,7 +62,7 @@ function PersonalProjectTextFile({
                     </div>
                 </div>
             }
-        </div>
+        </Draggable>
     );
 }
 

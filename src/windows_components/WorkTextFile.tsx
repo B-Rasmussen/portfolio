@@ -1,7 +1,5 @@
-// import workHistory from "../data/workHistory";
+import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/workHistoryStyle.css";
-
-// TODO: move title bar to a separate component
 
 type WorkTextFileProps = {
     index: number;
@@ -32,23 +30,8 @@ function WorkTextFile({
         <div>
             {
                 <div className="text-file-window">
-                    <div
-                        className="title-bar-button"
-                        onClick={() => {
-                            closeWindow(index);
-                        }}
-                    >
-                        <div className="title-bar-icon" id="close-icon">
-                            X
-                        </div>
-                        <div className="title-bar-icon" id="minimize-icon">
-                            _
-                        </div>
-                        <div className="title-bar-icon" id="maximize-icon">
-                            □
-                        </div>
-                        <div className="title-bar-text">{companyName}.txt</div>
-                    </div>
+                    <TitleBarIcon closeWindow={closeWindow} index={index} />
+                    <div className="title-bar-text">{companyName}.txt</div>
                     <div>
                         <h2 className="company-name">{companyName}</h2>
                         {companyLogo && (

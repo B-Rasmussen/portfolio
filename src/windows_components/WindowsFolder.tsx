@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../style/workHistoryStyle.css";
+import TitleBarIcon from "../components/TitleBarIcon";
 import WorkTextFile from "./WorkTextFile";
 import PersonalProjectTextFile from "./PersonalProjectsTextFile";
 import LinkedInRecommendationsTextFile from "./LinkedInRecommendationsTextFile";
@@ -31,6 +32,7 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
         <div>
             {
                 <div className="text-file-window">
+                    <TitleBarIcon closeWindow={closeFolder} />
                     <div
                         className="title-bar-button"
                         onClick={() => {

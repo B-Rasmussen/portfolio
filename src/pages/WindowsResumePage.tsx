@@ -55,6 +55,13 @@ function WindowsResumePage() {
                 <div className="line4" />
                 <text>example.txt</text>
             </div> */}
+            {/* <div className="clock">
+                {new Date().toLocaleTimeString([], {
+                    weekday: "short",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                })}
+            </div> */}
             <div onClick={openWorkHistory}>
                 <div className="text-file-icon" />
                 <text>Work History</text>
