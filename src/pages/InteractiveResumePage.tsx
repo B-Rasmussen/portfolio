@@ -58,6 +58,12 @@ function InteractiveResumePage() {
                     minute: "2-digit",
                 })}
             </div> */}
+            <div style={{ position: "absolute", left: "40%", top: "40%" }}>
+                <div>Click the "text" icon to open folder</div>
+                <div>Click the folder name to move</div>
+                <div>FYI: clicking anywhere but the minimize button</div>
+                <div>on the child files of each folder will close it</div>
+            </div>
             <div onClick={openWorkHistory}>
                 <div className="text-file-icon" />
                 <text>Work History</text>
