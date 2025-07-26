@@ -101,6 +101,10 @@ body {
     height: 40%;
 }
 
+/* .text-file-content {
+    overflow: scroll;
+} */
+
 .title-bar-button {
     cursor: pointer;
     position: fixed;

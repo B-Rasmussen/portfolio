@@ -1,7 +1,7 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
-import "../style/workHistoryStyle.css";
 import TitleBarIcon from "../components/TitleBarIcon";
+import "../style/workHistoryStyle.css";
 
 type PersonalProjectTextFileProps = {
     index: number;
@@ -39,12 +39,15 @@ function PersonalProjectTextFile({
             onStop={handleStop}
             position={{ x, y }}
             nodeRef={nodeRef}
+            handle=".title-bar-text"
         >
             {
                 <div className="text-file-window" ref={nodeRef}>
-                    <TitleBarIcon closeWindow={closeWindow} index={index} />
-                    <div className="title-bar-text">{projectName}.txt</div>
                     <div>
+                        <TitleBarIcon closeWindow={closeWindow} index={index} />
+                        <div className="title-bar-text">{projectName}.txt</div>
+                    </div>
+                    <div className="text-file-content">
                         <div>{description}</div>
                         <div>
                             {technologies?.map(

@@ -33,23 +33,7 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
             {
                 <div className="text-file-window">
                     <TitleBarIcon closeWindow={closeFolder} />
-                    <div
-                        className="title-bar-button"
-                        onClick={() => {
-                            closeFolder();
-                        }}
-                    >
-                        <div className="title-bar-icon" id="close-icon">
-                            X
-                        </div>
-                        <div className="title-bar-icon" id="minimize-icon">
-                            _
-                        </div>
-                        <div className="title-bar-icon" id="maximize-icon">
-                            □
-                        </div>
-                        <div className="title-bar-text">{folderTitle}</div>
-                    </div>
+                    <div className="title-bar-text">{folderTitle}</div>
 
                     <div className="folder-content">
                         {folderTitle === "Work History"
@@ -84,6 +68,7 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
                                 </div>
                             ))
                             : null}
+
                         {folderTitle === "Personal Projects"
                             ? data.map((item: any, index: number) => (
                                 <div
