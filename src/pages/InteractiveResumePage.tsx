@@ -10,7 +10,7 @@ import "../style/windowsResumeStyle.css";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
-function WindowsResumePage() {
+function InteractiveResumePage() {
     const [isWorkHistoryFolderOpen, setIsWorkHistoryFolderOpen] =
         useState(false);
     const [isProjectsFolderOpen, setIsProjectsFolderOpen] = useState(false);
@@ -124,4 +124,4 @@ function WindowsResumePage() {
         </div>
     );
 }
-export default WindowsResumePage;
+export default InteractiveResumePage;

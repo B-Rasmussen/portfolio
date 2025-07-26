@@ -20,6 +20,17 @@ function WorkHistory() {
                         {job.companyName}
                     </h2>
                     <h3 className="position">{job.positionTitle}</h3>
+                    <h4 className="languagesUsed">
+                        Languages used:&nbsp;
+                        {job.languagesUsed.map((item, index) => (
+                            <span key={index} className="language-item">
+                                {item}
+                                {index < job.languagesUsed.length - 1
+                                    ? ", "
+                                    : ""}
+                            </span>
+                        ))}
+                    </h4>
                     <div className="job-details">
                         <div id="job-location">{job.location}</div>
                         <div id="job-date">

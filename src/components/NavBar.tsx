@@ -9,21 +9,17 @@ function NavBar({ navigateTo }: NavBarProps) {
     return (
         <div className="internal-links-container">
             <Button
-                buttonName={"Landing"}
-                onButtonPressed={() => navigateTo("Landing")}
+                buttonName={"Work History"}
+                onButtonPressed={() => navigateTo("WorkHistory")}
             />
             <Button
                 buttonName={"Projects"}
                 onButtonPressed={() => navigateTo("Projects")}
             />
             <Button
-                buttonName={"Windows"}
-                onButtonPressed={() => navigateTo("Windows")}
+                buttonName={"Interactive Resume"}
+                onButtonPressed={() => navigateTo("InteractiveResume")}
             />
-            {/* <Button
-                buttonName={"Experiment"}
-                onButtonPressed={() => navigateTo("Experiment")}
-            /> */}
         </div>
     );
 }

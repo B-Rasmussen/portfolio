@@ -1,10 +1,10 @@
 import WorkHistory from "../components/WorkHistory";
 
-function LandingPage() {
+function WorkHistoryPage() {
     return (
         <div>
             <WorkHistory />
         </div>
     );
 }
-export default LandingPage;
+export default WorkHistoryPage;
