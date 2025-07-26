@@ -32,15 +32,6 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
         setY(dragElement.y);
     };
 
-    // const handleClick = (index: number) => {
-    //     setIsWindowOpen(isWindowOpen.map((i) => i === index));
-    //     console.log(isWindowOpen[index])
-    // };
-
-    // const closeWindow = (index: number) => {
-    //     setIsWindowOpen(isWindowOpen.map((open, i) => (i === index ? false : open)));
-    // };
-
     return (
         <Draggable
             bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
