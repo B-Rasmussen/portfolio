@@ -24,7 +24,7 @@ const Button = ({
     return (
         <div>
             <div onClick={onButtonPressed}>
-                <div>{buttonName}</div>
+                <div style={{ color: "red" }}>{buttonName}</div>
             </div>
         </div>
     );

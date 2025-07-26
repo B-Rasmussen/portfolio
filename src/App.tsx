@@ -3,10 +3,10 @@ import { SetStateAction, useState } from "react";
 import LandingPage from "./pages/LandingPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import WindowResumePage from "./pages/WindowsResumePage";
-import NavBar from "./components/NavBar";
-// import ExperimentPage from "./pages/ExperimentPage";
+// import NavBar from "./components/NavBar";
 import SocialMediaBar from "./components/SocialMediaBar";
-import LanguagesList from "./components/LanguagesList";
+// import LanguagesList from "./components/LanguagesList";
+import Button from "./components/Button";
 
 function App() {
     const [currentScreen, setCurrentScreen] = useState("Windows");
@@ -21,7 +21,7 @@ function App() {
             case "Landing":
                 return (
                     <div>
-                        <LanguagesList />
+                        {/* <LanguagesList /> */}
                         <LandingPage />
                     </div>
                 );
@@ -35,10 +35,14 @@ function App() {
     };
     return (
         <>
-            {/* {currentScreen == "Landing" ? <Hero /> : null} */}
-            {currentScreen == "Windows" ? null : (
+            {currentScreen == "Windows" ? (
+                <Button
+                    buttonName={"In a rush? Click here for a non interactive version!"}
+                    onButtonPressed={() => navigateTo("Landing")}
+                />
+            ) : (
                 <div className="nav-bar-container">
-                    <NavBar navigateTo={navigateTo} />
+                    {/* <NavBar navigateTo={navigateTo} /> */}
                     <SocialMediaBar />
                 </div>
             )}
@@ -48,28 +52,3 @@ function App() {
 }
 
 export default App;
-
-/*
- *******************************************************************************
- * This is a simple HTML5 canvas drawing of a desert sunset with Joshua trees. *
- *******************************************************************************
- */
-
-// <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//   <meta charset="UTF-8" />
-//   <title>Desert Sunset with Joshua Trees</title>
-//   <style>
-//     canvas {
-//       display: block;
-//       margin: 0 auto;
-//       background: linear-gradient(to top, #EDC9Af, #FF4500); /* fallback */
-//     }
-//   </style>
-// </head>
-// <body>
-//   <canvas id="desertCanvas" width="800" height="400"></canvas>
-
-// </body>
-// </html>

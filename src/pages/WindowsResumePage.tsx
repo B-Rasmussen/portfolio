@@ -11,9 +11,11 @@ import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.p
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
 function WindowsResumePage() {
-    const [isWorkHistoryFolderOpen, setIsWorkHistoryFolderOpen] = useState(false);
+    const [isWorkHistoryFolderOpen, setIsWorkHistoryFolderOpen] =
+        useState(false);
     const [isProjectsFolderOpen, setIsProjectsFolderOpen] = useState(false);
-    const [isLinkedInRecommendationsOpen, setIsLinkedInRecommendationsOpen] = useState(false);
+    const [isLinkedInRecommendationsOpen, setIsLinkedInRecommendationsOpen] =
+        useState(false);
 
     const openWorkHistory = () => {
         setIsWorkHistoryFolderOpen(true);
@@ -106,7 +108,7 @@ function WindowsResumePage() {
                 <WindowsFolder
                     closeFolder={closePersonalProjectsFolder}
                     folderTitle="Personal Projects"
-                    data = {personalProjects}
+                    data={personalProjects}
                 />
             )}
 
@@ -114,7 +116,7 @@ function WindowsResumePage() {
                 <WindowsFolder
                     closeFolder={closeLinkedInRecommendations}
                     folderTitle="LinkedIn Recommendations"
-                    data = {linkedinRecommendations}
+                    data={linkedinRecommendations}
                 />
             )}
 
