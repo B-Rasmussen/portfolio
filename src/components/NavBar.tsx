@@ -17,7 +17,7 @@ function NavBar({ navigateTo }: NavBarProps) {
                 onButtonPressed={() => navigateTo("Projects")}
             />
             <Button
-                buttonName={"Interactive Resume"}
+                buttonName={"Interactive Resume (best viewed on desktop)"}
                 onButtonPressed={() => navigateTo("InteractiveResume")}
             />
         </div>
