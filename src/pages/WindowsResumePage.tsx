@@ -16,8 +16,8 @@ function WindowsResumePage() {
     const [isLinkedInRecommendationsOpen, setIsLinkedInRecommendationsOpen] = useState(false);
 
     const openWorkHistory = () => {
-        setIsProjectsFolderOpen(false);
-        setIsLinkedInRecommendationsOpen(false);
+        // setIsProjectsFolderOpen(false);
+        // setIsLinkedInRecommendationsOpen(false);
         setIsWorkHistoryFolderOpen(true);
     };
 
@@ -26,8 +26,8 @@ function WindowsResumePage() {
     };
 
     const openPersonalProjects = () => {
-        setIsWorkHistoryFolderOpen(false);
-        setIsLinkedInRecommendationsOpen(false);
+        // setIsWorkHistoryFolderOpen(false);
+        // setIsLinkedInRecommendationsOpen(false);
         setIsProjectsFolderOpen(true);
     };
 
@@ -36,8 +36,8 @@ function WindowsResumePage() {
     };
 
     const openLinkedInRecommendations = () => {
-        setIsWorkHistoryFolderOpen(false);
-        setIsProjectsFolderOpen(false);
+        // setIsWorkHistoryFolderOpen(false);
+        // setIsProjectsFolderOpen(false);
         setIsLinkedInRecommendationsOpen(true);
     };
 

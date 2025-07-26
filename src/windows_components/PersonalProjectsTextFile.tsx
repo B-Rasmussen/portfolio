@@ -27,7 +27,7 @@ function PersonalProjectTextFile({
     const [y, setY] = useState(0);
 
     const handleStop = (
-        event: any,
+        _event: any,
         dragElement: { x: SetStateAction<number>; y: SetStateAction<number> }
     ) => {
         setX(dragElement.x);
@@ -39,11 +39,11 @@ function PersonalProjectTextFile({
             onStop={handleStop}
             position={{ x, y }}
             nodeRef={nodeRef}
-            handle=".title-bar-text"
+            handle=".grabbable-area"
         >
             {
                 <div className="text-file-window" ref={nodeRef}>
-                    <div>
+                    <div className="grabbable-area">
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
                         <div className="title-bar-text">{projectName}.txt</div>
                     </div>

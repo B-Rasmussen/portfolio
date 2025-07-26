@@ -1,3 +1,5 @@
+import Draggable from "react-draggable";
+import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/workHistoryStyle.css";
 
@@ -14,12 +16,33 @@ function LinkedInRecommendationsTextFile({
     person,
     bodyText,
 }: LinkedInRecommendationsTextFileProps) {
+    const nodeRef = useRef(null);
+    const [x, setX] = useState(0);
+    const [y, setY] = useState(0);
+
+    const handleStop = (
+        _event: any,
+        dragElement: { x: SetStateAction<number>; y: SetStateAction<number> }
+    ) => {
+        setX(dragElement.x);
+        setY(dragElement.y);
+    };
     return (
-        <div>
+        <Draggable
+            bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
+            onStop={handleStop}
+            position={{ x, y }}
+            nodeRef={nodeRef}
+            handle=".grabbable-area"
+        >
             {
-                <div className="text-file-window">
-                    <TitleBarIcon closeWindow={closeWindow} index={index} />
-                    <div className="title-bar-text">{person}_review.txt</div>
+                <div className="text-file-window" ref={nodeRef}>
+                    <div className="grabbable-area">
+                        <TitleBarIcon closeWindow={closeWindow} index={index} />
+                        <div className="title-bar-text">
+                            {person}_review.txt
+                        </div>
+                    </div>
                     <div>
                         <div>{person}</div>
                         <div>
@@ -30,7 +53,7 @@ function LinkedInRecommendationsTextFile({
                     </div>
                 </div>
             }
-        </div>
+        </Draggable>
     );
 }
 
