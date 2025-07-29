@@ -1,4 +1,4 @@
-.company-name{
+.company-name {
     text-align: center;
     /* color: var(--royal-purple); */
     /* color: var(--emerald); */
@@ -25,7 +25,7 @@
     /* color: var(--carolina-blue); */
 }
 
-.position{
+.position {
     text-align: center;
     text-decoration: underline;
     /* text-decoration-color: var(--emerald); */
@@ -34,28 +34,28 @@
     color: var(--carolina-blue);
 }
 
-.job-details{
-    color: #FFF;
+.job-details {
+    color: #fff;
     display: flex;
 }
 
-#job-location{
-    color: #FFF;
+#job-location {
+    color: #fff;
     margin-left: 10px;
 }
 
-#job-date{
-    color: #FFF;
+#job-date {
+    color: #fff;
     margin-left: auto;
     margin-right: 10px;
 }
 
-.job-list-container{
+.job-list-container {
     padding-bottom: 10px;
-    color: #FFF;
+    color: #fff;
 }
 
-.job-bullet-points{
+.job-bullet-points {
     margin: 10px 0px;
 }
 
@@ -75,4 +75,9 @@
     width: 50%;
     margin: auto;
     color: var(--royal-purple);
+}
+
+.child-window-contents {
+    display: flex;
+    flex-direction: column;
 }

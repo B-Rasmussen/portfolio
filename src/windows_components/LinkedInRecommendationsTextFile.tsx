@@ -36,14 +36,17 @@ function LinkedInRecommendationsTextFile({
             handle=".grabbable-area"
         >
             {
-                <div className="text-file-window" ref={nodeRef}>
+                <div
+                    className="text-file-window child-window-contents"
+                    ref={nodeRef}
+                >
                     <div className="grabbable-area">
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
                         <div className="title-bar-text">
                             {person}_review.txt
                         </div>
                     </div>
-                    <div>
+                    <div style={{ overflowY: "scroll" }}>
                         <div>{person}</div>
                         <div>
                             {bodyText.map((line: string, index: number) => (

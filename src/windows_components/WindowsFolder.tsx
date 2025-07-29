@@ -17,7 +17,6 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
             newState[index] = !newState[index];
             return newState;
         });
-        // console.log(isWindowOpen[index]);
     };
 
     const nodeRef = useRef(null);
@@ -39,6 +38,7 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
             position={{ x, y }}
             nodeRef={nodeRef}
             handle=".grabbable-area"
+            cancel="#child-item"
         >
             {
                 <div className="text-file-window" ref={nodeRef}>
@@ -49,88 +49,88 @@ function WindowsFolder({ closeFolder, folderTitle, data }: any) {
                     <div className="folder-content">
                         {folderTitle === "Work History"
                             ? data.map((item: any, index: number) => (
-                                  <div
-                                      key={item.id}
-                                      onClick={() => {
-                                          handleOpen(index);
-                                          console.log(item);
-                                      }}
-                                  >
-                                      <div className="text-file-icon" />
-                                      <text>{item.companyName}</text>
-                                      {isWindowOpen[index] && (
-                                          <WorkTextFile
-                                              index={index}
-                                              closeWindow={() =>
-                                                  handleOpen(index)
-                                              }
-                                              companyName={item.companyName}
-                                              companyLogo={item.companyLogo}
-                                              companyLogoAlt={
-                                                  item.companyLogoAlt
-                                              }
-                                              location={item.location}
-                                              startDate={item.startDate}
-                                              endDate={item.endDate}
-                                              langaugesUsed={item.languagesUsed}
-                                              bulletPoints={item.bulletPoints}
-                                          />
-                                      )}
-                                  </div>
-                              ))
+                                <div
+                                    key={item.id}
+                                    onClick={() => {
+                                        handleOpen(index);
+                                    }}
+                                    id="child-item"
+                                >
+                                    <div className="text-file-icon" />
+                                    <text>{item.companyName}</text>
+                                    {isWindowOpen[index] && (
+                                        <WorkTextFile
+                                            index={index}
+                                            closeWindow={() =>
+                                                handleOpen(index)
+                                            }
+                                            companyName={item.companyName}
+                                            companyLogo={item.companyLogo}
+                                            companyLogoAlt={
+                                                item.companyLogoAlt
+                                            }
+                                            location={item.location}
+                                            startDate={item.startDate}
+                                            endDate={item.endDate}
+                                            langaugesUsed={item.languagesUsed}
+                                            bulletPoints={item.bulletPoints}
+                                        />
+                                    )}
+                                </div>
+                            ))
                             : null}
 
                         {folderTitle === "Personal Projects"
                             ? data.map((item: any, index: number) => (
-                                  <div
-                                      key={item.id}
-                                      onClick={() => {
-                                          handleOpen(index);
-                                          console.log(item);
-                                      }}
-                                  >
-                                      <div className="text-file-icon" />
-                                      <text>{item.projectName}</text>
-                                      {isWindowOpen[index] && (
-                                          <PersonalProjectTextFile
-                                              index={index}
-                                              closeWindow={() =>
-                                                  handleOpen(index)
-                                              }
-                                              projectName={item.projectName}
-                                              technologies={item.technologies}
-                                              description={item.description}
-                                              image={item.image}
-                                              imageAlt={item.imageAlt}
-                                          />
-                                      )}
-                                  </div>
-                              ))
+                                <div
+                                    key={item.id}
+                                    onClick={() => {
+                                        handleOpen(index);
+                                    }}
+                                    id="child-item"
+                                >
+                                    <div className="text-file-icon" />
+                                    <text>{item.projectName}</text>
+                                    {isWindowOpen[index] && (
+                                        <PersonalProjectTextFile
+                                            index={index}
+                                            closeWindow={() =>
+                                                handleOpen(index)
+                                            }
+                                            projectName={item.projectName}
+                                            technologies={item.technologies}
+                                            description={item.description}
+                                            image={item.image}
+                                            imageAlt={item.imageAlt}
+                                        />
+                                    )}
+                                </div>
+                            ))
                             : null}
 
                         {folderTitle === "LinkedIn Recommendations"
                             ? data.map((item: any, index: number) => (
-                                  <div
-                                      key={item.id}
-                                      onClick={() => {
-                                          handleOpen(index);
-                                          console.log(item);
-                                      }}
-                                  >
-                                      <div className="text-file-icon" />
-                                      <text>{item.person} review.txt</text>
-                                      {isWindowOpen[index] && (
-                                          <LinkedInRecommendationsTextFile
-                                              index={index}
-                                              closeWindow={() =>
-                                                  handleOpen(index)
-                                              }
-                                              person={item.person}
-                                              bodyText={item.bodyText}
-                                          />
-                                      )}
-                                  </div>
-                              ))
+                                <div
+                                    key={item.id}
+                                    onClick={() => {
+                                        handleOpen(index);
+                                    }}
+                                    id="child-item"
+                                >
+                                    <div className="text-file-icon" />
+                                    <text>{item.person} review.txt</text>
+                                    {isWindowOpen[index] && (
+                                        <LinkedInRecommendationsTextFile
+                                            index={index}
+                                            closeWindow={() =>
+                                                handleOpen(index)
+                                            }
+                                            person={item.person}
+                                            bodyText={item.bodyText}
+                                        />
+                                    )}
+                                </div>
+                            ))
                             : null}
                     </div>
                 </div>

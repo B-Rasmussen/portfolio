@@ -48,12 +48,19 @@ function WorkTextFile({
             handle=".grabbable-area"
         >
             {
-                <div className="text-file-window" ref={nodeRef}>
-                    <div className="grabbable-area">
+                <div
+                    className="text-file-window child-window-contents"
+                    ref={nodeRef}
+                    // style={{ display: "flex", flexDirection: "column" }}
+                >
+                    <div
+                        className="grabbable-area"
+                        style={{ position: "fixed", zIndex: 1000 }}
+                    >
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
                         <div className="title-bar-text">{companyName}.txt</div>
                     </div>
-                    <div>
+                    <div style={{ overflowY: "scroll" }}>
                         <h2 className="company-name">{companyName}</h2>
                         {companyLogo && (
                             <img

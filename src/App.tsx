@@ -23,7 +23,6 @@ function isMobileDevice() {
 
     for (const keyword of mobileKeywords) {
         if (navigator.userAgent.includes(keyword)) {
-            console.log(`Detected mobile device: ${keyword}`);
             return true;
         }
     }
