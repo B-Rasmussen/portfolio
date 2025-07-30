@@ -6,7 +6,15 @@ import WorkTextFile from "./WorkTextFile";
 import PersonalProjectTextFile from "./PersonalProjectsTextFile";
 import LinkedInRecommendationsTextFile from "./LinkedInRecommendationsTextFile";
 
-function WindowsFolder({ closeFolder, folderTitle, data }: any) {
+// TODO: prevent child from being dragged when parent is dragged
+
+type WindowsFolderProps = {
+    closeFolder: () => void;
+    folderTitle: string;
+    data: any[];
+};
+
+function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
     const [isWindowOpen, setIsWindowOpen] = useState(
         Array(data.length).fill(false)
     );
