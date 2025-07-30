@@ -17,21 +17,25 @@ function LinkedInRecommendationsTextFile({
     bodyText,
 }: LinkedInRecommendationsTextFileProps) {
     const nodeRef = useRef(null);
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
+    const [childPosition, setChildPosition] = useState({
+        x: 0 as number,
+        y: 0 as number,
+    });
 
     const handleStop = (
         _event: any,
         dragElement: { x: SetStateAction<number>; y: SetStateAction<number> }
     ) => {
-        setX(dragElement.x);
-        setY(dragElement.y);
+        setChildPosition({
+            x: dragElement.x as number,
+            y: dragElement.y as number,
+        });
     };
     return (
         <Draggable
             bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
             onStop={handleStop}
-            position={{ x, y }}
+            position={childPosition}
             nodeRef={nodeRef}
             handle=".grabbable-area"
         >

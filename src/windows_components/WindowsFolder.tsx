@@ -1,10 +1,10 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
-import "../style/workHistoryStyle.css";
 import TitleBarIcon from "../components/TitleBarIcon";
 import WorkTextFile from "./WorkTextFile";
 import PersonalProjectTextFile from "./PersonalProjectsTextFile";
 import LinkedInRecommendationsTextFile from "./LinkedInRecommendationsTextFile";
+import "../style/windowsFolderStyle.css"
 
 // TODO: prevent child from being dragged when parent is dragged
 
@@ -28,22 +28,26 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
     };
 
     const nodeRef = useRef(null);
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
+    const [parentPosition, setParentPosition] = useState({
+        x: 0,
+        y: 0,
+    });
 
     const handleStop = (
         _event: any,
         dragElement: { x: SetStateAction<number>; y: SetStateAction<number> }
     ) => {
-        setX(dragElement.x);
-        setY(dragElement.y);
+        setParentPosition({
+            x: dragElement.x as number,
+            y: dragElement.y as number,
+        });
     };
 
     return (
         <Draggable
             bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
             onStop={handleStop}
-            position={{ x, y }}
+            position={parentPosition}
             nodeRef={nodeRef}
             handle=".grabbable-area"
             cancel="#child-item"
