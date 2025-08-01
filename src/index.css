@@ -19,6 +19,9 @@
 
     /* Windows Resume Styles */
     --windows-beige: #F5F5DC;
+    /* --mac-folder: #37a8f6; */
+    --folder-color: linear-gradient(to bottom, #aad3e6 0%, #8ebfd6 100%);
+    --folder-tab-color: linear-gradient(to bottom, #b3d6e6, #94bdd2);
 }
 
 a {

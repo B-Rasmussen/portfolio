@@ -76,8 +76,3 @@
     margin: auto;
     color: var(--royal-purple);
 }
-
-.child-window-contents {
-    display: flex;
-    flex-direction: column;
-}

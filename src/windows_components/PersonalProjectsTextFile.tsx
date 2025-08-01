@@ -1,7 +1,8 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
-import "../style/workHistoryStyle.css";
+import "../style/textFileStyle.css"
+// import "../style/workHistoryStyle.css";
 
 type PersonalProjectTextFileProps = {
     index: number;
@@ -23,7 +24,7 @@ function PersonalProjectTextFile({
     imageAlt,
 }: PersonalProjectTextFileProps) {
     const nodeRef = useRef(null);
-        const [childPosition, setChildPosition] = useState({
+    const [childPosition, setChildPosition] = useState({
         x: 0 as number,
         y: 0 as number,
     });
@@ -54,7 +55,7 @@ function PersonalProjectTextFile({
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
                         <div className="title-bar-text">{projectName}.txt</div>
                     </div>
-                    <div style={{ overflowY: "scroll" }}>
+                    <div className="child-window-main-content">
                         <div>{description}</div>
                         <div>
                             {technologies?.map(
@@ -68,7 +69,15 @@ function PersonalProjectTextFile({
                                 )
                             )}
                         </div>
-                        <div>{image && <img src={image} alt={imageAlt} />}</div>
+                        <div>
+                            {image && (
+                                <img
+                                    id="image-content"
+                                    src={image}
+                                    alt={imageAlt}
+                                />
+                            )}
+                        </div>
                     </div>
                 </div>
             }

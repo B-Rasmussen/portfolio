@@ -6,7 +6,7 @@ import workHistory from "../data/workHistory";
 import personalProjects from "../data/personalProjects";
 import linkedinRecommendations from "../data/linkedinRecommendations";
 
-import "../style/windowsResumeStyle.css";
+import "../style/interactiveResumeStyle.css";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
@@ -58,27 +58,32 @@ function InteractiveResumePage() {
                     minute: "2-digit",
                 })}
             </div> */}
-            <div style={{ position: "absolute", left: "40%", top: "40%" }}>
+            <div id="welcome-info">
                 <div>Click the "text" icon to open folder</div>
                 <div>Click the folder name to move</div>
                 <div>FYI: clicking anywhere but the minimize button</div>
                 <div>on the child files of each folder will close it</div>
             </div>
-            <div onClick={openWorkHistory}>
-                <div className="text-file-icon" />
-                <text>Work History</text>
+            <div onClick={openWorkHistory} className="folder-container">
+                <div className="folder-icon" />
+                <text className="folder-name">Work History</text>
             </div>
-            <div onClick={openPersonalProjects}>
-                <div className="text-file-icon" />
-                <text>Personal Projects</text>
+            <div onClick={openPersonalProjects} className="folder-container">
+                <div className="folder-icon" />
+                <text className="folder-name">Personal Projects</text>
             </div>
-            <div onClick={openLinkedInRecommendations}>
-                <div className="text-file-icon" />
-                <text>LinkedIn</text>
-                <br />
-                <text>Recommendations</text>
+            <div
+                onClick={openLinkedInRecommendations}
+                className="folder-container"
+            >
+                <div className="folder-icon" />
+                <div className="folder-name">
+                    <text>LinkedIn</text>
+                    <br />
+                    <text>Recommendations</text>
+                </div>
             </div>
-            <div>
+            <div className="folder-container">
                 <Button
                     buttonName={"Linked In"}
                     imageName={linkedinDarkMode}
@@ -91,7 +96,7 @@ function InteractiveResumePage() {
                     isSocialMediaLink={true}
                 />
             </div>
-            <div>
+            <div className="folder-container">
                 <Button
                     buttonName={"GitHub"}
                     imageName={githubDarkMode}

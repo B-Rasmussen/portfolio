@@ -1,31 +1,12 @@
-body {
-    border-top: 20px solid var(--windows-beige);
-    border-left: 20px solid var(--windows-beige);
-    border-right: 20px solid var(--windows-beige);
-    border-bottom: 40px solid var(--windows-beige);
-    height: 100%;
-    /* border-radius: 20px; */
-    /* padding: 20px; */
-    /* background-color: var(--windows-beige); */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-}
-
-.windows-container {
-    height: 100%;
-}
-
-#computer-model {
-    position: fixed;
-    bottom: 0.1%;
-    left: 43%;
-    font-size: 24px;
-    color: #000; /* Black text */
-    font-family: "Courier New", Courier, monospace; /* Monospace font for authenticity */
+.folder-content {
+    display: flex;
+    flex-direction: row;
 }
 
 .text-file-container {
     cursor: pointer;
     left: 50%;
+    padding: 10px
 }
 
 .text-file-icon {
@@ -49,8 +30,8 @@ body {
 
 .line1 {
     position: absolute;
-    top: 35px;
-    left: 42px;
+    top: 15px;
+    left: 5px;
     width: 32px;
     height: 2px;
     background-color: #000;
@@ -58,8 +39,8 @@ body {
 
 .line2 {
     position: absolute;
-    top: 45px;
-    left: 42px;
+    top: 25px;
+    left: 5px;
     width: 37px;
     height: 2px;
     background-color: #000;
@@ -67,8 +48,8 @@ body {
 
 .line3 {
     position: absolute;
-    top: 55px;
-    left: 42px;
+    top: 35px;
+    left: 5px;
     width: 37px;
     height: 2px;
     background-color: #000;
@@ -76,18 +57,12 @@ body {
 
 .line4 {
     position: absolute;
-    top: 65px;
-    left: 42px;
+    top: 45px;
+    left: 5px;
     width: 37px;
     height: 2px;
     background-color: #000;
 }
-
-/* 
-.text-file-icon .lines + .lines {
-    margin-top: 5px;
-}
-*/
 
 .text-file-window {
     position: fixed;
@@ -96,9 +71,8 @@ body {
     transform: translate(-50%, -50%);
     background-color: black;
     border: 1px solid gray;
-    padding: 50px 200px;
-    z-index: 1000;
-    height: 40%;
+    padding: 3% 20px 20px 20px;
+    /* height: 20%; */
 }
 
 /* .text-file-content {
@@ -114,7 +88,7 @@ body {
     left: 1%;
 }
 
-.title-bar-text{
+.title-bar-text {
     position: fixed;
     top: 1%;
     left: 40%;
@@ -141,5 +115,4 @@ body {
 #close-icon {
     background-color: red;
     color: black;
-    
 }

@@ -1,0 +1,30 @@
+.grabbable-area {
+    position: fixed;
+    z-index: 1000;
+}
+
+.child-window-main-content {
+    overflow-y: scroll;
+    padding: 40px 20px;
+}
+.child-window-contents {
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    position: relative;
+    height: 500px;
+    width: 500px;
+}
+
+/* work history specific items */
+
+/* personal projects specific items */
+#image-content {
+    height: 250px;
+}
+
+
+/* linkedin recommedation specific items */
+#linkedin-recommendations-content {
+    padding: 50px 20px;
+}

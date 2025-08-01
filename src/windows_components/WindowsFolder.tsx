@@ -45,7 +45,8 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
 
     return (
         <Draggable
-            bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
+            // bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
+            bounds="parent"
             onStop={handleStop}
             position={parentPosition}
             nodeRef={nodeRef}
@@ -67,9 +68,15 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
                                         handleOpen(index);
                                     }}
                                     id="child-item"
+                                    className="text-file-container"
                                 >
-                                    <div className="text-file-icon" />
-                                    <text>{item.companyName}</text>
+                                    <div className="text-file-icon">
+                                        <div className="line1" />
+                                        <div className="line2" />
+                                        <div className="line3" />
+                                        <div className="line4" />
+                                    </div>
+                                    <text>{item.companyName}.txt</text>
                                     {isWindowOpen[index] && (
                                         <WorkTextFile
                                             index={index}
@@ -100,8 +107,14 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
                                         handleOpen(index);
                                     }}
                                     id="child-item"
+                                    className="text-file-container"
                                 >
-                                    <div className="text-file-icon" />
+                                    <div className="text-file-icon">
+                                        <div className="line1" />
+                                        <div className="line2" />
+                                        <div className="line3" />
+                                        <div className="line4" />
+                                    </div>
                                     <text>{item.projectName}</text>
                                     {isWindowOpen[index] && (
                                         <PersonalProjectTextFile
@@ -128,8 +141,14 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
                                         handleOpen(index);
                                     }}
                                     id="child-item"
+                                    className="text-file-container"
                                 >
-                                    <div className="text-file-icon" />
+                                    <div className="text-file-icon">
+                                        <div className="line1" />
+                                        <div className="line2" />
+                                        <div className="line3" />
+                                        <div className="line4" />
+                                    </div>
                                     <text>{item.person} review.txt</text>
                                     {isWindowOpen[index] && (
                                         <LinkedInRecommendationsTextFile

@@ -1,7 +1,8 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
-import "../style/workHistoryStyle.css";
+import "../style/textFileStyle.css"
+// import "../style/workHistoryStyle.css";
 
 type WorkTextFileProps = {
     index: number;
@@ -55,16 +56,14 @@ function WorkTextFile({
                 <div
                     className="text-file-window child-window-contents"
                     ref={nodeRef}
-                    // style={{ display: "flex", flexDirection: "column" }}
                 >
                     <div
                         className="grabbable-area"
-                        style={{ position: "fixed", zIndex: 1000 }}
                     >
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
                         <div className="title-bar-text">{companyName}.txt</div>
                     </div>
-                    <div style={{ overflowY: "scroll" }}>
+                    <div className="child-window-main-content">
                         <h2 className="company-name">{companyName}</h2>
                         {companyLogo && (
                             <img

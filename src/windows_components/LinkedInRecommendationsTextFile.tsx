@@ -50,11 +50,11 @@ function LinkedInRecommendationsTextFile({
                             {person}_review.txt
                         </div>
                     </div>
-                    <div style={{ overflowY: "scroll" }}>
-                        <div>{person}</div>
+                    <div className="child-window-main-content" id="linkedin-recommendations-content">
+                        <h3>Reviewed By: {person}</h3>
                         <div>
                             {bodyText.map((line: string, index: number) => (
-                                <div key={index}>{line}</div>
+                                <text key={index}>{line} </text>
                             ))}
                         </div>
                     </div>

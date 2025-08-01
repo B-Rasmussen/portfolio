@@ -60,19 +60,8 @@ function App() {
 
     return (
         <>
-            {currentScreen === "InteractiveResume"  ? (
-                <div
-                    style={{
-                        color: "White",
-                        backgroundColor: "green",
-                        padding: "5px",
-                        borderRadius: "50px",
-                        position: "absolute",
-                        bottom: "0.3%",
-                        left: "10%",
-                        zIndex: 1000,
-                    }}
-                >
+            {currentScreen === "InteractiveResume" ? (
+                <div id="static-resume-button">
                     <Button
                         buttonName={"In a rush? Static version here!"}
                         onButtonPressed={() => navigateTo("WorkHistory")}
