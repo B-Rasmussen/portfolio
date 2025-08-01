@@ -77,6 +77,7 @@ function WorkTextFile({
                             {startDate} - {endDate}
                         </div>
                         <div>
+                            Languages/Frameworks:&nbsp;
                             {langaugesUsed?.map(
                                 (item: string, index: number) => (
                                     <span key={index}>

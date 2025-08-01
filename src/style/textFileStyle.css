@@ -5,7 +5,7 @@
 
 .child-window-main-content {
     overflow-y: scroll;
-    padding: 40px 20px;
+    margin-top: 40px;
 }
 .child-window-contents {
     display: flex;
@@ -26,5 +26,5 @@
 
 /* linkedin recommedation specific items */
 #linkedin-recommendations-content {
-    padding: 50px 20px;
+    padding: 0px;
 }
