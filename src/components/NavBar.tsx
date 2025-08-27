@@ -3,9 +3,10 @@ import Button from "./Button";
 
 type NavBarProps = {
     navigateTo: (path: string) => void;
+    isMobileDevice: boolean;
 };
 
-function NavBar({ navigateTo }: NavBarProps) {
+function NavBar({ navigateTo, isMobileDevice }: NavBarProps) {
     return (
         <div className="internal-links-container">
             <Button
@@ -16,10 +17,12 @@ function NavBar({ navigateTo }: NavBarProps) {
                 buttonName={"Projects"}
                 onButtonPressed={() => navigateTo("Projects")}
             />
-            <Button
-                buttonName={"Interactive Resume (best viewed on desktop)"}
-                onButtonPressed={() => navigateTo("InteractiveResume")}
-            />
+            {isMobileDevice ? null : (
+                <Button
+                    buttonName={"Interactive Resume (best viewed on desktop)"}
+                    onButtonPressed={() => navigateTo("InteractiveResume")}
+                />
+            )}
         </div>
     );
 }
