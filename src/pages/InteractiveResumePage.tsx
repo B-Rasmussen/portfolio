@@ -1,14 +1,13 @@
 import { useState } from "react";
-import Button from "../components/Button";
 import WindowsFolder from "../windows_components/WindowsFolder";
 
+import InteractiveNavBar from "../windows_components/InteractiveNavBar";
 import workHistory from "../data/workHistory";
 import personalProjects from "../data/personalProjects";
 import linkedinRecommendations from "../data/linkedinRecommendations";
-
 import "../style/interactiveResumeStyle.css";
-import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
-import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
+
+// TODO: move useState logic to it's own file
 
 type NavBarProps = {
     navigateTo: (path: string) => void;
@@ -46,22 +45,9 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
     };
 
     return (
-        <div className="windows-container">
-            {/* <div className="text-file-container">
-                <div className="text-file-icon" />
-                <div className="line1" />
-                <div className="line2" />
-                <div className="line3" />
-                <div className="line4" />
-                <text>example.txt</text>
-            </div> */}
-            {/* <div className="clock">
-                {new Date().toLocaleTimeString([], {
-                    weekday: "short",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                })}
-            </div> */}
+        <div>
+            <InteractiveNavBar navigateTo={navigateTo} />
+
             <div id="welcome-info">
                 <div>Click the "text" icon to open folder</div>
                 <div>Click the folder name to move</div>
@@ -87,37 +73,6 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                     <text>Recommendations</text>
                 </div>
             </div>
-            <div className="folder-container">
-                <Button
-                    buttonName={"Linked In"}
-                    imageName={linkedinDarkMode}
-                    onButtonPressed={() => {
-                        window.open(
-                            "https://www.linkedin.com/in/brandonrasmussen91/",
-                            "_blank"
-                        );
-                    }}
-                    isSocialMediaLink={true}
-                />
-            </div>
-            <div className="folder-container">
-                <Button
-                    buttonName={"GitHub"}
-                    imageName={githubDarkMode}
-                    onButtonPressed={() => {
-                        window.open("https://github.com/B-Rasmussen", "_blank");
-                    }}
-                    isSocialMediaLink={true}
-                />
-            </div>
-            <div
-                onClick={() => navigateTo("WorkHistory")}
-                className="static-resume-container"
-            >
-                <div className="door-frame" />
-                <div className="door" />
-                {/* <text className="folder-name">Static version here </text> */}
-            </div>
 
             {isWorkHistoryFolderOpen && (
                 <WindowsFolder
@@ -142,8 +97,6 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                     data={linkedinRecommendations}
                 />
             )}
-
-            <div id="computer-model">🍎 Brandotosh</div>
         </div>
     );
 }
