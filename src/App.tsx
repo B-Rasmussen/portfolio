@@ -6,7 +6,6 @@ import InteractiveResumePage from "./pages/InteractiveResumePage";
 import NavBar from "./components/NavBar";
 import SocialMediaBar from "./components/SocialMediaBar";
 // import LanguagesList from "./components/LanguagesList";
-import Button from "./components/Button";
 
 function isMobileDevice() {
     const mobileKeywords = [
