@@ -10,7 +10,11 @@ import "../style/interactiveResumeStyle.css";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
-function InteractiveResumePage() {
+type NavBarProps = {
+    navigateTo: (path: string) => void;
+};
+
+function InteractiveResumePage({ navigateTo }: NavBarProps) {
     const [isWorkHistoryFolderOpen, setIsWorkHistoryFolderOpen] =
         useState(false);
     const [isProjectsFolderOpen, setIsProjectsFolderOpen] = useState(false);
@@ -105,6 +109,14 @@ function InteractiveResumePage() {
                     }}
                     isSocialMediaLink={true}
                 />
+            </div>
+            <div
+                onClick={() => navigateTo("WorkHistory")}
+                className="static-resume-container"
+            >
+                <div className="door-frame" />
+                <div className="door" />
+                {/* <text className="folder-name">Static version here </text> */}
             </div>
 
             {isWorkHistoryFolderOpen && (

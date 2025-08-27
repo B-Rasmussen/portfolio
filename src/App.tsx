@@ -44,7 +44,7 @@ function App() {
             case "Projects":
                 return <ProjectsPage />;
             case "InteractiveResume":
-                return <InteractiveResumePage />;
+                return <InteractiveResumePage navigateTo={navigateTo} />;
             default:
                 return <div>Oops something went wrong</div>;
         }
@@ -60,14 +60,7 @@ function App() {
 
     return (
         <>
-            {currentScreen === "InteractiveResume" ? (
-                <div id="static-resume-button">
-                    <Button
-                        buttonName={"In a rush? Static version here!"}
-                        onButtonPressed={() => navigateTo("WorkHistory")}
-                    />
-                </div>
-            ) : (
+            {currentScreen === "InteractiveResume" ? (null) : (
                 <div className="nav-bar-container">
                     <NavBar navigateTo={navigateTo} />
                     <SocialMediaBar />
