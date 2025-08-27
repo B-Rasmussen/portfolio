@@ -61,7 +61,7 @@ function App() {
         <>
             {currentScreen === "InteractiveResume" ? (null) : (
                 <div className="nav-bar-container">
-                    <NavBar navigateTo={navigateTo} isMobileDevice/>
+                    <NavBar navigateTo={navigateTo} isMobileDevice={isMobileDevice()} />
                     <SocialMediaBar />
                 </div>
             )}
