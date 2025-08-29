@@ -1,7 +1,7 @@
 import { useState } from "react";
 import WindowsFolder from "../windows_components/WindowsFolder";
-
 import InteractiveNavBar from "../windows_components/InteractiveNavBar";
+import WindowsFolderIcon from "../windows_components/WindowsFolderIcon";
 import workHistory from "../data/workHistory";
 import personalProjects from "../data/personalProjects";
 import linkedinRecommendations from "../data/linkedinRecommendations";
@@ -47,33 +47,24 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
     return (
         <div>
             <InteractiveNavBar navigateTo={navigateTo} />
-
             <div id="welcome-info">
                 <div>Click the "text" icon to open folder</div>
                 <div>Click the folder name to move</div>
                 <div>FYI: clicking anywhere but the minimize button</div>
                 <div>on the child files of each folder will close it</div>
             </div>
-            <div onClick={openWorkHistory} className="folder-container">
-                <div className="folder-icon" />
-                <text className="folder-name">Work History</text>
-            </div>
-            <div onClick={openPersonalProjects} className="folder-container">
-                <div className="folder-icon" />
-                <text className="folder-name">Personal Projects</text>
-            </div>
-            <div
+            <WindowsFolderIcon
+                onClick={openWorkHistory}
+                folderName="Work History"
+            />
+            <WindowsFolderIcon
+                onClick={openPersonalProjects}
+                folderName="Personal Projects"
+            />
+            <WindowsFolderIcon
                 onClick={openLinkedInRecommendations}
-                className="folder-container"
-            >
-                <div className="folder-icon" />
-                <div className="folder-name">
-                    <text>LinkedIn</text>
-                    <br />
-                    <text>Recommendations</text>
-                </div>
-            </div>
-
+                folderName="LinkedIn Recommendations"
+            />
             {isWorkHistoryFolderOpen && (
                 <WindowsFolder
                     closeFolder={closeWorkHistoryFolder}
@@ -81,7 +72,6 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                     data={workHistory}
                 />
             )}
-
             {isProjectsFolderOpen && (
                 <WindowsFolder
                     closeFolder={closePersonalProjectsFolder}
@@ -89,7 +79,6 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                     data={personalProjects}
                 />
             )}
-
             {isLinkedInRecommendationsOpen && (
                 <WindowsFolder
                     closeFolder={closeLinkedInRecommendations}
