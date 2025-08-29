@@ -11,6 +11,7 @@ type NavBarProps = {
 
 function InteractiveNavBar({ navigateTo }: NavBarProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const [currentTime, setCurrentTime] = useState(new Date());
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -19,31 +20,42 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const target = event.target as HTMLElement;
-            if (!target.closest(".socials") && !target.closest(".dropdown-menu")) {
+            if (
+                !target.closest(".socials") &&
+                !target.closest(".dropdown-menu")
+            ) {
                 setIsOpen(false);
             }
         };
-
         document.addEventListener("click", handleClickOutside);
         return () => {
             document.removeEventListener("click", handleClickOutside);
         };
     }, []);
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
         <div className="interactive-nav-bar">
-            {/* <div id="computer-model">🍎 Brandotosh</div> */}
             <div className="left-side">
                 <div>🍎 Brandotosh</div>
-                <div className="filler">File</div>
-                <div className="filler">View</div>
-                <div className="socials" onClick={toggleDropdown}>
+                <div className="left-side-item">File</div>
+                <div className="left-side-item">View</div>
+                <div
+                    className="left-side-item socials"
+                    onClick={toggleDropdown}
+                >
                     Socials
                 </div>
                 {isOpen && (
                     <div className="dropdown-menu">
                         <Button
-                            buttonName={"Linked In"}
                             imageName={linkedinDarkMode}
                             onButtonPressed={() => {
                                 window.open(
@@ -54,7 +66,6 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
                             isSocialMediaLink={true}
                         />
                         <Button
-                            buttonName={"GitHub"}
                             imageName={githubDarkMode}
                             onButtonPressed={() => {
                                 window.open(
@@ -66,16 +77,21 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
                         />
                     </div>
                 )}
-                <div onClick={() => navigateTo("WorkHistory")}>Static Page</div>
+                <div
+                    className="left-side-item static-page"
+                    onClick={() => navigateTo("WorkHistory")}
+                >
+                    Static Page
+                </div>
             </div>
             <div className="clock">
-                {new Date().toLocaleDateString([], {
+                {currentTime.toLocaleDateString([], {
                     weekday: "short",
                     month: "short",
                     day: "numeric",
                 })}
                 &nbsp;
-                {new Date().toLocaleTimeString([], {
+                {currentTime.toLocaleTimeString([], {
                     hour: "2-digit",
                     minute: "2-digit",
                 })}

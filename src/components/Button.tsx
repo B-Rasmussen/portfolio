@@ -1,7 +1,7 @@
 import "../style/navBarStyle.css";
 
 type customButtonProps = {
-    buttonName: string;
+    buttonName?: string;
     imageName?: string;
     onButtonPressed: any;
     isSocialMediaLink?: boolean;
@@ -17,7 +17,7 @@ const Button = ({
         return (
             <div onClick={onButtonPressed} className="social-media-button">
                 <img src={imageName} alt={buttonName} className="social-logos" />
-                <div>{buttonName}</div>
+                {buttonName ? <div>{buttonName}</div> : null}
             </div>
         );
     }

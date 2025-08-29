@@ -6,40 +6,65 @@
     border-top-right-radius: 5px;
     display: flex;
     align-items: center;
-    padding: 0 10px;
-    box-sizing: border-box; 
+    padding: 0px 10px;
+    box-sizing: border-box;
 }
 
 .left-side {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between items */
 }
 
 .dropdown-menu {
     position: absolute;
-    top: 4%; /* Below the nav bar */
-    left: 10%; /* Align with the left side padding */
-    background-color: grey;
-    border: 1px solid ;
+    top: 4.3%;
+    left: 10%;
+    background-color: rgba(256, 256, 256, 0.2);
+    /* border: 1px solid; */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
-    gap: 10px;;
+    gap: 13px;
+    padding: 5px 10px 0px 10px;
 }
 
-.filler {
-    /* margin-left: 20px;
-    margin-right: 20px; */
+.dropdown-menu::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 45%;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(256, 256, 256, 0.2);
+}
+
+.left-side-item {
+    padding-left: 10px;
+    padding-right: 10px;
     color: white;
     /* font-family: "Courier New", Courier, monospace; Monospace font for authenticity */
     /* font-size: 14px; */
 }
 
+.left-side-item:hover {
+    background-color: darkgrey;
+    border-radius: 5px;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.left-side-item.socials,
+.left-side-item.static-page {
+    cursor: pointer;
+}
+
 .clock {
     margin-left: auto;
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
     /* font-family: "Courier New", Courier, monospace; Monospace font for authenticity */
     /* font-size: 14px; */
 }
