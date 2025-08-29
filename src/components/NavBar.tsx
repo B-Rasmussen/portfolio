@@ -19,7 +19,7 @@ function NavBar({ navigateTo, isMobileDevice }: NavBarProps) {
             />
             {isMobileDevice ? null : (
                 <Button
-                    buttonName={"Interactive Resume (best viewed on desktop)"}
+                    buttonName={"Interactive Resume"}
                     onButtonPressed={() => navigateTo("InteractiveResume")}
                 />
             )}
