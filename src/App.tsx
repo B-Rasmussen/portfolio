@@ -58,7 +58,7 @@ function App() {
     }, []);
 
     return (
-        <>
+        <div id={currentScreen === "InteractiveResume" ? "interactive-resume" : "static-resume"}>
             {currentScreen === "InteractiveResume" ? null : (
                 <div className="nav-bar-container">
                     <NavBar
@@ -69,7 +69,7 @@ function App() {
                 </div>
             )}
             {renderPage()}
-        </>
+        </div>
     );
 }
 
