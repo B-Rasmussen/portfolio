@@ -38,7 +38,7 @@ body {
     display: flex;
     /* place-items: center; */
     min-width: 320px;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh);
 }
 
 h1 {

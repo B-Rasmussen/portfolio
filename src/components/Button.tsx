@@ -5,6 +5,7 @@ type customButtonProps = {
     imageName?: string;
     onButtonPressed: any;
     isSocialMediaLink?: boolean;
+    isInteractiveNavBarButton?: boolean;
 };
 
 const Button = ({
@@ -12,10 +13,11 @@ const Button = ({
     imageName,
     onButtonPressed,
     isSocialMediaLink = false,
+    isInteractiveNavBarButton = false,
 }: customButtonProps) => {
     if (isSocialMediaLink) {
         return (
-            <div onClick={onButtonPressed} className="social-media-button">
+            <div onClick={onButtonPressed} className={isInteractiveNavBarButton ? "interactive-social-button" : "social-media-button"}>
                 <img src={imageName} alt={buttonName} className="social-logos" />
                 {buttonName ? <div>{buttonName}</div> : null}
             </div>

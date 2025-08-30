@@ -44,7 +44,7 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
     return (
         <div className="interactive-nav-bar">
             <div className="left-side">
-                <div>🍎 Brandotosh</div>
+                <div className="left-side-item">🍎 Brandotosh</div>
                 <div className="left-side-item">File</div>
                 <div className="left-side-item">View</div>
                 <div
@@ -64,6 +64,7 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
                                 );
                             }}
                             isSocialMediaLink={true}
+                            isInteractiveNavBarButton={true}
                         />
                         <Button
                             imageName={githubDarkMode}
@@ -74,6 +75,7 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
                                 );
                             }}
                             isSocialMediaLink={true}
+                            isInteractiveNavBarButton={true}
                         />
                     </div>
                 )}
