@@ -45,8 +45,9 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
     };
 
     return (
-        <div>
+        <div id="interactive-resume-page">
             <InteractiveNavBar navigateTo={navigateTo} />
+
             <div id="welcome-info">
                 <div>Click the "text" icon to open folder</div>
                 <div>Click the folder name to move</div>
@@ -65,27 +66,29 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                 onClick={openLinkedInRecommendations}
                 folderName="LinkedIn Recommendations"
             />
-            {isWorkHistoryFolderOpen && (
-                <WindowsFolder
-                    closeFolder={closeWorkHistoryFolder}
-                    folderTitle="Work History"
-                    data={workHistory}
-                />
-            )}
-            {isProjectsFolderOpen && (
-                <WindowsFolder
-                    closeFolder={closePersonalProjectsFolder}
-                    folderTitle="Personal Projects"
-                    data={personalProjects}
-                />
-            )}
-            {isLinkedInRecommendationsOpen && (
-                <WindowsFolder
-                    closeFolder={closeLinkedInRecommendations}
-                    folderTitle="LinkedIn Recommendations"
-                    data={linkedinRecommendations}
-                />
-            )}
+            <div id="desktop-draggable-area">
+                {isWorkHistoryFolderOpen && (
+                    <WindowsFolder
+                        closeFolder={closeWorkHistoryFolder}
+                        folderTitle="Work History"
+                        data={workHistory}
+                    />
+                )}
+                {isProjectsFolderOpen && (
+                    <WindowsFolder
+                        closeFolder={closePersonalProjectsFolder}
+                        folderTitle="Personal Projects"
+                        data={personalProjects}
+                    />
+                )}
+                {isLinkedInRecommendationsOpen && (
+                    <WindowsFolder
+                        closeFolder={closeLinkedInRecommendations}
+                        folderTitle="LinkedIn Recommendations"
+                        data={linkedinRecommendations}
+                    />
+                )}
+            </div>
         </div>
     );
 }

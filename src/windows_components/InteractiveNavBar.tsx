@@ -42,7 +42,7 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
     }, []);
 
     return (
-        <div className="interactive-nav-bar">
+        <div id="interactive-nav-bar">
             <div className="left-side">
                 <div className="left-side-item">🍎 Brandotosh</div>
                 <div className="left-side-item">File</div>
@@ -87,11 +87,15 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
                 </div>
             </div>
             <div className="clock">
-                {currentTime.toLocaleDateString([], {
-                    weekday: "short",
-                    month: "short",
-                    day: "numeric",
-                })}
+                {currentTime
+                    .toLocaleDateString([], {
+                        weekday: "short",
+                        month: "short",
+                        day: "numeric",
+                    })
+                    // possibly remove?
+                    .split(",")
+                    .join("")}
                 &nbsp;
                 {currentTime.toLocaleTimeString([], {
                     hour: "2-digit",

@@ -3,3 +3,17 @@
     left: 40%;
     top: 40%;
 }
+
+#interactive-resume-page {
+    /* width: 100%; */
+    /* top: 30px; */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#desktop-draggable-area {
+    padding-top: 30px;
+    top: calc(100vh - 30px);
+    height: 100vh;
+}
