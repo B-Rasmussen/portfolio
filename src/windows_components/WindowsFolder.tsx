@@ -1,32 +1,21 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
-import WorkTextFile from "./WorkTextFile";
-import PersonalProjectTextFile from "./PersonalProjectsTextFile";
-import LinkedInRecommendationsTextFile from "./LinkedInRecommendationsTextFile";
-import "../style/windowsFolderStyle.css"
-
-// TODO: prevent child from being dragged when parent is dragged
+import "../style/windowsFolderStyle.css";
 
 type WindowsFolderProps = {
     closeFolder: () => void;
+    handleOpen: (index: number) => void;
     folderTitle: string;
     data: any[];
 };
 
-function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
-    const [isWindowOpen, setIsWindowOpen] = useState(
-        Array(data.length).fill(false)
-    );
-
-    const handleOpen = (index: number) => {
-        setIsWindowOpen((prev) => {
-            const newState = [...prev];
-            newState[index] = !newState[index];
-            return newState;
-        });
-    };
-
+function WindowsFolder({
+    closeFolder,
+    handleOpen,
+    folderTitle,
+    data,
+}: WindowsFolderProps) {
     const nodeRef = useRef(null);
     const [parentPosition, setParentPosition] = useState({
         x: 0,
@@ -45,7 +34,6 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
 
     return (
         <Draggable
-            // bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
             bounds="parent"
             onStop={handleStop}
             position={parentPosition}
@@ -77,24 +65,6 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
                                         <div className="line4" />
                                     </div>
                                     <text>{item.companyName}.txt</text>
-                                    {isWindowOpen[index] && (
-                                        <WorkTextFile
-                                            index={index}
-                                            closeWindow={() =>
-                                                handleOpen(index)
-                                            }
-                                            companyName={item.companyName}
-                                            companyLogo={item.companyLogo}
-                                            companyLogoAlt={
-                                                item.companyLogoAlt
-                                            }
-                                            location={item.location}
-                                            startDate={item.startDate}
-                                            endDate={item.endDate}
-                                            langaugesUsed={item.languagesUsed}
-                                            bulletPoints={item.bulletPoints}
-                                        />
-                                    )}
                                 </div>
                             ))
                             : null}
@@ -116,19 +86,6 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
                                         <div className="line4" />
                                     </div>
                                     <text>{item.projectName}</text>
-                                    {isWindowOpen[index] && (
-                                        <PersonalProjectTextFile
-                                            index={index}
-                                            closeWindow={() =>
-                                                handleOpen(index)
-                                            }
-                                            projectName={item.projectName}
-                                            technologies={item.technologies}
-                                            description={item.description}
-                                            image={item.image}
-                                            imageAlt={item.imageAlt}
-                                        />
-                                    )}
                                 </div>
                             ))
                             : null}
@@ -150,16 +107,6 @@ function WindowsFolder({ closeFolder, folderTitle, data }: WindowsFolderProps) {
                                         <div className="line4" />
                                     </div>
                                     <text>{item.person} review.txt</text>
-                                    {isWindowOpen[index] && (
-                                        <LinkedInRecommendationsTextFile
-                                            index={index}
-                                            closeWindow={() =>
-                                                handleOpen(index)
-                                            }
-                                            person={item.person}
-                                            bodyText={item.bodyText}
-                                        />
-                                    )}
                                 </div>
                             ))
                             : null}

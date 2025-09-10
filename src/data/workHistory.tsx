@@ -5,7 +5,7 @@ type workHistory = {
     companyLogoAlt?: string;
     positionTitle: string;
     startDate: string;
-    endDate?: string;
+    endDate: string;
     location: string;
     languagesUsed: Array<string>;
     bulletPoints: Array<string>;

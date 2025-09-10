@@ -46,7 +46,7 @@ function WorkTextFile({
     };
     return (
         <Draggable
-            bounds={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
+            bounds="parent"
             onStop={handleStop}
             position={childPosition}
             nodeRef={nodeRef}
