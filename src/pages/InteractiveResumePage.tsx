@@ -1,19 +1,13 @@
-import { useState } from "react";
 import WindowsFolder from "../windows_components/WindowsFolder";
 import InteractiveNavBar from "../windows_components/InteractiveNavBar";
 import WindowsFolderIcon from "../windows_components/WindowsFolderIcon";
-
-// DATA
-import workHistory from "../data/workHistory";
-import personalProjects from "../data/personalProjects";
-import linkedinRecommendations from "../data/linkedinRecommendations";
-
 // TEXT FILES
 import WorkTextFile from "../windows_components/WorkTextFile";
 import PersonalProjectTextFile from "../windows_components/PersonalProjectsTextFile";
 import LinkedInRecommendationsTextFile from "../windows_components/LinkedInRecommendationsTextFile";
-
+// HOOKS
 import { useOpenAndCloseFolder } from "../windows_hooks/OpenAndCloseFolder";
+import { handleChildWindow } from "../windows_hooks/handleChildWindow";
 
 import "../style/interactiveResumeStyle.css";
 
@@ -34,39 +28,17 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
         closeLinkedInRecommendations,
     } = useOpenAndCloseFolder();
 
-    const [isJobWindowOpen, setIsJobWindowOpen] = useState(
-        Array(workHistory.length).fill(false)
-    );
-
-    const [isPersonalProjectWindowOpen, setIsPersonalProjectWindowOpen] =
-        useState(Array(personalProjects.length).fill(false));
-
-    const [isLinkedInRecommendationOpen, setIsLinkedInRecommendationOpen] =
-        useState(Array(linkedinRecommendations.length).fill(false));
-
-    const handleWorkHistoryOpen = (index: number) => {
-        setIsJobWindowOpen((prev) => {
-            const newState = [...prev];
-            newState[index] = !newState[index];
-            return newState;
-        });
-    };
-
-    const handleProjectsOpen = (index: number) => {
-        setIsPersonalProjectWindowOpen((prev) => {
-            const newState = [...prev];
-            newState[index] = !newState[index];
-            return newState;
-        });
-    };
-
-    const handleRecommendationsOpen = (index: number) => {
-        setIsLinkedInRecommendationOpen((prev) => {
-            const newState = [...prev];
-            newState[index] = !newState[index];
-            return newState;
-        });
-    };
+    const {
+        workHistory,
+        personalProjects,
+        linkedinRecommendations,
+        isJobWindowOpen,
+        isPersonalProjectWindowOpen,
+        isLinkedInRecommendationOpen,
+        handleWorkHistoryOpen,
+        handleProjectsOpen,
+        handleRecommendationsOpen,
+    } = handleChildWindow();
 
     return (
         <div id="interactive-resume-page">
