@@ -1,17 +1,17 @@
 import "../style/windowsFolderIconStyle.css";
 
-type WindowsFolderIconProps = {
+type FolderIconProps = {
     onClick: () => void;
     folderName: string;
 };
 
-function WindowsFolderIcon({ onClick, folderName }: WindowsFolderIconProps) {
+function FolderIcon({ onClick, folderName }: FolderIconProps) {
     return (
-        <div onClick={onClick} className="folder-container">
+        <div onDoubleClick={onClick} className="folder-container">
             <div className="folder-icon" />
             <text className="folder-name">{folderName}</text>
         </div>
     );
 }
 
-export default WindowsFolderIcon;
+export default FolderIcon;

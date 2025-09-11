@@ -32,7 +32,7 @@ const workHistory: workHistory[] = [
             "Shell Scripting",
         ],
         bulletPoints: [
-            // SE
+            // SWE
             "Created Top 250 Multiplayer and Warzone Leaderboards for Call of Duty (CoD): Modern Warfare 3, allowing users to see the best players in the world and highlighting pro players from the Call of Duty Esport scene.",
             "Created Zombie Leaderboard for CoD: Modern Warfare 3, which allowed users to compare their progress against friends and the others in the CoD Community.",
             "Collaborated with team to bring stats and leaderboards screens to Call of Duty series allowing users to compare themselves to friends, favorite streamers, and top players in the community, increasing user engagement when comparing stats to others.",

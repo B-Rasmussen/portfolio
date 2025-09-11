@@ -3,7 +3,7 @@ import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/windowsFolderStyle.css";
 
-type WindowsFolderProps = {
+type FolderContainerProps = {
     handleOpen: (index: number) => void;
     closeFolder: () => void;
     positionOffset: { x: number; y: number };
@@ -11,13 +11,13 @@ type WindowsFolderProps = {
     data: any[];
 };
 
-function WindowsFolder({
+function FolderContainer({
     handleOpen,
     closeFolder,
     positionOffset,
     folderTitle,
     data,
-}: WindowsFolderProps) {
+}: FolderContainerProps) {
     const nodeRef = useRef(null);
     const [parentPosition, setParentPosition] = useState({
         x: 100,
@@ -118,4 +118,4 @@ function WindowsFolder({
     );
 }
 
-export default WindowsFolder;
+export default FolderContainer;

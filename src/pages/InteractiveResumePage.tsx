@@ -1,6 +1,6 @@
-import WindowsFolder from "../windows_components/WindowsFolder";
+import FolderContainer from "../windows_components/FolderContainer";
 import InteractiveNavBar from "../windows_components/InteractiveNavBar";
-import WindowsFolderIcon from "../windows_components/WindowsFolderIcon";
+import FolderIcon from "../windows_components/FolderIcon";
 // TEXT FILES
 import WorkTextFile from "../windows_components/WorkTextFile";
 import PersonalProjectTextFile from "../windows_components/PersonalProjectsTextFile";
@@ -43,21 +43,21 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
     return (
         <div id="interactive-resume-page">
             <InteractiveNavBar navigateTo={navigateTo} />
-            <WindowsFolderIcon
+            <FolderIcon
                 onClick={openWorkHistory}
                 folderName="Work History"
             />
-            <WindowsFolderIcon
+            <FolderIcon
                 onClick={openPersonalProjects}
                 folderName="Personal Projects"
             />
-            <WindowsFolderIcon
+            <FolderIcon
                 onClick={openLinkedInRecommendations}
                 folderName="LinkedIn Recommendations"
             />
             <div id="desktop-draggable-area">
                 {isWorkHistoryFolderOpen && (
-                    <WindowsFolder
+                    <FolderContainer
                         handleOpen={handleWorkHistoryOpen}
                         closeFolder={closeWorkHistoryFolder}
                         positionOffset={{ x: 0, y: 0 }}
@@ -66,7 +66,7 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                     />
                 )}
                 {isProjectsFolderOpen && (
-                    <WindowsFolder
+                    <FolderContainer
                         handleOpen={handleProjectsOpen}
                         closeFolder={closePersonalProjectsFolder}
                         positionOffset={{ x: 30, y: 30 }}
@@ -75,7 +75,7 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                     />
                 )}
                 {isLinkedInRecommendationsOpen && (
-                    <WindowsFolder
+                    <FolderContainer
                         handleOpen={handleRecommendationsOpen}
                         closeFolder={closeLinkedInRecommendations}
                         positionOffset={{ x: 60, y: 60 }}
