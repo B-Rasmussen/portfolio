@@ -1,11 +1,12 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
-import "../style/textFileStyle.css"
+import "../style/textFileStyle.css";
 // import "../style/workHistoryStyle.css";
 
 type PersonalProjectTextFileProps = {
     index: number;
+    positionOffset: { x: number; y: number };
     closeWindow: (index: number) => void;
     projectName: string;
     technologies: string[];
@@ -16,6 +17,7 @@ type PersonalProjectTextFileProps = {
 
 function PersonalProjectTextFile({
     index,
+    positionOffset,
     closeWindow,
     projectName,
     technologies,
@@ -25,8 +27,8 @@ function PersonalProjectTextFile({
 }: PersonalProjectTextFileProps) {
     const nodeRef = useRef(null);
     const [childPosition, setChildPosition] = useState({
-        x: 0 as number,
-        y: 0 as number,
+        x: -600,
+        y: -400,
     });
 
     const handleStop = (
@@ -42,7 +44,10 @@ function PersonalProjectTextFile({
         <Draggable
             bounds="parent"
             onStop={handleStop}
-            position={childPosition}
+            defaultPosition={{
+                x: childPosition.x + positionOffset.x,
+                y: childPosition.y + positionOffset.y,
+            }}
             nodeRef={nodeRef}
             handle=".grabbable-area"
         >

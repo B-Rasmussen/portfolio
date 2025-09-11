@@ -70,10 +70,6 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
         });
     };
 
-    console.log("work array", isJobWindowOpen);
-    console.log("project array", isPersonalProjectWindowOpen);
-    console.log("recommendation array", isLinkedInRecommendationOpen);
-
     return (
         <div id="interactive-resume-page">
             <InteractiveNavBar navigateTo={navigateTo} />
@@ -92,33 +88,38 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
             <div id="desktop-draggable-area">
                 {isWorkHistoryFolderOpen && (
                     <WindowsFolder
-                        closeFolder={closeWorkHistoryFolder}
                         handleOpen={handleWorkHistoryOpen}
+                        closeFolder={closeWorkHistoryFolder}
+                        positionOffset={{ x: 0, y: 0 }}
                         folderTitle="Work History"
                         data={workHistory}
                     />
                 )}
                 {isProjectsFolderOpen && (
                     <WindowsFolder
-                        closeFolder={closePersonalProjectsFolder}
                         handleOpen={handleProjectsOpen}
+                        closeFolder={closePersonalProjectsFolder}
+                        positionOffset={{ x: 30, y: 30 }}
                         folderTitle="Personal Projects"
                         data={personalProjects}
                     />
                 )}
                 {isLinkedInRecommendationsOpen && (
                     <WindowsFolder
-                        closeFolder={closeLinkedInRecommendations}
                         handleOpen={handleRecommendationsOpen}
+                        closeFolder={closeLinkedInRecommendations}
+                        positionOffset={{ x: 60, y: 60 }}
                         folderTitle="LinkedIn Recommendations"
                         data={linkedinRecommendations}
                     />
                 )}
+                
                 {isJobWindowOpen.map((isOpen, index) =>
                     isOpen
                         ? isJobWindowOpen[index] && (
                             <WorkTextFile
                                 key={index}
+                                positionOffset={{ x: 0, y: 40 * index}}
                                 index={index}
                                 closeWindow={() =>
                                     handleWorkHistoryOpen(index)
@@ -145,6 +146,7 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                             <PersonalProjectTextFile
                                 key={index}
                                 index={index}
+                                positionOffset={{ x: 0, y: 40 * index}}
                                 closeWindow={() => handleProjectsOpen(index)}
                                 projectName={
                                     personalProjects[index].projectName
@@ -167,6 +169,7 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                             <LinkedInRecommendationsTextFile
                                 key={index}
                                 index={index}
+                                positionOffset={{ x: 0, y: 40 * index}}
                                 closeWindow={() =>
                                     handleRecommendationsOpen(index)
                                 }

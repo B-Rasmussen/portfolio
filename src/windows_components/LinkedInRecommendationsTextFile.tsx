@@ -1,10 +1,11 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
-import "../style/workHistoryStyle.css";
+// import "../style/workHistoryStyle.css";
 
 type LinkedInRecommendationsTextFileProps = {
     index: number;
+    positionOffset: { x: number; y: number };
     closeWindow: (index: number) => void;
     person: string;
     bodyText: string[];
@@ -12,14 +13,15 @@ type LinkedInRecommendationsTextFileProps = {
 
 function LinkedInRecommendationsTextFile({
     index,
+    positionOffset,
     closeWindow,
     person,
     bodyText,
 }: LinkedInRecommendationsTextFileProps) {
     const nodeRef = useRef(null);
     const [childPosition, setChildPosition] = useState({
-        x: 0 as number,
-        y: 0 as number,
+        x: -300,
+        y: -400,
     });
 
     const handleStop = (
@@ -35,7 +37,10 @@ function LinkedInRecommendationsTextFile({
         <Draggable
             bounds="parent"
             onStop={handleStop}
-            position={childPosition}
+            defaultPosition={{
+                x: childPosition.x + positionOffset.x,
+                y: childPosition.y + positionOffset.y,
+            }}
             nodeRef={nodeRef}
             handle=".grabbable-area"
         >
@@ -50,7 +55,10 @@ function LinkedInRecommendationsTextFile({
                             {person}_review.txt
                         </div>
                     </div>
-                    <div className="child-window-main-content" id="linkedin-recommendations-content">
+                    <div
+                        className="child-window-main-content"
+                        id="linkedin-recommendations-content"
+                    >
                         <h3>Reviewed By: {person}</h3>
                         <div>
                             {bodyText.map((line: string, index: number) => (

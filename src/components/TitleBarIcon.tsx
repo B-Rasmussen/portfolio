@@ -10,8 +10,6 @@ const TitleBarIcon = ({ closeWindow, index }: TitleBarIconProps) => {
         <div
             className="title-bar-button"
             onClick={() => {
-                console.log('close window clicked');
-                console.log('index:', index);
                 closeWindow(index == undefined ? 0 : index);
             }}
         >

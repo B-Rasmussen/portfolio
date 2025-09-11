@@ -4,22 +4,24 @@ import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/windowsFolderStyle.css";
 
 type WindowsFolderProps = {
-    closeFolder: () => void;
     handleOpen: (index: number) => void;
+    closeFolder: () => void;
+    positionOffset: { x: number; y: number };
     folderTitle: string;
     data: any[];
 };
 
 function WindowsFolder({
-    closeFolder,
     handleOpen,
+    closeFolder,
+    positionOffset,
     folderTitle,
     data,
 }: WindowsFolderProps) {
     const nodeRef = useRef(null);
     const [parentPosition, setParentPosition] = useState({
-        x: 0,
-        y: 0,
+        x: 100,
+        y: -450,
     });
 
     const handleStop = (
@@ -36,10 +38,12 @@ function WindowsFolder({
         <Draggable
             bounds="parent"
             onStop={handleStop}
-            position={parentPosition}
+            defaultPosition={{
+                x: parentPosition.x + positionOffset.x,
+                y: parentPosition.y + positionOffset.y,
+            }}
             nodeRef={nodeRef}
             handle=".grabbable-area"
-            cancel="#child-item"
         >
             {
                 <div className="text-file-window" ref={nodeRef}>
@@ -55,7 +59,6 @@ function WindowsFolder({
                                     onClick={() => {
                                         handleOpen(index);
                                     }}
-                                    id="child-item"
                                     className="text-file-container"
                                 >
                                     <div className="text-file-icon">
@@ -76,7 +79,6 @@ function WindowsFolder({
                                     onClick={() => {
                                         handleOpen(index);
                                     }}
-                                    id="child-item"
                                     className="text-file-container"
                                 >
                                     <div className="text-file-icon">
@@ -97,7 +99,6 @@ function WindowsFolder({
                                     onClick={() => {
                                         handleOpen(index);
                                     }}
-                                    id="child-item"
                                     className="text-file-container"
                                 >
                                     <div className="text-file-icon">

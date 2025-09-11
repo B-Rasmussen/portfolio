@@ -6,6 +6,7 @@ import "../style/textFileStyle.css"
 
 type WorkTextFileProps = {
     index: number;
+    positionOffset: { x: number; y: number };
     closeWindow: (index: number) => void;
     companyName: string;
     companyLogo?: string;
@@ -19,6 +20,7 @@ type WorkTextFileProps = {
 
 function WorkTextFile({
     index,
+    positionOffset,
     closeWindow,
     companyName,
     companyLogo,
@@ -31,8 +33,8 @@ function WorkTextFile({
 }: WorkTextFileProps) {
     const nodeRef = useRef(null);
     const [childPosition, setChildPosition] = useState({
-        x: 0 as number,
-        y: 0 as number,
+        x: -900,
+        y: -400,
     });
 
     const handleStop = (
@@ -48,7 +50,10 @@ function WorkTextFile({
         <Draggable
             bounds="parent"
             onStop={handleStop}
-            position={childPosition}
+            defaultPosition={{
+                x: childPosition.x + positionOffset.x,
+                y: childPosition.y + positionOffset.y,
+            }}
             nodeRef={nodeRef}
             handle=".grabbable-area"
         >
