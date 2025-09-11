@@ -1,7 +1,7 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
-import "../style/textFileStyle.css"
+import "../style/textFileStyle.css";
 // import "../style/workHistoryStyle.css";
 
 type WorkTextFileProps = {
@@ -9,6 +9,7 @@ type WorkTextFileProps = {
     positionOffset: { x: number; y: number };
     closeWindow: (index: number) => void;
     companyName: string;
+    positionTitle: string;
     companyLogo?: string;
     companyLogoAlt?: string;
     location: string;
@@ -23,6 +24,7 @@ function WorkTextFile({
     positionOffset,
     closeWindow,
     companyName,
+    positionTitle,
     companyLogo,
     companyLogoAlt,
     location,
@@ -62,21 +64,23 @@ function WorkTextFile({
                     className="text-file-window child-window-contents"
                     ref={nodeRef}
                 >
-                    <div
-                        className="grabbable-area"
-                    >
+                    <div className="grabbable-area">
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
                         <div className="title-bar-text">{companyName}.txt</div>
                     </div>
                     <div className="child-window-main-content">
-                        <h2 className="company-name">{companyName}</h2>
-                        {companyLogo && (
-                            <img
-                                src={companyLogo}
-                                alt={`${companyLogoAlt}`}
-                                className="company-logo"
-                            />
-                        )}
+                        <div id="company-header">
+                            <h2 className="company-name">{companyName}</h2>
+                            {companyLogo && (
+                                <img
+                                    src={companyLogo}
+                                    alt={`${companyLogoAlt}`}
+                                    className="company-logo"
+                                    style={{ width: "25px", height: "auto" }}
+                                />
+                            )}
+                        </div>
+                        <h4 className="position-title">{positionTitle}</h4>
                         <div>{location}</div>
                         <div>
                             {startDate} - {endDate}

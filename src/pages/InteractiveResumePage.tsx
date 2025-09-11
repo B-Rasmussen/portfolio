@@ -17,8 +17,6 @@ import { useOpenAndCloseFolder } from "../windows_hooks/OpenAndCloseFolder";
 
 import "../style/interactiveResumeStyle.css";
 
-// TODO: move useState logic to it's own file
-
 type NavBarProps = {
     navigateTo: (path: string) => void;
 };
@@ -125,6 +123,7 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
                                     handleWorkHistoryOpen(index)
                                 }
                                 companyName={workHistory[index].companyName}
+                                positionTitle={workHistory[index].positionTitle}
                                 companyLogo={workHistory[index].companyLogo}
                                 companyLogoAlt={
                                     workHistory[index].companyLogoAlt

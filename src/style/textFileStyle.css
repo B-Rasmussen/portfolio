@@ -18,6 +18,24 @@
 }
 
 /* work history specific items */
+.company-name {
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#company-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.position-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 0px 0px 15px 0px;
+}
 
 /* personal projects specific items */
 #image-content {
