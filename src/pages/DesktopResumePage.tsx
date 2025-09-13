@@ -6,7 +6,7 @@ import WorkTextFile from "../desktop_components/WorkTextFile";
 import PersonalProjectTextFile from "../desktop_components/PersonalProjectsTextFile";
 import LinkedInRecommendationsTextFile from "../desktop_components/LinkedInRecommendationsTextFile";
 // HOOKS
-import { useOpenAndCloseFolder } from "../desktop_hooks/OpenAndCloseFolder";
+import { handleOpenAndCloseFolder } from "../desktop_hooks/OpenAndCloseFolder";
 import { handleChildWindow } from "../desktop_hooks/handleChildWindow";
 
 import "../style/interactiveResumeStyle.css";
@@ -26,7 +26,7 @@ function DesktopResumePage({ navigateTo }: NavBarProps) {
         closePersonalProjectsFolder,
         openLinkedInRecommendations,
         closeLinkedInRecommendations,
-    } = useOpenAndCloseFolder();
+    } = handleOpenAndCloseFolder();
 
     const {
         workHistory,

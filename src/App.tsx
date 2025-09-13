@@ -8,7 +8,7 @@ import DesktopResumePage from "./pages/DesktopResumePage";
 import MobileResumePage from "./pages/MobileResumePage";
 
 // NAVBAR COMPONENTS
-import NavBar from "./components/StaticNavBar";
+import StaticNavBar from "./components/StaticNavBar";
 import SocialMediaBar from "./components/SocialMediaBar";
 // import LanguagesList from "./components/LanguagesList";
 
@@ -34,7 +34,7 @@ function isMobileDevice() {
 }
 
 function App() {
-    const [currentScreen, setCurrentScreen] = useState("");
+    const [currentScreen, setCurrentScreen] = useState("WorkHistory");
     // const [isDarkMode, setIsDarkMode] = useState(false);
 
     const navigateTo = (screenName: SetStateAction<string>) => {
@@ -59,10 +59,9 @@ function App() {
         if (isMobileDevice()) {
             setCurrentScreen("MobileResume");
         } else {
-            setCurrentScreen("InteractiveResume");
+            setCurrentScreen("DesktopResume");
         }
     }, []);
-
     return (
         <div
             id={
@@ -76,7 +75,7 @@ function App() {
             {currentScreen === "DesktopResume" ||
             currentScreen === "MobileResume" ? null : (
                 <div className="nav-bar-container">
-                    <NavBar
+                    <StaticNavBar
                         navigateTo={navigateTo}
                         isMobileDevice={isMobileDevice()}
                     />

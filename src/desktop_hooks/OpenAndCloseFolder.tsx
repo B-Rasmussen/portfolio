@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function useOpenAndCloseFolder() {
+export function handleOpenAndCloseFolder() {
     const [isWorkHistoryFolderOpen, setIsWorkHistoryFolderOpen] =
         useState(false);
     const [isProjectsFolderOpen, setIsProjectsFolderOpen] = useState(false);
