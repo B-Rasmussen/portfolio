@@ -40,7 +40,6 @@ function App() {
     const navigateTo = (screenName: SetStateAction<string>) => {
         setCurrentScreen(screenName);
     };
-console.log('cs: ', currentScreen)
     const renderPage = () => {
         switch (currentScreen) {
             case "WorkHistory":
