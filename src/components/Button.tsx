@@ -1,12 +1,12 @@
 import "../style/staticNavBarStyle.css";
-import "../style/interactiveNavBarStyle.css"
+import "../style/desktopNavBarStyle.css"
 
 type customButtonProps = {
     buttonName?: string;
     imageName?: string;
     onButtonPressed: any;
     isSocialMediaLink?: boolean;
-    isInteractiveNavBarButton?: boolean;
+    isDesktopNavBarButton?: boolean;
 };
 
 const Button = ({
@@ -14,14 +14,14 @@ const Button = ({
     imageName,
     onButtonPressed,
     isSocialMediaLink = false,
-    isInteractiveNavBarButton = false,
+    isDesktopNavBarButton = false,
 }: customButtonProps) => {
     if (isSocialMediaLink) {
         return (
             <div
                 onClick={onButtonPressed}
                 className={
-                    isInteractiveNavBarButton
+                    isDesktopNavBarButton
                         ? "interactive-social-button"
                         : "social-media-button"
                 }
@@ -30,7 +30,7 @@ const Button = ({
                     src={imageName}
                     alt={buttonName}
                     id={
-                        isInteractiveNavBarButton
+                        isDesktopNavBarButton
                             ? "interactive-social-logos"
                             : "social-logos"
                     }

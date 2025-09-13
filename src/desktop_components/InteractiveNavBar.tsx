@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import Button from "../components/Button";
 
-import "../style/interactiveNavBarStyle.css";
+import "../style/desktopNavBarStyle.css";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
-type NavBarProps = {
+type DesktopNavBarProps = {
     navigateTo: (path: string) => void;
 };
 
-function InteractiveNavBar({ navigateTo }: NavBarProps) {
+function DesktopNavBar({ navigateTo }: DesktopNavBarProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -64,7 +64,7 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
                                 );
                             }}
                             isSocialMediaLink={true}
-                            isInteractiveNavBarButton={true}
+                            isDesktopNavBarButton={true}
                         />
                         <Button
                             imageName={githubDarkMode}
@@ -75,7 +75,7 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
                                 );
                             }}
                             isSocialMediaLink={true}
-                            isInteractiveNavBarButton={true}
+                            isDesktopNavBarButton={true}
                         />
                     </div>
                 )}
@@ -106,4 +106,4 @@ function InteractiveNavBar({ navigateTo }: NavBarProps) {
     );
 }
 
-export default InteractiveNavBar;
+export default DesktopNavBar;
