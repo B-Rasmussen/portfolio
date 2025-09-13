@@ -13,7 +13,17 @@
 
 #interactive-social-logos {
     height: 48px;
+}
 
+.interactive-social-button:not(:hover) {
+    filter: brightness(0.5) grayscale(50%);
+    transition: filter 0.3s ease;
+}
+
+.interactive-social-button:hover {
+    filter: none;
+    transition: filter 0.3s ease;
+    cursor: pointer;
 }
 
 .left-side {

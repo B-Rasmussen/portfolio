@@ -1,4 +1,4 @@
-import "../style/navBarStyle.css";
+import "../style/staticNavBarStyle.css";
 import Button from "./Button";
 import linkedinDarkMode from '../assets/socialImages/LinkedIn/linkedinDarkMode.png';
 import githubDarkMode from '../assets/socialImages/github/githubDarkMode.png';

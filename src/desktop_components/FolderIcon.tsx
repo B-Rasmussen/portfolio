@@ -1,4 +1,4 @@
-import "../style/windowsFolderIconStyle.css";
+import "../style/desktopFolderIconStyle.css";
 
 type FolderIconProps = {
     onClick: () => void;

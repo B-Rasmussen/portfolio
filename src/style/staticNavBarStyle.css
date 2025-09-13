@@ -4,13 +4,13 @@
     display: flex;
     top: 0;
     align-items: center;
-    gap: 10px;
     padding-left: 5px;
     padding-right: 5px;
     /* padding: 10px; */
     /* border-radius: 50px; */
-    box-shadow: 0px 1px 10px var(--emerald);
+    box-shadow: 0px 5px 10px rgba(50, 50, 255, 0.7);
     /* margin: 10px; */
+    cursor: pointer;
 }
 
 button {
@@ -21,7 +21,7 @@ button {
 
 .internal-links-container {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-right: auto;
 }
 
@@ -36,15 +36,4 @@ button {
 
 #social-logos {
     height: 35px;
-}
-
-.interactive-social-button:not(:hover) {
-    filter: brightness(0.5) grayscale(50%);
-    transition: filter 0.3s ease;
-}
-
-.interactive-social-button:hover {
-    filter: none;
-    transition: filter 0.3s ease;
-    cursor: pointer;
 }

@@ -1,12 +1,12 @@
-import "../style/navBarStyle.css";
+import "../style/staticNavBarStyle.css";
 import Button from "./Button";
 
-type NavBarProps = {
+type StaticNavBarProps = {
     navigateTo: (path: string) => void;
     isMobileDevice: boolean;
 };
 
-function NavBar({ navigateTo, isMobileDevice }: NavBarProps) {
+function StaticNavBar({ navigateTo, isMobileDevice }: StaticNavBarProps) {
     return (
         <div className="internal-links-container">
             <Button
@@ -19,12 +19,16 @@ function NavBar({ navigateTo, isMobileDevice }: NavBarProps) {
             />
             {isMobileDevice ? null : (
                 <Button
-                    buttonName={"Interactive Resume"}
-                    onButtonPressed={() => navigateTo("InteractiveResume")}
+                    buttonName={"Desktop Resume"}
+                    onButtonPressed={() => navigateTo("DesktopResume")}
                 />
             )}
+            <Button
+                buttonName={"mobile Resume"}
+                onButtonPressed={() => navigateTo("MobileResume")}
+            />
         </div>
     );
 }
 
-export default NavBar;
+export default StaticNavBar;

@@ -1,9 +1,14 @@
 import "./App.css";
 import { SetStateAction, useState, useEffect } from "react";
+
+// PAGES
 import WorkHistoryPage from "./pages/WorkHistoryPage";
 import ProjectsPage from "./pages/ProjectsPage";
-import InteractiveResumePage from "./pages/InteractiveResumePage";
-import NavBar from "./components/NavBar";
+import DesktopResumePage from "./pages/DesktopResumePage";
+import MobileResumePage from "./pages/MobileResumePage";
+
+// NAVBAR COMPONENTS
+import NavBar from "./components/StaticNavBar";
 import SocialMediaBar from "./components/SocialMediaBar";
 // import LanguagesList from "./components/LanguagesList";
 
@@ -35,15 +40,17 @@ function App() {
     const navigateTo = (screenName: SetStateAction<string>) => {
         setCurrentScreen(screenName);
     };
-
+console.log('cs: ', currentScreen)
     const renderPage = () => {
         switch (currentScreen) {
             case "WorkHistory":
                 return <WorkHistoryPage />;
             case "Projects":
                 return <ProjectsPage />;
-            case "InteractiveResume":
-                return <InteractiveResumePage navigateTo={navigateTo} />;
+            case "DesktopResume":
+                return <DesktopResumePage navigateTo={navigateTo} />;
+            case "MobileResume":
+                return <MobileResumePage navigateTo={navigateTo} />;
             default:
                 return <div>Oops something went wrong</div>;
         }
@@ -51,15 +58,24 @@ function App() {
 
     useEffect(() => {
         if (isMobileDevice()) {
-            setCurrentScreen("WorkHistory");
+            setCurrentScreen("MobileResume");
         } else {
             setCurrentScreen("InteractiveResume");
         }
     }, []);
 
     return (
-        <div id={currentScreen === "InteractiveResume" ? "interactive-resume" : "static-resume"}>
-            {currentScreen === "InteractiveResume" ? null : (
+        <div
+            id={
+                currentScreen === "DesktopResume"
+                    ? "interactive-resume"
+                    : currentScreen === "MobileResume"
+                        ? "mobile-resume"
+                        : "static-resume"
+            }
+        >
+            {currentScreen === "DesktopResume" ||
+            currentScreen === "MobileResume" ? null : (
                 <div className="nav-bar-container">
                     <NavBar
                         navigateTo={navigateTo}

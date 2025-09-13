@@ -1,13 +1,13 @@
-import FolderContainer from "../windows_components/FolderContainer";
-import InteractiveNavBar from "../windows_components/InteractiveNavBar";
-import FolderIcon from "../windows_components/FolderIcon";
+import FolderContainer from "../desktop_components/FolderContainer";
+import InteractiveNavBar from "../desktop_components/InteractiveNavBar";
+import FolderIcon from "../desktop_components/FolderIcon";
 // TEXT FILES
-import WorkTextFile from "../windows_components/WorkTextFile";
-import PersonalProjectTextFile from "../windows_components/PersonalProjectsTextFile";
-import LinkedInRecommendationsTextFile from "../windows_components/LinkedInRecommendationsTextFile";
+import WorkTextFile from "../desktop_components/WorkTextFile";
+import PersonalProjectTextFile from "../desktop_components/PersonalProjectsTextFile";
+import LinkedInRecommendationsTextFile from "../desktop_components/LinkedInRecommendationsTextFile";
 // HOOKS
-import { useOpenAndCloseFolder } from "../windows_hooks/OpenAndCloseFolder";
-import { handleChildWindow } from "../windows_hooks/handleChildWindow";
+import { useOpenAndCloseFolder } from "../desktop_hooks/OpenAndCloseFolder";
+import { handleChildWindow } from "../desktop_hooks/handleChildWindow";
 
 import "../style/interactiveResumeStyle.css";
 
@@ -15,7 +15,7 @@ type NavBarProps = {
     navigateTo: (path: string) => void;
 };
 
-function InteractiveResumePage({ navigateTo }: NavBarProps) {
+function DesktopResumePage({ navigateTo }: NavBarProps) {
     const {
         isWorkHistoryFolderOpen,
         isProjectsFolderOpen,
@@ -156,4 +156,4 @@ function InteractiveResumePage({ navigateTo }: NavBarProps) {
         </div>
     );
 }
-export default InteractiveResumePage;
+export default DesktopResumePage;

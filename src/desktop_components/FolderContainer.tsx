@@ -1,7 +1,7 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
-import "../style/windowsFolderStyle.css";
+import "../style/desktopFolderStyle.css";
 
 type FolderContainerProps = {
     handleOpen: (index: number) => void;

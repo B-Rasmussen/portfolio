@@ -1,4 +1,4 @@
-import "../style/navBarStyle.css";
+import "../style/staticNavBarStyle.css";
 import "../style/interactiveNavBarStyle.css"
 
 type customButtonProps = {
