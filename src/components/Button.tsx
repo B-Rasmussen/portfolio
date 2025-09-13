@@ -1,4 +1,5 @@
 import "../style/navBarStyle.css";
+import "../style/interactiveNavBarStyle.css"
 
 type customButtonProps = {
     buttonName?: string;
@@ -17,8 +18,23 @@ const Button = ({
 }: customButtonProps) => {
     if (isSocialMediaLink) {
         return (
-            <div onClick={onButtonPressed} className={isInteractiveNavBarButton ? "interactive-social-button" : "social-media-button"}>
-                <img src={imageName} alt={buttonName} className="social-logos" />
+            <div
+                onClick={onButtonPressed}
+                className={
+                    isInteractiveNavBarButton
+                        ? "interactive-social-button"
+                        : "social-media-button"
+                }
+            >
+                <img
+                    src={imageName}
+                    alt={buttonName}
+                    id={
+                        isInteractiveNavBarButton
+                            ? "interactive-social-logos"
+                            : "social-logos"
+                    }
+                />
                 {buttonName ? <div>{buttonName}</div> : null}
             </div>
         );

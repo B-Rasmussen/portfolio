@@ -1,3 +1,26 @@
+/* ::-webkit-scrollbar {
+    width: 7px;
+    scrollbar-highlight-color: aqua;
+} */
+/* Track */
+/* ::-webkit-scrollbar-track {
+    background: blur(5px);
+    
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(200, 200, 200, 0.1);
+    backdrop-filter: blur(5px);
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: rgba(200, 200, 200, 0.7);
+    backdrop-filter: blur(5px);
+} */
+
 .grabbable-area {
     position: fixed;
     z-index: 1000;
@@ -41,7 +64,6 @@
 #image-content {
     height: 250px;
 }
-
 
 /* linkedin recommedation specific items */
 #linkedin-recommendations-content {
