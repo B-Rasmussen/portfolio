@@ -9,7 +9,7 @@ import LinkedInRecommendationsTextFile from "../desktop_components/LinkedInRecom
 import { handleOpenAndCloseFolder } from "../desktop_hooks/handleOpenAndCloseFolder";
 import { handleChildWindow } from "../desktop_hooks/handleChildWindow";
 
-import "../style/interactiveResumeStyle.css";
+import "../style/desktopResumeStyle.css";
 
 type NavBarProps = {
     navigateTo: (path: string) => void;
