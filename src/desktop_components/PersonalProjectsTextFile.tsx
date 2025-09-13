@@ -10,7 +10,7 @@ type PersonalProjectTextFileProps = {
     closeWindow: (index: number) => void;
     projectName: string;
     technologies: string[];
-    description: string;
+    description: string[];
     image?: string;
     imageAlt?: string;
 };
