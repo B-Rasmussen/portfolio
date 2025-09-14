@@ -1,6 +1,7 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
+import { DesktopFileIcon } from "./DesktopFileIcon";
 import "../style/desktopFolderStyle.css";
 
 type FolderContainerProps = {
@@ -61,13 +62,7 @@ function FolderContainer({
                                     }}
                                     className="text-file-container"
                                 >
-                                    <div className="text-file-icon">
-                                        <div className="line1" />
-                                        <div className="line2" />
-                                        <div className="line3" />
-                                        <div className="line4" />
-                                    </div>
-                                    <text>{item.companyName}.txt</text>
+                                    <DesktopFileIcon fileName={item.companyName} folderTitle={folderTitle} />
                                 </div>
                             ))
                             : null}
@@ -81,13 +76,7 @@ function FolderContainer({
                                     }}
                                     className="text-file-container"
                                 >
-                                    <div className="text-file-icon">
-                                        <div className="line1" />
-                                        <div className="line2" />
-                                        <div className="line3" />
-                                        <div className="line4" />
-                                    </div>
-                                    <text>{item.projectName}</text>
+                                    <DesktopFileIcon fileName={item.projectName} folderTitle={folderTitle} />
                                 </div>
                             ))
                             : null}
@@ -101,13 +90,7 @@ function FolderContainer({
                                     }}
                                     className="text-file-container"
                                 >
-                                    <div className="text-file-icon">
-                                        <div className="line1" />
-                                        <div className="line2" />
-                                        <div className="line3" />
-                                        <div className="line4" />
-                                    </div>
-                                    <text>{item.person} review.txt</text>
+                                    <DesktopFileIcon fileName={item.person} folderTitle={folderTitle} />
                                 </div>
                             ))
                             : null}
