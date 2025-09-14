@@ -1,6 +1,6 @@
 import "../style/staticNavBarStyle.css";
-import "../style/desktopNavBarStyle.css"
-import "../style/mobileNavBarAppDockStyle.css"
+import "../style/desktopNavBarStyle.css";
+import "../style/mobileNavBarAppDockStyle.css";
 
 type customButtonProps = {
     buttonName?: string;
@@ -8,7 +8,7 @@ type customButtonProps = {
     onButtonPressed: any;
     isSocialMediaLink?: boolean;
     isDesktopNavBarButton?: boolean;
-    isMobileAppDockButton? : boolean;
+    isMobileAppDockButton?: boolean;
 };
 
 const Button = ({
@@ -26,7 +26,7 @@ const Button = ({
                 className={
                     isDesktopNavBarButton
                         ? "interactive-social-button"
-                        : isMobileAppDockButton 
+                        : isMobileAppDockButton
                         ? "mobile-social-button"
                         : "social-media-button"
                 }

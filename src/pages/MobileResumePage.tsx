@@ -9,9 +9,7 @@ function MobileResumePage({ navigateTo }: NavBarProps) {
     return (
         <div>
             <MobileNavBar />
-            <div>hello there</div>
-            <div onClick={() => navigateTo("WorkHistory")}>Static Page</div>
-            <MobileAppDock />
+            <MobileAppDock navigateTo={navigateTo}/>
         </div>
     );
 }

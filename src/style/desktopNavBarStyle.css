@@ -77,7 +77,7 @@
     cursor: pointer;
 }
 
-.clock {
+#clock {
     margin-left: auto;
     color: white;
     padding-left: 10px;

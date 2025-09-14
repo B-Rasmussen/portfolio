@@ -86,7 +86,7 @@ function DesktopNavBar({ navigateTo }: DesktopNavBarProps) {
                     Static Page
                 </div>
             </div>
-            <div className="clock">
+            <div id="clock">
                 {currentTime
                     .toLocaleDateString([], {
                         weekday: "short",
