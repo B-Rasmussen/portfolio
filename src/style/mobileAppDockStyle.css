@@ -1,0 +1,17 @@
+#mobile-app-dock {
+    width: 90vw;
+    position: absolute;
+    bottom: 1%;
+    left: 5%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: rgba(200, 200, 200, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    padding: 15px;
+    justify-content: center;
+}

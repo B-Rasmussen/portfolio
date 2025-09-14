@@ -1,5 +1,6 @@
 import "../style/staticNavBarStyle.css";
 import "../style/desktopNavBarStyle.css"
+import "../style/mobileNavBarAppDockStyle.css"
 
 type customButtonProps = {
     buttonName?: string;
@@ -7,6 +8,7 @@ type customButtonProps = {
     onButtonPressed: any;
     isSocialMediaLink?: boolean;
     isDesktopNavBarButton?: boolean;
+    isMobileAppDockButton? : boolean;
 };
 
 const Button = ({
@@ -15,6 +17,7 @@ const Button = ({
     onButtonPressed,
     isSocialMediaLink = false,
     isDesktopNavBarButton = false,
+    isMobileAppDockButton = false,
 }: customButtonProps) => {
     if (isSocialMediaLink) {
         return (
@@ -23,6 +26,8 @@ const Button = ({
                 className={
                     isDesktopNavBarButton
                         ? "interactive-social-button"
+                        : isMobileAppDockButton 
+                        ? "mobile-social-button"
                         : "social-media-button"
                 }
             >
@@ -32,6 +37,8 @@ const Button = ({
                     id={
                         isDesktopNavBarButton
                             ? "interactive-social-logos"
+                            : isMobileAppDockButton
+                            ? "mobile-social-logos"
                             : "social-logos"
                     }
                 />

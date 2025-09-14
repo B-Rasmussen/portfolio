@@ -1,5 +1,5 @@
 import FolderContainer from "../desktop_components/FolderContainer";
-import InteractiveNavBar from "../desktop_components/InteractiveNavBar";
+import DesktopNavBar from "../desktop_components/DesktopNavBar";
 import FolderIcon from "../desktop_components/FolderIcon";
 // TEXT FILES
 import WorkTextFile from "../desktop_components/WorkTextFile";
@@ -42,7 +42,7 @@ function DesktopResumePage({ navigateTo }: NavBarProps) {
 
     return (
         <div id="interactive-resume-page">
-            <InteractiveNavBar navigateTo={navigateTo} />
+            <DesktopNavBar navigateTo={navigateTo} />
             <FolderIcon
                 onClick={openWorkHistory}
                 folderName="Work History"

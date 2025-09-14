@@ -66,7 +66,7 @@ function App() {
         <div
             id={
                 currentScreen === "DesktopResume"
-                    ? "interactive-resume"
+                    ? "desktop-resume"
                     : currentScreen === "MobileResume"
                         ? "mobile-resume"
                         : "static-resume"
