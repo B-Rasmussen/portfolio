@@ -3,7 +3,10 @@ type desktopFileIconProps = {
     folderTitle: string;
 };
 
-export function DesktopFileIcon({ fileName, folderTitle }: desktopFileIconProps) {
+export function DesktopFileIcon({
+    fileName,
+    folderTitle,
+}: desktopFileIconProps) {
     return (
         <div>
             <div className="text-file-icon">
@@ -12,9 +15,15 @@ export function DesktopFileIcon({ fileName, folderTitle }: desktopFileIconProps)
                 <div className="line3" />
                 <div className="line4" />
             </div>
-            {folderTitle === "Work History" ? <text>{fileName}.txt</text> : null}
-            {folderTitle === "Personal Projects" ? <text>{fileName}.proj</text> : null}
-            {folderTitle === "LinkedIn Recommendations" ? <text>{fileName}_review.txt</text> : null}
+            {folderTitle === "Work History" ? (
+                <text>{fileName}.txt</text>
+            ) : null}
+            {folderTitle === "Personal Projects" ? (
+                <text>{fileName}.proj</text>
+            ) : null}
+            {folderTitle === "LinkedIn Recommendations" ? (
+                <text>{fileName}_review.txt</text>
+            ) : null}
         </div>
     );
 }

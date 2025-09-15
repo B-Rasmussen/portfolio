@@ -15,10 +15,16 @@ function MobileResumePage({ navigateTo }: NavBarProps) {
         <div>
             <MobileNavBar />
             <div className="app-container">
-                <MobileAppFile data={workHistory} />
-                <MobileAppFile data={personalProjects} />
-                <MobileAppFile data={linkedinRecommendations} />
-                <div>
+                <MobileAppFile data={workHistory} dataName="Work History" />
+                <MobileAppFile
+                    data={personalProjects}
+                    dataName="Personal Projects"
+                />
+                <MobileAppFile
+                    data={linkedinRecommendations}
+                    dataName="Linkedin Recommendations"
+                />
+                {/* <div>
                     {personalProjects.map((item: any, index: number) => (
                         <div
                             key={item.id}
@@ -43,7 +49,7 @@ function MobileResumePage({ navigateTo }: NavBarProps) {
                             <text>{item.person}.txt</text>
                         </div>
                     ))}
-                </div>
+                </div> */}
             </div>
             <MobileAppDock navigateTo={navigateTo} />
         </div>

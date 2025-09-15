@@ -17,7 +17,7 @@ export function MobileNavBar() {
         <div id="mobile-nav-bar">
             <img src={linkedinDarkMode} style={{ height: "15px", paddingRight: "10px" }}/>
             <img src={githubDarkMode} style={{ height: "15px" }}/>
-            <div id="the-notch" />
+            {/* <div id="the-notch" /> */}
             <div id="clock">
                 {currentTime.toLocaleTimeString([], {
                     hour: "2-digit",
