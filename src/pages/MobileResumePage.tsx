@@ -1,6 +1,6 @@
-import { MobileNavBar } from "../mobile_components/mobileNavBar";
-import { MobileAppDock } from "../mobile_components/mobileAppDock";
-import { MobileAppFile } from "../mobile_components/mobileAppFile";
+import { MobileNavBar } from "../mobile_components/MobileNavBar";
+import { MobileAppDock } from "../mobile_components/MobileAppDock";
+import { MobileAppFile } from "../mobile_components/MobileAppFile";
 
 import workHistory from "../data/workHistory";
 import personalProjects from "../data/personalProjects";
