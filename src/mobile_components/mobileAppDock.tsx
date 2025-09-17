@@ -1,7 +1,8 @@
-import "../style/mobileNavBarAppDockStyle.css";
 import Button from "../components/Button";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
+
+import "../style/mobileNavBarAppDockStyle.css";
 
 type MobileAppDockProps = {
     navigateTo: (path: string) => void

@@ -6,6 +6,8 @@ import workHistory from "../data/workHistory";
 import personalProjects from "../data/personalProjects";
 import linkedinRecommendations from "../data/linkedinRecommendations";
 
+import "../style/mobileResumeStyle.css";
+
 type NavBarProps = {
     navigateTo: (path: string) => void;
 };
@@ -24,32 +26,6 @@ function MobileResumePage({ navigateTo }: NavBarProps) {
                     data={linkedinRecommendations}
                     dataName="Linkedin Recommendations"
                 />
-                {/* <div>
-                    {personalProjects.map((item: any, index: number) => (
-                        <div
-                            key={item.id}
-                            // onClick={() => {
-                            //     handleOpen(index);
-                            // }}
-                            className="text-file-container"
-                        >
-                            <text>{item.projectName}.txt</text>
-                        </div>
-                    ))}
-                </div>
-                <div>
-                    {linkedinRecommendations.map((item: any, index: number) => (
-                        <div
-                            key={item.id}
-                            // onClick={() => {
-                            //     handleOpen(index);
-                            // }}
-                            className="text-file-container"
-                        >
-                            <text>{item.person}.txt</text>
-                        </div>
-                    ))}
-                </div> */}
             </div>
             <MobileAppDock navigateTo={navigateTo} />
         </div>

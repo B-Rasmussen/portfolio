@@ -3,6 +3,7 @@ import zombie_gif from "../assets/zombies_project.gif";
 type personalProjects = {
     id: number;
     projectName: string;
+    projectNameAbbr: string;
     // description: string;
     description: string[];
     technologies: Array<string>;
@@ -15,6 +16,7 @@ const personalProjects: personalProjects[] = [
     {
         id: 0,
         projectName: "WIP: Zombie survival game",
+        projectNameAbbr: "Zombies",
         // description: "A endless zombie survival game created in Godot 4.",
         description: ["A endless zombie survival game created in Godot 4."],
         technologies: ["Godot 4", "GDScript"],
@@ -30,6 +32,7 @@ const personalProjects: personalProjects[] = [
     {
         id: 2,
         projectName: "Wellness App (name tbd)",
+        projectNameAbbr: "Health",
         description: [
             "A wellness app created in React Native.",
             "The goal of this project is to create an app to help users track their chronic illness symptoms",

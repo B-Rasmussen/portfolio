@@ -1,6 +1,7 @@
 type workHistory = {
     id: number;
     companyName: string;
+    companyNameAbbr: string;
     companyLogo?: string;
     companyLogoAlt?: string;
     positionTitle: string;
@@ -15,6 +16,7 @@ const workHistory: workHistory[] = [
     {
         id: 0,
         companyName: "Activision Blizzard",
+        companyNameAbbr: "ATVI",
         companyLogoAlt: "Activision Blizzard Logo",
         positionTitle: "Software Engineer",
         startDate: "January 2020",
@@ -55,6 +57,7 @@ const workHistory: workHistory[] = [
     // {
     //     id: 1,
     //     companyName: "Activision Blizzard",
+    //     companyNameAbbr: "ATVI",
     //     companyLogoAlt: "Activision Blizzard Logo",
     //     positionTitle: "Software Engineer",
     //     startDate: "January 2020",
@@ -88,6 +91,7 @@ const workHistory: workHistory[] = [
     {
         id: 1,
         companyName: "SQA Squared",
+        companyNameAbbr: "SQA ^2",
         positionTitle: "Junior Software Engineer in Test",
         companyLogoAlt: "SQA Squared Logo",
         startDate: "May 2019",
@@ -103,6 +107,7 @@ const workHistory: workHistory[] = [
     {
         id: 2,
         companyName: "Moving Mindz",
+        companyNameAbbr: "MMZ",
         companyLogoAlt: "Moving Mindz Logo",
         positionTitle: "Web Developer / Tutor",
         startDate: "June 2018",

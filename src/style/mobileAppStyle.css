@@ -1,0 +1,13 @@
+/* MOBILE APP FILE SECTION */
+.app-icon-layout {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* MOBILE APP ICON SECTION */
+.app-icon {
+    padding: 10px;
+    height: 40px;
+}

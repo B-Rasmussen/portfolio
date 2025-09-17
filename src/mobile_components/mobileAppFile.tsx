@@ -1,3 +1,7 @@
+import { MobileAppIcon } from "./MobileAppIcon";
+
+import '../style/mobileAppStyle.css';
+
 type mobileAppFileProps = {
     data: any[];
     dataName: string;
@@ -5,7 +9,7 @@ type mobileAppFileProps = {
 
 export function MobileAppFile({ data, dataName }: mobileAppFileProps) {
     return (
-        <div>
+        <div className="app-icon-layout">
             {dataName === "Work History"
                 ? data.map((item: any, index: number) => (
                     <div
@@ -15,11 +19,12 @@ export function MobileAppFile({ data, dataName }: mobileAppFileProps) {
                             // }}
                         className=""
                     >
-                        <img
-                            src={item.companyLogo ? item.companyLogo : null}
-                            alt={item.companyLogoAlt}
+                        <MobileAppIcon
+                            image={item.companyLogo}
+                            // imageAlt={item.companyLogoAlt}
+                            name={item.companyName}
+                            nameAbbr={item.companyNameAbbr}
                         />
-                        <text>{item.companyName}</text>
                     </div>
                 ))
                 : null}
@@ -32,11 +37,7 @@ export function MobileAppFile({ data, dataName }: mobileAppFileProps) {
                             // }}
                         className=""
                     >
-                        {/* <img
-                            src={item.companyLogo}
-                            alt={item.companyLogoAlt}
-                        /> */}
-                        <text>{item.projectName}</text>
+                        <MobileAppIcon name={item.projectName} nameAbbr={item.projectNameAbbr}/>
                     </div>
                 ))
             : null}
@@ -49,7 +50,11 @@ export function MobileAppFile({ data, dataName }: mobileAppFileProps) {
                             // }}
                         className=""
                     >
-                        <text>{item.person}</text>
+                        <MobileAppIcon
+                            image={item.companyLogo}
+                            name={item.person}
+                            nameAbbr={item.personNameAbbr}
+                        />
                     </div>
                 ))
                 : null}
