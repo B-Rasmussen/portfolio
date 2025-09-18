@@ -1,4 +1,3 @@
-import "./App.css";
 import { SetStateAction, useState, useEffect } from "react";
 
 // PAGES
@@ -10,7 +9,8 @@ import MobileResumePage from "./pages/MobileResumePage";
 // NAVBAR COMPONENTS
 import StaticNavBar from "./components/StaticNavBar";
 import SocialMediaBar from "./components/SocialMediaBar";
-// import LanguagesList from "./components/LanguagesList";
+
+import "./App.css";
 
 function isMobileDevice() {
     const mobileKeywords = [

@@ -91,7 +91,7 @@ const workHistory: workHistory[] = [
     {
         id: 1,
         companyName: "SQA Squared",
-        companyNameAbbr: "SQA ^2",
+        companyNameAbbr: "SQA \u{00B2}",
         positionTitle: "Junior Software Engineer in Test",
         companyLogoAlt: "SQA Squared Logo",
         startDate: "May 2019",

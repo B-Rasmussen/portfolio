@@ -2,7 +2,6 @@ import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/textFileStyle.css";
-// import "../style/workHistoryStyle.css";
 
 type PersonalProjectTextFileProps = {
     index: number;

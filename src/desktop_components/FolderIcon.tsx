@@ -7,7 +7,7 @@ type FolderIconProps = {
 
 function FolderIcon({ onClick, folderName }: FolderIconProps) {
     return (
-        <div onDoubleClick={onClick} className="folder-container">
+        <div onClick={onClick} className="folder-container">
             <div className="folder-icon" />
             <text className="folder-name">{folderName}</text>
         </div>
