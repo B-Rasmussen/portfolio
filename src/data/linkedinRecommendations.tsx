@@ -10,7 +10,7 @@ const linkedinRecommendations: Recommendations[] = [
     {
         id: 0,
         person: "Tim Jung",
-        personNameAbbr: "T. Jung",
+        personNameAbbr: "Tim J.",
         bodyText: [
             "I worked with Brandon on engineering projects at Activision and he's a great engineer.",
             "But our story actually goes back further than that.",
@@ -32,7 +32,7 @@ const linkedinRecommendations: Recommendations[] = [
     {
         id: 1,
         person: "Shadae Kawaguchi",
-        personNameAbbr: "S. Kawaguchi",
+        personNameAbbr: "Shadae K.",
         bodyText: [
             "I have had the pleasure of working with Brandon over the past few years, and have worked on multiple projects together several of which can be viewed in-game.",
             "Working with Brandon on those projects has been a seamless process.",

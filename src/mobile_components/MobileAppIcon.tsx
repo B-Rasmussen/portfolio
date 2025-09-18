@@ -16,9 +16,9 @@ export function MobileAppIcon({
     nameAbbr,
 }: MobileAppIconProps) {
     return (
-        <div>
+        <>
             <img src={!image ? githubDarkMode : image} className="app-icon" />
             <div>{name!.length > 10 ? nameAbbr : name}</div>
-        </div>
+        </>
     );
 }

@@ -61,9 +61,10 @@ function PersonalProjectTextFile({
                         <div className="title-bar-text">{projectName}.txt</div>
                     </div>
                     <div className="child-window-main-content">
+                        <div>{projectName}</div>
                         <div>{description}</div>
                         <div>
-                            {technologies?.map(
+                            Tech Stack: {technologies?.map(
                                 (item: string, index: number) => (
                                     <span key={index}>
                                         {item}
