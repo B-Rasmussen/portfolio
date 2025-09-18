@@ -25,7 +25,7 @@ export function MobileAppFile({ appNavigateTo, data, dataName }: mobileAppFilePr
                             className=""
                         >
                             <MobileAppIcon
-                                image={item.companyLogo}
+                                appIcon={item.companyAppIcon}
                                 // imageAlt={item.companyLogoAlt}
                                 name={item.companyName}
                                 nameAbbr={item.companyNameAbbr}

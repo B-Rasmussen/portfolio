@@ -4,6 +4,7 @@ type personalProjects = {
     id: number;
     projectName: string;
     projectNameAbbr: string;
+    projectAppLogo?: string;
     // description: string;
     description: string[];
     technologies: Array<string>;

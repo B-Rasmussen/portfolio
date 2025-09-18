@@ -1,9 +1,17 @@
+import activisionLogo from "../assets/companyLogos/activision/activisionLogo.svg";
+import activisionAppIcon from "../assets/companyLogos/activision/activisionAppIcon.ico";
+import sqaSquaredLogo from "../assets/companyLogos/sqa_squared/sqaSquaredLogo.png";
+import sqaSquaredAppLogo from "../assets/companyLogos/sqa_squared/sqaSquaredAppLogo.png";
+import movingMindzLogo from "../assets/companyLogos/moving_mindz/movingMindzLogo.svg";
+import movingMindzAppLogo from "../assets/companyLogos/moving_mindz/movingMindzAppLogo.png";
+
 type workHistory = {
     id: number;
     companyName: string;
     companyNameAbbr: string;
     companyLogo?: string;
-    companyLogoAlt?: string;
+    companyLogoAlt: string;
+    companyAppIcon?: string;
     positionTitle: string;
     startDate: string;
     endDate: string;
@@ -17,7 +25,9 @@ const workHistory: workHistory[] = [
         id: 0,
         companyName: "Activision Blizzard",
         companyNameAbbr: "ATVI",
+        companyLogo: activisionLogo,
         companyLogoAlt: "Activision Blizzard Logo",
+        companyAppIcon: activisionAppIcon,
         positionTitle: "Software Engineer",
         startDate: "January 2020",
         endDate: "January 2024",
@@ -58,7 +68,9 @@ const workHistory: workHistory[] = [
     //     id: 1,
     //     companyName: "Activision Blizzard",
     //     companyNameAbbr: "ATVI",
+    //     companyLogo: activisionLogo,
     //     companyLogoAlt: "Activision Blizzard Logo",
+    //     companyAppIcon: activisionAppIcon,
     //     positionTitle: "Software Engineer",
     //     startDate: "January 2020",
     //     endDate: "January 2024",
@@ -93,7 +105,9 @@ const workHistory: workHistory[] = [
         companyName: "SQA Squared",
         companyNameAbbr: "SQA \u{00B2}",
         positionTitle: "Junior Software Engineer in Test",
+        companyLogo: sqaSquaredLogo,
         companyLogoAlt: "SQA Squared Logo",
+        companyAppIcon: sqaSquaredAppLogo,
         startDate: "May 2019",
         endDate: "January 2020",
         location: "Los Alamitos, California",
@@ -108,7 +122,9 @@ const workHistory: workHistory[] = [
         id: 2,
         companyName: "Moving Mindz",
         companyNameAbbr: "MMZ",
+        companyLogo: movingMindzLogo,
         companyLogoAlt: "Moving Mindz Logo",
+        companyAppIcon: movingMindzAppLogo,
         positionTitle: "Web Developer / Tutor",
         startDate: "June 2018",
         endDate: "March 2020",

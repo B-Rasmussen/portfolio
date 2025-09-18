@@ -1,8 +1,9 @@
 import "../style/mobileAppStyle.css";
 
-import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
+import missingAppLogo from "../assets/missingAppLogo.png";
 
 type MobileAppIconProps = {
+    appIcon?: string;
     image?: string;
     // imageAlt?: string;
     name?: string;
@@ -10,6 +11,7 @@ type MobileAppIconProps = {
 };
 
 export function MobileAppIcon({
+    appIcon,
     image,
     // imageAlt,
     name,
@@ -17,7 +19,7 @@ export function MobileAppIcon({
 }: MobileAppIconProps) {
     return (
         <>
-            <img src={!image ? githubDarkMode : image} className="app-icon" />
+            <img src={!appIcon ? missingAppLogo : appIcon} className="app-icon" />
             <div>{name!.length > 10 ? nameAbbr : name}</div>
         </>
     );
