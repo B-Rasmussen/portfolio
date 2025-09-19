@@ -22,7 +22,7 @@ function FolderContainer({
     const nodeRef = useRef(null);
     const [parentPosition, setParentPosition] = useState({
         x: 100,
-        y: -450,
+        y: -300,
     });
 
     const handleStop = (
