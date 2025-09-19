@@ -9,7 +9,7 @@ type workHistory = {
     id: number;
     companyName: string;
     companyNameAbbr: string;
-    companyLogo?: string;
+    companyLogo: string;
     companyLogoAlt: string;
     companyAppIcon?: string;
     positionTitle: string;
@@ -103,7 +103,7 @@ const workHistory: workHistory[] = [
     {
         id: 1,
         companyName: "SQA Squared",
-        companyNameAbbr: "SQA \u{00B2}",
+        companyNameAbbr: "SQA\u{00B2}",
         positionTitle: "Junior Software Engineer in Test",
         companyLogo: sqaSquaredLogo,
         companyLogoAlt: "SQA Squared Logo",

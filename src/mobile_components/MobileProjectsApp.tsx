@@ -1,5 +1,6 @@
 import personalProjects from "../data/personalProjects";
 import { MobileInAppNavBar } from "./MobileInAppNavBar";
+import '../style/mobileAppStyle.css'
 
 type MobileProjectsAppProps = {
     appNavigateTo: (path: string, index: number) => void;
@@ -12,9 +13,11 @@ export function MobileProjectsApp({
 }: MobileProjectsAppProps) {
     return (
         <>
-            <MobileInAppNavBar appNavigateTo={appNavigateTo} />
-            <div>
-                <div>{personalProjects[idNumber].projectName}</div>
+            <MobileInAppNavBar
+                appNavigateTo={appNavigateTo}
+                appName={personalProjects[idNumber].projectName}
+            />
+            <div className="app-body">
                 <div>{personalProjects[idNumber].description}</div>
                 <div>
                     Tech Stack:
@@ -39,7 +42,7 @@ export function MobileProjectsApp({
                         <img
                             src={personalProjects[idNumber].image}
                             alt={personalProjects[idNumber].imageAlt}
-                            style={{width: '90%'}}
+                            style={{ width: "90%" }}
                         />
                     )}
                 </div>

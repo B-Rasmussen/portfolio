@@ -26,7 +26,6 @@ export function MobileAppFile({ appNavigateTo, data, dataName }: mobileAppFilePr
                         >
                             <MobileAppIcon
                                 appIcon={item.companyAppIcon}
-                                // imageAlt={item.companyLogoAlt}
                                 name={item.companyName}
                                 nameAbbr={item.companyNameAbbr}
                             />
@@ -48,6 +47,7 @@ export function MobileAppFile({ appNavigateTo, data, dataName }: mobileAppFilePr
                             className=""
                         >
                             <MobileAppIcon
+                                appIcon={item.projectAppLogo}
                                 name={item.projectName}
                                 nameAbbr={item.projectNameAbbr}
                             />
@@ -64,7 +64,6 @@ export function MobileAppFile({ appNavigateTo, data, dataName }: mobileAppFilePr
                     className=""
                 >
                     <MobileAppIcon name="Reviews" nameAbbr="Reviews"/>
-                    {/* <MobileReviewsApp data={data} /> */}
                 </div>
             ) : null}
         </div>

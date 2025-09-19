@@ -1,3 +1,4 @@
+/* NAV BAR */
 #mobile-nav-bar {
     height: 30px;
     width: 100%;
@@ -31,10 +32,7 @@
     /* font-size: 14px; */
 }
 
-/* .mobile-social-button {
-    
-} */
-
+/* APP DOCK STYLE */
 #mobile-social-logos {
     height: 50px;
 }

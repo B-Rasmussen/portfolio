@@ -55,7 +55,7 @@ function MobileResumePage({ navigateTo }: NavBarProps) {
     };
 
     return (
-        <div>
+        <div id={appWindow == "MobileHomeScreen" ? "mobile-home-screen" : undefined}>
             <MobileNavBar />
             {renderAppWindow()}
         </div>

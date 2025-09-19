@@ -11,3 +11,64 @@
     padding: 10px;
     height: 40px;
 }
+
+/* APP NAV BAR */
+#in-app-nav-bar {
+    display: flex;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.3);
+    filter: blur(5%);
+    height: 75px;
+    width: 100%;
+}
+
+#back-button {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    text-decoration: underline;
+    background-color: rgba(255, 50, 50, 0.2);
+    border-radius: 10px;
+    font-size: larger;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.app-title-image {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    height: 6%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.app-title-text {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
+
+/* IN APP STYLE */
+/* REVIEWS APP */
+.reviewer-headline {
+    display: flex;
+}
+
+.reviewer-name {
+    position: relative;
+    left: 5%;
+}
+
+.reviewer-rating {
+    position: absolute;
+    right: 5%;
+}
+
+.review-divider {
+    padding-top: 10px;
+    border-bottom: 1px dashed #FFF;
+}

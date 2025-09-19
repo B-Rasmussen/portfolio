@@ -70,13 +70,12 @@ function WorkTextFile({
                     </div>
                     <div className="child-window-main-content">
                         <div id="company-header">
-                            <h2 className="company-name">{companyName}</h2>
+                            {/* <h2 className="company-name">{companyName}</h2> */}
                             {companyLogo && (
                                 <img
                                     src={companyLogo}
                                     alt={`${companyLogoAlt}`}
                                     className="company-logo"
-                                    style={{ width: "25px", height: "auto" }}
                                 />
                             )}
                         </div>

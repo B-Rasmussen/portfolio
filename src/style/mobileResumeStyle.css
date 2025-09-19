@@ -1,3 +1,8 @@
-/* .app-container {
-    display: flex;
-} */
+#mobile-home-screen {
+    background-image: url("../assets/mac-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100%;
+}

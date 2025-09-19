@@ -5,7 +5,6 @@ type personalProjects = {
     projectName: string;
     projectNameAbbr: string;
     projectAppLogo?: string;
-    // description: string;
     description: string[];
     technologies: Array<string>;
     projectURL?: string;
@@ -18,7 +17,6 @@ const personalProjects: personalProjects[] = [
         id: 0,
         projectName: "WIP: Zombie survival game",
         projectNameAbbr: "Zombies",
-        // description: "A endless zombie survival game created in Godot 4.",
         description: ["A endless zombie survival game created in Godot 4."],
         technologies: ["Godot 4", "GDScript"],
         image: zombie_gif,
@@ -27,6 +25,7 @@ const personalProjects: personalProjects[] = [
     // {
     //     id: 1,
     //     projectName: "Idle Clicker Game",
+    //     projectNameAbbr: "Idle Game",
     //     description: ["An idle clicker game created in React Native."],
     //     technologies: ["React Native", "JavaScript", "TypeScript"],
     // },

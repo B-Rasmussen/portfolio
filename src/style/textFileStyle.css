@@ -47,6 +47,11 @@
     margin: 5px;
 }
 
+.company-logo {
+    width: auto;
+    height: auto;
+}
+
 #company-header {
     display: flex;
     align-items: center;
