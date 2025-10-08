@@ -69,7 +69,8 @@ function DesktopResumePage() {
                 onClick={() =>
                     window.open(
                         "/portfolio/src/game_files/godot.html",
-                        "_blank"
+                        "_blank",
+                        'noopener,noreferrer'
                     )
                 }
             >
