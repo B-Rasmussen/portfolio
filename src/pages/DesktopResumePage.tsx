@@ -55,6 +55,7 @@ function DesktopResumePage({ navigateTo }: NavBarProps) {
                 onClick={openLinkedInRecommendations}
                 folderName="LinkedIn Recommendations"
             />
+            <iframe src="/portfolio/src/game_files/index.html" width={800} height={800}/>
             <div id="desktop-draggable-area">
                 {isWorkHistoryFolderOpen && (
                     <FolderContainer
