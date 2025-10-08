@@ -11,9 +11,9 @@ import { handleChildWindow } from "../desktop_hooks/handleChildWindow";
 
 import "../style/desktopResumeStyle.css";
 
-type NavBarProps = {
-    navigateTo: (path: string) => void;
-};
+// type NavBarProps = {
+//     navigateTo: (path: string) => void;
+// };
 
 function DesktopResumePage() {
 // { navigateTo }: NavBarProps
