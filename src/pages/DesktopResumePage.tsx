@@ -16,7 +16,7 @@ import "../style/desktopResumeStyle.css";
 // };
 
 function DesktopResumePage() {
-// { navigateTo }: NavBarProps
+    // { navigateTo }: NavBarProps
     const {
         isWorkHistoryFolderOpen,
         isProjectsFolderOpen,
@@ -55,7 +55,7 @@ function DesktopResumePage() {
                 onClick={openLinkedInRecommendations}
                 folderName="LinkedIn Recommendations"
             />
-            {/* <button
+            <button
                 style={{
                     marginTop: "1%",
                     marginLeft: "92%",
@@ -70,15 +70,15 @@ function DesktopResumePage() {
                     window.open(
                         `/src/game_files/godot.html`,
                         "_blank",
-                        'noopener,noreferrer'
+                        "noopener,noreferrer"
                     )
                 }
             >
                 <img src="" />
                 <div>Zombie Alpha</div>
                 <div>Opens in new tab</div>
-            </button> */}
-            <iframe src="portfolio/src/game_files/godot.html" />
+            </button>
+            {/* <iframe src="portfolio/src/game_files/godot.html" /> */}
             <div id="desktop-draggable-area">
                 {isWorkHistoryFolderOpen && (
                     <FolderContainer
