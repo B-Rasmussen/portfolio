@@ -68,7 +68,7 @@ function DesktopResumePage() {
                 id="open-game-button"
                 onClick={() =>
                     window.open(
-                        "/portfolio/src/game_files/godot.html",
+                        "portfolio/src/game_files/index.html",
                         "_blank",
                         'noopener,noreferrer'
                     )
