@@ -78,7 +78,7 @@ function DesktopResumePage() {
                 <div>Zombie Alpha</div>
                 <div>Opens in new tab</div>
             </button> */}
-            <iframe src="portfolio/src/game_files/godot.html" />
+            {/* <iframe src="portfolio/src/game_files/godot.html" /> */}
             <div id="desktop-draggable-area">
                 {isWorkHistoryFolderOpen && (
                     <FolderContainer
