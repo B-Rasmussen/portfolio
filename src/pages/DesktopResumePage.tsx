@@ -42,7 +42,9 @@ function DesktopResumePage({ navigateTo }: NavBarProps) {
 
     return (
         <div id="interactive-resume-page">
-            <DesktopNavBar navigateTo={navigateTo} />
+            <DesktopNavBar
+                // navigateTo={navigateTo}
+            />
             <FolderIcon onClick={openWorkHistory} folderName="Work History" />
             <FolderIcon
                 onClick={openPersonalProjects}

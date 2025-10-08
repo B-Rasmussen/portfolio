@@ -5,11 +5,13 @@ import "../style/desktopNavBarStyle.css";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
-type DesktopNavBarProps = {
-    navigateTo: (path: string) => void;
-};
+// type DesktopNavBarProps = {
+//     navigateTo: (path: string) => void;
+// };
 
-function DesktopNavBar({ navigateTo }: DesktopNavBarProps) {
+function DesktopNavBar()
+    // { navigateTo }: DesktopNavBarProps) 
+    {
     const [isOpen, setIsOpen] = useState(false);
     const [currentTime, setCurrentTime] = useState(new Date());
 
