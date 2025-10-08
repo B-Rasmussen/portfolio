@@ -52,11 +52,28 @@ function DesktopResumePage({ navigateTo }: NavBarProps) {
                 onClick={openLinkedInRecommendations}
                 folderName="LinkedIn Recommendations"
             />
-            {/* <iframe
-                src="/portfolio/src/game_files/index.html"
-                width={800}
-                height={800}
-            /> */}
+            <button
+                style={{
+                    marginTop: "1%",
+                    marginLeft: "92%",
+                    marginRight: "1%",
+                    position: "relative",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    marginBottom: "10px",
+                }}
+                id="open-game-button"
+                onClick={() =>
+                    window.open(
+                        "/portfolio/src/game_files/index.html",
+                        "_blank"
+                    )
+                }
+            >
+                <img src="" />
+                <div>Zombie Alpha</div>
+                <div>Opens in new tab</div>
+            </button>
             <div id="desktop-draggable-area">
                 {isWorkHistoryFolderOpen && (
                     <FolderContainer

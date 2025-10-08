@@ -79,12 +79,12 @@ function DesktopNavBar({ navigateTo }: DesktopNavBarProps) {
                         />
                     </div>
                 )}
-                <div
+                {/* <div
                     className="left-side-item static-page"
                     onClick={() => navigateTo("WorkHistory")}
                 >
                     Static Page
-                </div>
+                </div> */}
             </div>
             <div id="clock">
                 {currentTime
