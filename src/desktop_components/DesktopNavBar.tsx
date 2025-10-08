@@ -9,9 +9,8 @@ import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 //     navigateTo: (path: string) => void;
 // };
 
-function DesktopNavBar()
-    // { navigateTo }: DesktopNavBarProps) 
-    {
+function DesktopNavBar() {
+// { navigateTo }: DesktopNavBarProps
     const [isOpen, setIsOpen] = useState(false);
     const [currentTime, setCurrentTime] = useState(new Date());
 

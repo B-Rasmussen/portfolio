@@ -15,7 +15,8 @@ type NavBarProps = {
     navigateTo: (path: string) => void;
 };
 
-function DesktopResumePage({ navigateTo }: NavBarProps) {
+function DesktopResumePage() {
+// { navigateTo }: NavBarProps
     const {
         isWorkHistoryFolderOpen,
         isProjectsFolderOpen,
@@ -43,7 +44,7 @@ function DesktopResumePage({ navigateTo }: NavBarProps) {
     return (
         <div id="interactive-resume-page">
             <DesktopNavBar
-                // navigateTo={navigateTo}
+            // navigateTo={navigateTo}
             />
             <FolderIcon onClick={openWorkHistory} folderName="Work History" />
             <FolderIcon
