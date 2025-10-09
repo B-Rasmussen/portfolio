@@ -22,7 +22,7 @@ const zombieGameChangeLog: ChangeLog[] = [
         id: 2,
         versionNumber: '0.1.1',
         changeLog: [
-            "Added sound effects for shooting and reloading",
+            "Added placeholder sound effects for shooting and reloading",
             "Added a doom style reload animation",
             "Added raycast to detect when an enemy is hit"
         ],

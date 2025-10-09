@@ -12,6 +12,7 @@ type workHistory = {
     companyLogo: string;
     companyLogoAlt: string;
     companyAppIcon?: string;
+    companyColor: string;
     positionTitle: string;
     startDate: string;
     endDate: string;
@@ -28,6 +29,7 @@ const workHistory: workHistory[] = [
         companyLogo: activisionLogo,
         companyLogoAlt: "Activision Blizzard Logo",
         companyAppIcon: activisionAppIcon,
+        companyColor: "#1e71e7",
         positionTitle: "Software Engineer",
         startDate: "January 2020",
         endDate: "January 2024",
@@ -71,6 +73,7 @@ const workHistory: workHistory[] = [
     //     companyLogo: activisionLogo,
     //     companyLogoAlt: "Activision Blizzard Logo",
     //     companyAppIcon: activisionAppIcon,
+    //     companyColor: "#1e71e7",
     //     positionTitle: "Software Engineer",
     //     startDate: "January 2020",
     //     endDate: "January 2024",
@@ -108,6 +111,7 @@ const workHistory: workHistory[] = [
         companyLogo: sqaSquaredLogo,
         companyLogoAlt: "SQA Squared Logo",
         companyAppIcon: sqaSquaredAppLogo,
+        companyColor: '#ff8800ff',
         startDate: "May 2019",
         endDate: "January 2020",
         location: "Los Alamitos, California",
@@ -125,6 +129,7 @@ const workHistory: workHistory[] = [
         companyLogo: movingMindzLogo,
         companyLogoAlt: "Moving Mindz Logo",
         companyAppIcon: movingMindzAppLogo,
+        companyColor: "#2d9305",
         positionTitle: "Web Developer / Tutor",
         startDate: "June 2018",
         endDate: "March 2020",

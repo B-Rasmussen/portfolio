@@ -21,7 +21,11 @@ export function MobileReviewsApp({ appNavigateTo }: MobileReviewsAppProps) {
 
     return (
         <>
-            <MobileInAppNavBar appNavigateTo={appNavigateTo} appName="Reviews"/>
+            <MobileInAppNavBar
+                appNavigateTo={appNavigateTo}
+                appName="Reviews"
+                backButtonColor="#9fa200ff"
+            />
             {linkedinRecommendations.map((item: any, index: number) => (
                 <div
                     key={item.id}
@@ -42,7 +46,9 @@ export function MobileReviewsApp({ appNavigateTo }: MobileReviewsAppProps) {
                             ) + "...see more"
                             : item.bodyText}
                     </div>
-                    {index < (linkedinRecommendations.length - 1) ? <div className="review-divider"/> : null}
+                    {index < linkedinRecommendations.length - 1 ? (
+                        <div className="review-divider" />
+                    ) : null}
                 </div>
             ))}
         </>

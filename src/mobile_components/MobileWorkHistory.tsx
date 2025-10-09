@@ -17,6 +17,7 @@ export function MobileWorkHistoryApp({
                 appNavigateTo={appNavigateTo}
                 companyImage={workHistory[idNumber].companyLogo}
                 appName={workHistory[idNumber].companyName}
+                backButtonColor={workHistory[idNumber].companyColor}
             />
             <div className="app-body">
                 <div id="mobile-company-header">
