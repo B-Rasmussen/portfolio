@@ -47,11 +47,17 @@ function App() {
             case "Projects":
                 return <ProjectsPage />;
             case "DesktopResume":
-                return <DesktopResumePage
+                return (
+                    <DesktopResumePage
                     // navigateTo={navigateTo}
-                />;
+                    />
+                );
             case "MobileResume":
-                return <MobileResumePage navigateTo={navigateTo} />;
+                return (
+                    <MobileResumePage
+                    // navigateTo={navigateTo}
+                    />
+                );
             default:
                 return <div>Oops something went wrong</div>;
         }
@@ -70,8 +76,8 @@ function App() {
                 currentScreen === "DesktopResume"
                     ? "desktop-resume"
                     : currentScreen === "MobileResume"
-                        ? "mobile-resume"
-                        : "static-resume"
+                    ? "mobile-resume"
+                    : "static-resume"
             }
         >
             {currentScreen === "DesktopResume" ||

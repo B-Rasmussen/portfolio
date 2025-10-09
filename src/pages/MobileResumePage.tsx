@@ -8,9 +8,9 @@ import { MobileWorkHistoryApp } from "../mobile_components/MobileWorkHistory";
 import "../style/mobileResumeStyle.css";
 import { MobileProjectsApp } from "../mobile_components/MobileProjectsApp";
 
-type NavBarProps = {
-    navigateTo: (path: string) => void;
-};
+// type NavBarProps = {
+//     navigateTo: (path: string) => void;
+// };
 
 function MobileResumePage(
     // { navigateTo }: NavBarProps
