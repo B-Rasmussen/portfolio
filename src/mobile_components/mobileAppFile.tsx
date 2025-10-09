@@ -1,5 +1,5 @@
 import { MobileAppIcon } from "./MobileAppIcon";
-
+import review_logo from "../assets/review_logo.png";
 import "../style/mobileAppStyle.css";
 
 type mobileAppFileProps = {
@@ -63,7 +63,7 @@ export function MobileAppFile({ appNavigateTo, data, dataName }: mobileAppFilePr
                     }}
                     className=""
                 >
-                    <MobileAppIcon name="Reviews" nameAbbr="Reviews"/>
+                    <MobileAppIcon appIcon={review_logo} name="Reviews" nameAbbr="Reviews"/>
                 </div>
             ) : null}
         </div>
