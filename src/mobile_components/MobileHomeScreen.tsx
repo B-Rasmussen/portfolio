@@ -6,12 +6,12 @@ import personalProjects from "../data/personalProjects";
 import linkedinRecommendations from "../data/linkedinRecommendations";
 
 type MobileHomeScreenProps = {
-    navigateTo: (path: string) => void;
+    // navigateTo: (path: string) => void;
     appNavigateTo: (path: string, index: number) => void;
 };
 
 export function MobileHomeScreen({
-    navigateTo,
+    // navigateTo,
     appNavigateTo,
 }: MobileHomeScreenProps) {
     return (
@@ -33,7 +33,9 @@ export function MobileHomeScreen({
                     dataName="Linkedin Recommendations"
                 />
             </div>
-            <MobileAppDock navigateTo={navigateTo} />
+            <MobileAppDock
+            // navigateTo={navigateTo}
+            />
         </>
     );
 }

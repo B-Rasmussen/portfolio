@@ -4,11 +4,13 @@ import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
 import "../style/mobileNavBarAppDockStyle.css";
 
-type MobileAppDockProps = {
-    navigateTo: (path: string) => void
-}
+// type MobileAppDockProps = {
+//     navigateTo: (path: string) => void
+// }
 
-export function MobileAppDock({ navigateTo }: MobileAppDockProps) {
+export function MobileAppDock(
+    // { navigateTo }: MobileAppDockProps
+) {
     return (
         <div id="mobile-app-dock">
             <div className="button-container">
@@ -31,7 +33,7 @@ export function MobileAppDock({ navigateTo }: MobileAppDockProps) {
                     isSocialMediaLink={true}
                     isMobileAppDockButton={true}
                 />
-                <div
+                {/* <div
                     className="text-file-mobile"
                     onClick={() => navigateTo("WorkHistory")}
                 >
@@ -39,7 +41,7 @@ export function MobileAppDock({ navigateTo }: MobileAppDockProps) {
                     <div className="line2" />
                     <div className="line3" />
                     <div className="line4" />
-                </div>
+                </div> */}
             </div>
         </div>
     );

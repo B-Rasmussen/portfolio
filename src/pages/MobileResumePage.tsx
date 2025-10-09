@@ -12,7 +12,9 @@ type NavBarProps = {
     navigateTo: (path: string) => void;
 };
 
-function MobileResumePage({ navigateTo }: NavBarProps) {
+function MobileResumePage(
+    // { navigateTo }: NavBarProps
+) {
     const [appWindow, setAppWindow] = useState("MobileHomeScreen");
     const [idNumberRequested, setIdNumberRequested] = useState(0);
 
@@ -29,7 +31,7 @@ function MobileResumePage({ navigateTo }: NavBarProps) {
             case "MobileHomeScreen":
                 return (
                     <MobileHomeScreen
-                        navigateTo={navigateTo}
+                        // navigateTo={navigateTo}
                         appNavigateTo={appNavigateTo}
                     />
                 );
