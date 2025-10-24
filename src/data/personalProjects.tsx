@@ -8,6 +8,8 @@ type personalProjects = {
     projectAppLogo?: string;
     buttonColor?: string;
     description: string[];
+    link?: string;
+    linkName?: string;
     technologies: Array<string>;
     projectURL?: string;
     image?: string;
@@ -43,6 +45,8 @@ const personalProjects: personalProjects[] = [
             "The goal of this project is to create an app to help users track their chronic illness symptoms",
             "Assisting users by tracking and displaying symptoms they recorded over the past day, week, month, year, etc",
         ],
+        link: "https://github.com/B-Rasmussen/symptom-tracker",
+        linkName: "Symptom Tracker Repo",
         technologies: ["React Native", "JavaScript", "TypeScript"],
     },
 ];

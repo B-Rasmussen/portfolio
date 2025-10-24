@@ -2,6 +2,7 @@ import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/textFileStyle.css";
+import Button from "../components/Button";
 
 type PersonalProjectTextFileProps = {
     index: number;
@@ -10,6 +11,8 @@ type PersonalProjectTextFileProps = {
     projectName: string;
     technologies: string[];
     description: string[];
+    link?: string;
+    linkName?: string;
     image?: string;
     imageAlt?: string;
 };
@@ -21,6 +24,8 @@ function PersonalProjectTextFile({
     projectName,
     technologies,
     description,
+    link,
+    linkName,
     image,
     imageAlt,
 }: PersonalProjectTextFileProps) {
@@ -61,9 +66,17 @@ function PersonalProjectTextFile({
                     </div>
                     <div className="child-window-main-content">
                         <div>{projectName}</div>
-                        <div>{description}</div>
+                        {link && (
+                            <Button
+                                buttonName={linkName}
+                                onButtonPressed={() => {
+                                    window.open(`${link}`, "_blank");
+                                }}
+                            />
+                        )}
                         <div>
-                            Tech Stack: {technologies?.map(
+                            Tech Stack:{" "}
+                            {technologies?.map(
                                 (item: string, index: number) => (
                                     <span key={index}>
                                         {item}
@@ -74,6 +87,7 @@ function PersonalProjectTextFile({
                                 )
                             )}
                         </div>
+                        <div>{description}</div>
                         <div>
                             {image && (
                                 <img

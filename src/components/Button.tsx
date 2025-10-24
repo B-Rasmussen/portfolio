@@ -48,7 +48,7 @@ const Button = ({
     }
     return (
         <div>
-            <div onClick={onButtonPressed}>
+            <div onClick={onButtonPressed} style={{textDecoration: "underline"}}>
                 <div>{buttonName}</div>
             </div>
         </div>

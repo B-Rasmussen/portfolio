@@ -109,71 +109,73 @@ function DesktopResumePage() {
                 {isJobWindowOpen.map((isOpen, index) =>
                     isOpen
                         ? isJobWindowOpen[index] && (
-                              <WorkTextFile
-                                  key={index}
-                                  positionOffset={{ x: 0, y: 40 * index }}
-                                  index={index}
-                                  closeWindow={() =>
-                                      handleWorkHistoryOpen(index)
-                                  }
-                                  companyName={workHistory[index].companyName}
-                                  positionTitle={
-                                      workHistory[index].positionTitle
-                                  }
-                                  companyLogo={workHistory[index].companyLogo}
-                                  companyLogoAlt={
-                                      workHistory[index].companyLogoAlt
-                                  }
-                                  location={workHistory[index].location}
-                                  startDate={workHistory[index].startDate}
-                                  endDate={workHistory[index].endDate}
-                                  langaugesUsed={
-                                      workHistory[index].languagesUsed
-                                  }
-                                  bulletPoints={workHistory[index].bulletPoints}
-                              />
-                          )
+                            <WorkTextFile
+                                key={index}
+                                positionOffset={{ x: 0, y: 40 * index }}
+                                index={index}
+                                closeWindow={() =>
+                                    handleWorkHistoryOpen(index)
+                                }
+                                companyName={workHistory[index].companyName}
+                                positionTitle={
+                                    workHistory[index].positionTitle
+                                }
+                                companyLogo={workHistory[index].companyLogo}
+                                companyLogoAlt={
+                                    workHistory[index].companyLogoAlt
+                                }
+                                location={workHistory[index].location}
+                                startDate={workHistory[index].startDate}
+                                endDate={workHistory[index].endDate}
+                                langaugesUsed={
+                                    workHistory[index].languagesUsed
+                                }
+                                bulletPoints={workHistory[index].bulletPoints}
+                            />
+                        )
                         : null
                 )}
                 {isPersonalProjectWindowOpen.map((isOpen, index) =>
                     isOpen
                         ? isPersonalProjectWindowOpen[index] && (
-                              <PersonalProjectTextFile
-                                  key={index}
-                                  index={index}
-                                  positionOffset={{ x: 0, y: 40 * index }}
-                                  closeWindow={() => handleProjectsOpen(index)}
-                                  projectName={
-                                      personalProjects[index].projectName
-                                  }
-                                  technologies={
-                                      personalProjects[index].technologies
-                                  }
-                                  description={
-                                      personalProjects[index].description
-                                  }
-                                  image={personalProjects[index].image}
-                                  imageAlt={personalProjects[index].imageAlt}
-                              />
-                          )
+                            <PersonalProjectTextFile
+                                key={index}
+                                index={index}
+                                positionOffset={{ x: 0, y: 40 * index }}
+                                closeWindow={() => handleProjectsOpen(index)}
+                                projectName={
+                                    personalProjects[index].projectName
+                                }
+                                technologies={
+                                    personalProjects[index].technologies
+                                }
+                                description={
+                                    personalProjects[index].description
+                                }
+                                linkName={personalProjects[index].linkName}
+                                link={personalProjects[index].link}
+                                image={personalProjects[index].image}
+                                imageAlt={personalProjects[index].imageAlt}
+                            />
+                        )
                         : null
                 )}
                 {isLinkedInRecommendationOpen.map((isOpen, index) =>
                     isOpen
                         ? isLinkedInRecommendationOpen[index] && (
-                              <LinkedInRecommendationsTextFile
-                                  key={index}
-                                  index={index}
-                                  positionOffset={{ x: 0, y: 40 * index }}
-                                  closeWindow={() =>
-                                      handleRecommendationsOpen(index)
-                                  }
-                                  person={linkedinRecommendations[index].person}
-                                  bodyText={
-                                      linkedinRecommendations[index].bodyText
-                                  }
-                              />
-                          )
+                            <LinkedInRecommendationsTextFile
+                                key={index}
+                                index={index}
+                                positionOffset={{ x: 0, y: 40 * index }}
+                                closeWindow={() =>
+                                    handleRecommendationsOpen(index)
+                                }
+                                person={linkedinRecommendations[index].person}
+                                bodyText={
+                                    linkedinRecommendations[index].bodyText
+                                }
+                            />
+                        )
                         : null
                 )}
             </div>
