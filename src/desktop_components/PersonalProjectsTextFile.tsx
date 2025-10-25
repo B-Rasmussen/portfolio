@@ -1,5 +1,6 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
+import zombieGameChangeLog from "../data/zombieGameChangeLog";
 import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/textFileStyle.css";
 import Button from "../components/Button";
@@ -97,6 +98,26 @@ function PersonalProjectTextFile({
                                 />
                             )}
                         </div>
+                        {projectName === "Zombie survival game" ? (
+                            <div>
+                                <h3>Change Log:</h3>
+                                {zombieGameChangeLog.map((item: any) => (
+                                    <div key={item.id}>
+                                        <h4>Version {item.versionNumber}</h4>
+                                        <ul>
+                                            {item.changeLog.map(
+                                                (
+                                                    change: string,
+                                                    idx: number
+                                                ) => (
+                                                    <li key={idx}>{change}</li>
+                                                )
+                                            )}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : null}
                     </div>
                 </div>
             }
