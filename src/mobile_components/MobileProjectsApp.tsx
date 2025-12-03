@@ -40,13 +40,22 @@ export function MobileProjectsApp({
                     )}
                 </div>
                 <div>
-                    {personalProjects[idNumber].image && (
-                        <img
-                            src={personalProjects[idNumber].image}
-                            alt={personalProjects[idNumber].imageAlt}
-                            style={{ width: "90%" }}
-                        />
-                    )}
+                    {personalProjects[idNumber].image &&
+                        personalProjects[idNumber].image.map((imgSrc, idx) => (
+                            <img
+                                key={idx}
+                                // id={
+                                //     personalProjects[idNumber]
+                                //         .projectName ===
+                                //     "Zombie survival game"
+                                //         ? "zombie-image-content"
+                                //         : "image-content"
+                                // }
+                                src={imgSrc}
+                                alt={personalProjects[idNumber].imageAlt}
+                                style={{ width: "90%"}}
+                            />
+                        ))}
                 </div>
                 {personalProjects[idNumber].projectNameAbbr === "Zombies" ? (
                     <div>
