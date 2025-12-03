@@ -66,8 +66,13 @@
 }
 
 /* personal projects specific items */
-#image-content {
+#zombie-image-content {
     height: 250px;
+}
+
+#image-content {
+    height: 350px;
+    padding: 5px;
 }
 
 /* linkedin recommedation specific items */

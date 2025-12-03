@@ -1,4 +1,6 @@
-import zombie_gif from "../assets/zombies_project.gif";
+import zombie_gif from "../assets/personalProjects/zombies_project.gif";
+import health_app from "../assets/personalProjects/health_app_homescreen.png";
+import health_app_monthly_view from "../assets/personalProjects/health_app_monthly_view.png";
 import godot_icon from "../assets/godot_icon.svg";
 
 type personalProjects = {
@@ -12,7 +14,7 @@ type personalProjects = {
     linkName?: string;
     technologies: Array<string>;
     projectURL?: string;
-    image?: string;
+    image?: Array<string>;
     imageAlt?: string;
 };
 
@@ -25,7 +27,7 @@ const personalProjects: personalProjects[] = [
         buttonColor: "#640404",
         description: ["A endless zombie survival game created in Godot 4."],
         technologies: ["Godot 4", "GDScript"],
-        image: zombie_gif,
+        image: [zombie_gif],
         imageAlt: "Zombie survival game gif",
     },
     // {
@@ -48,6 +50,8 @@ const personalProjects: personalProjects[] = [
         link: "https://github.com/B-Rasmussen/symptom-tracker",
         linkName: "Symptom Tracker Repo",
         technologies: ["React Native", "JavaScript", "TypeScript"],
+        image: [health_app, health_app_monthly_view],
+        imageAlt: "Health App Homescreen",
     },
 ];
 

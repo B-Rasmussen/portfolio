@@ -14,7 +14,7 @@ type PersonalProjectTextFileProps = {
     description: string[];
     link?: string;
     linkName?: string;
-    image?: string;
+    image?: string[];
     imageAlt?: string;
 };
 
@@ -90,13 +90,15 @@ function PersonalProjectTextFile({
                         </div>
                         <div>{description}</div>
                         <div>
-                            {image && (
-                                <img
-                                    id="image-content"
-                                    src={image}
-                                    alt={imageAlt}
-                                />
-                            )}
+                            {image &&
+                                image.map((imgSrc, idx) => (
+                                    <img
+                                        key={idx}
+                                        id={projectName === 'Zombie survival game' ? "zombie-image-content" : "image-content"}
+                                        src={imgSrc}
+                                        alt={imageAlt}
+                                    />
+                                ))}
                         </div>
                         {projectName === "Zombie survival game" ? (
                             <div>

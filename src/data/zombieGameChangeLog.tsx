@@ -1,4 +1,4 @@
-import zombie_gif from "../assets/zombies_project.gif";
+import zombie_gif from "../assets/personalProjects/zombies_project.gif";
 
 type ChangeLog = {
     id: number;
