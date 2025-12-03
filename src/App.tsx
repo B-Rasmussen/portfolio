@@ -1,14 +1,8 @@
-import { SetStateAction, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // PAGES
-import WorkHistoryPage from "./pages/WorkHistoryPage";
-import ProjectsPage from "./pages/ProjectsPage";
 import DesktopResumePage from "./pages/DesktopResumePage";
 import MobileResumePage from "./pages/MobileResumePage";
-
-// NAVBAR COMPONENTS
-import StaticNavBar from "./components/StaticNavBar";
-import SocialMediaBar from "./components/SocialMediaBar";
 
 import "./App.css";
 
@@ -34,30 +28,13 @@ function isMobileDevice() {
 }
 
 function App() {
-    const [currentScreen, setCurrentScreen] = useState("WorkHistory");
-    // const [isDarkMode, setIsDarkMode] = useState(false);
-
-    const navigateTo = (screenName: SetStateAction<string>) => {
-        setCurrentScreen(screenName);
-    };
+    const [currentScreen, setCurrentScreen] = useState("DesktopResume");
     const renderPage = () => {
         switch (currentScreen) {
-            case "WorkHistory":
-                return <WorkHistoryPage />;
-            case "Projects":
-                return <ProjectsPage />;
             case "DesktopResume":
-                return (
-                    <DesktopResumePage
-                    // navigateTo={navigateTo}
-                    />
-                );
+                return <DesktopResumePage />;
             case "MobileResume":
-                return (
-                    <MobileResumePage
-                    // navigateTo={navigateTo}
-                    />
-                );
+                return <MobileResumePage />;
             default:
                 return <div>Oops something went wrong</div>;
         }
@@ -75,21 +52,9 @@ function App() {
             id={
                 currentScreen === "DesktopResume"
                     ? "desktop-resume"
-                    : currentScreen === "MobileResume"
-                    ? "mobile-resume"
-                    : "static-resume"
+                    : "mobile-resume"
             }
         >
-            {currentScreen === "DesktopResume" ||
-            currentScreen === "MobileResume" ? null : (
-                <div className="nav-bar-container">
-                    <StaticNavBar
-                        navigateTo={navigateTo}
-                        isMobileDevice={isMobileDevice()}
-                    />
-                    <SocialMediaBar />
-                </div>
-            )}
             {renderPage()}
         </div>
     );
