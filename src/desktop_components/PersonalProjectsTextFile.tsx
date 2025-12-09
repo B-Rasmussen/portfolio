@@ -3,7 +3,7 @@ import { useState, useRef, useEffect, SetStateAction } from "react";
 import zombieGameChangeLog from "../data/zombieGameChangeLog";
 import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/textFileStyle.css";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 
 type PersonalProjectTextFileProps = {
     index: number;
@@ -25,8 +25,8 @@ function PersonalProjectTextFile({
     projectName,
     technologies,
     description,
-    link,
-    linkName,
+    // link,
+    // linkName,
     image,
     imageAlt,
 }: PersonalProjectTextFileProps) {
