@@ -39,21 +39,19 @@ export function MobileProjectsApp({
                         }
                     )}
                 </div>
-                <div>
+                <div className="image-container">
                     {personalProjects[idNumber].image &&
                         personalProjects[idNumber].image.map((imgSrc, idx) => (
                             <img
                                 key={idx}
-                                // id={
-                                //     personalProjects[idNumber]
-                                //         .projectName ===
-                                //     "Zombie survival game"
-                                //         ? "zombie-image-content"
-                                //         : "image-content"
-                                // }
+                                className={
+                                    personalProjects[idNumber].projectName ===
+                                    "Zombie survival game"
+                                        ? "zombie-image-content"
+                                        : "image-content"
+                                }
                                 src={imgSrc}
                                 alt={personalProjects[idNumber].imageAlt}
-                                style={{ width: "90%"}}
                             />
                         ))}
                 </div>

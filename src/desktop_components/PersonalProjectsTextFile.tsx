@@ -1,5 +1,5 @@
 import Draggable from "react-draggable";
-import { useState, useRef, SetStateAction } from "react";
+import { useState, useRef, useEffect, SetStateAction } from "react";
 import zombieGameChangeLog from "../data/zombieGameChangeLog";
 import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/textFileStyle.css";
@@ -36,6 +36,19 @@ function PersonalProjectTextFile({
         y: -400,
     });
 
+    // State for expanded image modal
+    const [expandedImage, setExpandedImage] = useState<string | null>(null);
+
+    useEffect(() => {
+        const handleKey = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setExpandedImage(null);
+            }
+        };
+        window.addEventListener("keydown", handleKey);
+        return () => window.removeEventListener("keydown", handleKey);
+    }, []);
+
     const handleStop = (
         _event: any,
         dragElement: { x: SetStateAction<number>; y: SetStateAction<number> }
@@ -46,17 +59,17 @@ function PersonalProjectTextFile({
         });
     };
     return (
-        <Draggable
-            bounds="parent"
-            onStop={handleStop}
-            defaultPosition={{
-                x: childPosition.x + positionOffset.x,
-                y: childPosition.y + positionOffset.y,
-            }}
-            nodeRef={nodeRef}
-            handle=".grabbable-area"
-        >
-            {
+        <>
+            <Draggable
+                bounds="parent"
+                onStop={handleStop}
+                defaultPosition={{
+                    x: childPosition.x + positionOffset.x,
+                    y: childPosition.y + positionOffset.y,
+                }}
+                nodeRef={nodeRef}
+                handle=".grabbable-area"
+            >
                 <div
                     className="text-file-window child-window-contents"
                     ref={nodeRef}
@@ -67,14 +80,14 @@ function PersonalProjectTextFile({
                     </div>
                     <div className="child-window-main-content">
                         <div>{projectName}</div>
-                        {link && (
+                        {/* {link && (
                             <Button
                                 buttonName={linkName}
                                 onButtonPressed={() => {
                                     window.open(`${link}`, "_blank");
                                 }}
                             />
-                        )}
+                        )} */}
                         <div>
                             Tech Stack:{" "}
                             {technologies?.map(
@@ -94,9 +107,19 @@ function PersonalProjectTextFile({
                                 image.map((imgSrc, idx) => (
                                     <img
                                         key={idx}
-                                        id={projectName === 'Zombie survival game' ? "zombie-image-content" : "image-content"}
+                                        id={
+                                            projectName ===
+                                            "Zombie survival game"
+                                                ? "zombie-image-content"
+                                                : "image-content"
+                                        }
                                         src={imgSrc}
                                         alt={imageAlt}
+                                        onClick={() => setExpandedImage(imgSrc)}
+                                        style={{
+                                            cursor: "zoom-in",
+                                            margin: 4,
+                                        }}
                                     />
                                 ))}
                         </div>
@@ -122,8 +145,54 @@ function PersonalProjectTextFile({
                         ) : null}
                     </div>
                 </div>
-            }
-        </Draggable>
+            </Draggable>
+
+            {expandedImage && (
+                <div
+                    onClick={() => setExpandedImage(null)}
+                    style={{
+                        position: "fixed",
+                        inset: 0,
+                        backgroundColor: "rgba(0,0,0,0.85)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 9999,
+                    }}
+                >
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setExpandedImage(null);
+                        }}
+                        style={{
+                            position: "absolute",
+                            top: 20,
+                            right: 20,
+                            background: "#333",
+                            border: "none",
+                            padding: "8px 12px",
+                            borderRadius: 6,
+                            cursor: "pointer",
+                            zIndex: 10000,
+                        }}
+                    >
+                        Close
+                    </button>
+
+                    <img
+                        src={expandedImage}
+                        alt={imageAlt}
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                            maxWidth: "95%",
+                            maxHeight: "95%",
+                            boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+                        }}
+                    />
+                </div>
+            )}
+        </>
     );
 }
 

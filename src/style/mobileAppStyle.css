@@ -56,6 +56,9 @@
 }
 
 /* IN APP STYLE */
+.app-body {
+    width: 100%;
+}
 /* REVIEWS APP */
 .reviewer-headline {
     display: flex;
@@ -73,5 +76,20 @@
 
 .review-divider {
     padding-top: 10px;
-    border-bottom: 1px dashed #FFF;
+    border-bottom: 1px dashed #fff;
+}
+
+/* PERSONAL PROJECTS APP */
+.image-container {
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.zombie-image-content {
+    width: 90%;
+    margin: 4px;
+}
+.image-content {
+    width: 70%;
+    margin: 4px;
 }
