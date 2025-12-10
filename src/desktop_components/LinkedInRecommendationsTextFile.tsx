@@ -52,7 +52,7 @@ function LinkedInRecommendationsTextFile({
                     <div className="grabbable-area">
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
                         <div className="title-bar-text">
-                            {person}_review.txt
+                            {person.replace(/\ /g, "_")}_review.txt
                         </div>
                     </div>
                     <div

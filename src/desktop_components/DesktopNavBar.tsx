@@ -5,32 +5,43 @@ import "../style/desktopNavBarStyle.css";
 import linkedinDarkMode from "../assets/socialImages/LinkedIn/linkedinDarkMode.png";
 import githubDarkMode from "../assets/socialImages/github/githubDarkMode.png";
 
-// type DesktopNavBarProps = {
-//     navigateTo: (path: string) => void;
-// };
-
 function DesktopNavBar() {
-// { navigateTo }: DesktopNavBarProps
-    const [isOpen, setIsOpen] = useState(false);
+    const [isSocialsOpen, setIsSocialsOpen] = useState(false);
+    const [isLangaugeMenuOpen, setIsLanguageMenuOpen] = useState(false);
     const [currentTime, setCurrentTime] = useState(new Date());
 
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
+    const toggleDropdown = (input: string) => {
+        if (input === "social") {
+            setIsSocialsOpen(!isSocialsOpen);
+        } else if (input === "language") {
+            setIsLanguageMenuOpen(!isLangaugeMenuOpen);
+        }
     };
 
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
+        const handleClickOutsideSocial = (event: MouseEvent) => {
             const target = event.target as HTMLElement;
             if (
                 !target.closest(".socials") &&
                 !target.closest(".dropdown-menu")
             ) {
-                setIsOpen(false);
+                setIsSocialsOpen(false);
             }
         };
-        document.addEventListener("click", handleClickOutside);
+        const handleClickOutsideLanguage = (event: MouseEvent) => {
+            const target = event.target as HTMLElement;
+            if (
+                !target.closest(".language") &&
+                !target.closest(".dropdown-menu")
+            ) {
+                setIsLanguageMenuOpen(false);
+            }
+        };
+        document.addEventListener("click", handleClickOutsideSocial);
+        document.addEventListener("click", handleClickOutsideLanguage);
         return () => {
-            document.removeEventListener("click", handleClickOutside);
+            document.removeEventListener("click", handleClickOutsideSocial);
+            document.removeEventListener("click", handleClickOutsideLanguage);
         };
     }, []);
 
@@ -50,12 +61,12 @@ function DesktopNavBar() {
                 <div className="left-side-item">View</div>
                 <div
                     className="left-side-item socials"
-                    onClick={toggleDropdown}
+                    onClick={() => toggleDropdown("social")}
                 >
                     Socials
                 </div>
-                {isOpen && (
-                    <div className="dropdown-menu">
+                {isSocialsOpen && (
+                    <div className="dropdown-social-menu">
                         <Button
                             imageName={linkedinDarkMode}
                             onButtonPressed={() => {
@@ -80,12 +91,18 @@ function DesktopNavBar() {
                         />
                     </div>
                 )}
-                {/* <div
-                    className="left-side-item static-page"
-                    onClick={() => navigateTo("WorkHistory")}
+                <div
+                    className="left-side-item language"
+                    onClick={() => toggleDropdown("language")}
                 >
-                    Static Page
-                </div> */}
+                    Language
+                </div>
+                {isLangaugeMenuOpen && (
+                    <div className="dropdown-language-menu">
+                        <div className="dropdown-language-list active">🇺🇸 English</div>
+                        <div className="dropdown-language-list">🇲🇽 Spanish</div>
+                    </div>
+                )}
             </div>
             <div id="clock">
                 {currentTime
