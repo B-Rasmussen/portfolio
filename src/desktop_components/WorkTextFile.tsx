@@ -2,6 +2,7 @@ import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
 import "../style/textFileStyle.css";
+import { useTranslation } from "react-i18next";
 // import "../style/workHistoryStyle.css";
 
 type WorkTextFileProps = {
@@ -33,6 +34,7 @@ function WorkTextFile({
     langaugesUsed,
     bulletPoints,
 }: WorkTextFileProps) {
+    const { t } = useTranslation();
     const nodeRef = useRef(null);
     const [childPosition, setChildPosition] = useState({
         x: -900,
@@ -66,7 +68,9 @@ function WorkTextFile({
                 >
                     <div className="grabbable-area">
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
-                        <div className="title-bar-text">{companyName}.txt</div>
+                        <div className="title-bar-text">
+                            {companyName.replace(/\ /g, "_")}.txt
+                        </div>
                     </div>
                     <div className="child-window-main-content">
                         <div id="company-header">
@@ -85,7 +89,7 @@ function WorkTextFile({
                             {startDate} - {endDate}
                         </div>
                         <div>
-                            Languages/Frameworks:&nbsp;
+                            {t("textFiles.languages/frameworks")}:&nbsp;
                             {langaugesUsed?.map(
                                 (item: string, index: number) => (
                                     <span key={index}>

@@ -1,6 +1,7 @@
 import Draggable from "react-draggable";
 import { useState, useRef, SetStateAction } from "react";
 import TitleBarIcon from "../components/TitleBarIcon";
+import { useTranslation } from "react-i18next";
 // import "../style/workHistoryStyle.css";
 
 type LinkedInRecommendationsTextFileProps = {
@@ -18,6 +19,7 @@ function LinkedInRecommendationsTextFile({
     person,
     bodyText,
 }: LinkedInRecommendationsTextFileProps) {
+    const { t } = useTranslation();
     const nodeRef = useRef(null);
     const [childPosition, setChildPosition] = useState({
         x: -300,
@@ -59,10 +61,10 @@ function LinkedInRecommendationsTextFile({
                         className="child-window-main-content"
                         id="linkedin-recommendations-content"
                     >
-                        <h3>Reviewed By: {person}</h3>
+                        <h3>{t("textFiles.reviewedBy")}: {person}</h3>
                         <div>
                             {bodyText.map((line: string, index: number) => (
-                                <text key={index}>{line} </text>
+                                <div key={index}>{line} </div>
                             ))}
                         </div>
                     </div>

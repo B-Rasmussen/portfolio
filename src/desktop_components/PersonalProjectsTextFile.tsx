@@ -2,6 +2,7 @@ import Draggable from "react-draggable";
 import { useState, useRef, useEffect, SetStateAction } from "react";
 import zombieGameChangeLog from "../data/zombieGameChangeLog";
 import TitleBarIcon from "../components/TitleBarIcon";
+import { useTranslation } from "react-i18next";
 import "../style/textFileStyle.css";
 // import Button from "../components/Button";
 
@@ -30,6 +31,7 @@ function PersonalProjectTextFile({
     image,
     imageAlt,
 }: PersonalProjectTextFileProps) {
+    const { t } = useTranslation();
     const nodeRef = useRef(null);
     const [childPosition, setChildPosition] = useState({
         x: -600,
@@ -76,7 +78,7 @@ function PersonalProjectTextFile({
                 >
                     <div className="grabbable-area">
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
-                        <div className="title-bar-text">{projectName}.txt</div>
+                        <div className="title-bar-text">{projectName.replace(/\ /g, "_")}.txt</div>
                     </div>
                     <div className="child-window-main-content">
                         <div>{projectName}</div>
@@ -89,7 +91,7 @@ function PersonalProjectTextFile({
                             />
                         )} */}
                         <div>
-                            Tech Stack:{" "}
+                            {t("textFiles.techStack")}:{" "}
                             {technologies?.map(
                                 (item: string, index: number) => (
                                     <span key={index}>
@@ -125,7 +127,7 @@ function PersonalProjectTextFile({
                         </div>
                         {projectName === "Zombie survival game" ? (
                             <div>
-                                <h3>Change Log:</h3>
+                                <h3>{t("textFiles.changeLog")}:</h3>
                                 {zombieGameChangeLog.map((item: any) => (
                                     <div key={item.id}>
                                         <h4>Version {item.versionNumber}</h4>

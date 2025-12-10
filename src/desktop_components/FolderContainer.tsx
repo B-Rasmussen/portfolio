@@ -9,6 +9,7 @@ type FolderContainerProps = {
     closeFolder: () => void;
     positionOffset: { x: number; y: number };
     folderTitle: string;
+    folderType: string;
     data: any[];
 };
 
@@ -17,6 +18,7 @@ function FolderContainer({
     closeFolder,
     positionOffset,
     folderTitle,
+    folderType,
     data,
 }: FolderContainerProps) {
     const nodeRef = useRef(null);
@@ -24,7 +26,6 @@ function FolderContainer({
         x: 100,
         y: -300,
     });
-
     const handleStop = (
         _event: any,
         dragElement: { x: SetStateAction<number>; y: SetStateAction<number> }
@@ -53,7 +54,7 @@ function FolderContainer({
                         <div className="title-bar-text">{folderTitle}</div>
                     </div>
                     <div className="folder-content">
-                        {folderTitle === "Work History"
+                        {folderType === "Work History"
                             ? data.map((item: any, index: number) => (
                                 <div
                                     key={item.id}
@@ -62,12 +63,12 @@ function FolderContainer({
                                     }}
                                     className="text-file-container"
                                 >
-                                    <DesktopFileIcon fileName={item.companyName} folderTitle={folderTitle} />
+                                    <DesktopFileIcon fileName={item.companyName} folderTitle={folderType} />
                                 </div>
                             ))
                             : null}
 
-                        {folderTitle === "Personal Projects"
+                        {folderType === "Personal Projects"
                             ? data.map((item: any, index: number) => (
                                 <div
                                     key={item.id}
@@ -76,12 +77,12 @@ function FolderContainer({
                                     }}
                                     className="text-file-container"
                                 >
-                                    <DesktopFileIcon fileName={item.projectName} folderTitle={folderTitle} />
+                                    <DesktopFileIcon fileName={item.projectName} folderTitle={folderType} />
                                 </div>
                             ))
                             : null}
 
-                        {folderTitle === "LinkedIn Recommendations"
+                        {folderType === "LinkedIn Recommendations"
                             ? data.map((item: any, index: number) => (
                                 <div
                                     key={item.id}
@@ -90,7 +91,7 @@ function FolderContainer({
                                     }}
                                     className="text-file-container"
                                 >
-                                    <DesktopFileIcon fileName={item.person} folderTitle={folderTitle} />
+                                    <DesktopFileIcon fileName={item.person} folderTitle={folderType} />
                                 </div>
                             ))
                             : null}

@@ -16,13 +16,13 @@ export function DesktopFileIcon({
                 <div className="line4" />
             </div>
             {folderTitle === "Work History" ? (
-                <text>{fileName.replace(/\ /g, "_")}.txt</text>
+                <div>{fileName.replace(/\ /g, "_")}.txt</div>
             ) : null}
             {folderTitle === "Personal Projects" ? (
-                <text>{fileName.replace(/\ /g, "_")}.proj</text>
+                <div>{fileName.replace(/\ /g, "_")}.proj</div>
             ) : null}
             {folderTitle === "LinkedIn Recommendations" ? (
-                <text>{fileName.replace(/\ /g, "_")}_review.txt</text>
+                <div>{fileName.replace(/\ /g, "_")}_review.txt</div>
             ) : null}
         </div>
     );

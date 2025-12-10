@@ -1,0 +1,117 @@
+{
+    "language": {
+        "language": "es",
+        "english": "Ingles",
+        "spanish": "Espanol"
+    },
+    "folder": {
+        "workHistory": "Historial Laboral",
+        "personalProjects": "Proyectos personales",
+        "linkedinReviews": "Recomendaciones de Linkedin"
+    },
+    "navBar": {
+        "file": "Archivo",
+        "view": "Pantalla",
+        "socials": "Sociales",
+        "language": "Idioma"
+    },
+    "textFiles": {
+        "langauges/frameworks": "lenguajes/marcos de trabajo",
+        "reviewedBy": "Revisado por",
+        "techStack": "Pila tecnológica",
+        "changeLog": "Registro de cambios"
+    },
+    "work": {
+        "activision": {
+            "positionTitle": "Ingeniero de Software",
+            "startDate": "Enero 2020",
+            "endDate": "Enero 2024",
+            "bulletPoints": [
+                "Creé las tablas de clasificación de los 250 mejores jugadores de multijugador y Warzone para Call of Duty (CoD): Modern Warfare 3, lo que permitió a los usuarios ver a los mejores jugadores del mundo y destacó a los jugadores profesionales de la escena de los eSports de Call of Duty.",
+                "Creé la tabla de clasificación de Zombis para CoD: Modern Warfare 3, que permitió a los usuarios comparar su progreso con el de sus amigos y otros miembros de la comunidad de CoD.",
+                "Colaboré con el equipo para integrar pantallas de estadísticas y tablas de clasificación en la serie Call of Duty, permitiendo a los usuarios compararse con amigos, streamers favoritos y los mejores jugadores de la comunidad, lo que aumentó la interacción de los usuarios al comparar estadísticas.",
+                "Resolví problemas de estilo y funcionalidad en el Acuerdo de Licencia de Usuario Final para CoD: Modern Warfare 2 y Modern Warfare 3, creando un acuerdo legal más fácil de leer y ayudando a la empresa a evitar posibles problemas legales costosos.",
+                "Colaboré con el equipo de marketing para promocionar las nuevas funciones introducidas en cada temporada, creando mensajes del día que destacaban las nuevas funciones (incluido el Pase de Batalla Black Cell y los modos de juego de tiempo limitado) lanzadas con cada nueva temporada de Modern Warfare 2 y Modern Warfare 3.",
+                "Diseñé, desarrollé y mantuve un marco de pruebas de control de calidad interno con más de 300 casos de prueba para la aplicación complementaria de CoD, el Mensaje del Día, myCoD (versión web de la aplicación complementaria) y varios sitios web promocionales de juegos (Tony Hawk Pro Skater, Crash Bandicoot, Spyro, etc.).",
+                "Utilicé Appium y Python para la aplicación complementaria de CoD y realicé pruebas en dispositivos iOS y Android con emuladores y dispositivos físicos.",
+                "Utilicé Playwright y TypeScript para los casos de prueba de los sitios web promocionales de juegos, myCoD y el Mensaje del Día.",
+                "Compartí conocimientos con el equipo de desarrollo para que comprendieran Appium/Selenium y cómo ejecutar los scripts de prueba en sus propias ramas.",
+                "Actualicé y mantuve la documentación interna de la aplicación complementaria de Call of Duty, lo que ayudó a evitar que el equipo tuviera lagunas de conocimiento sobre la base de código.",
+                "Trabajé con el equipo de desarrollo para garantizar que los datos de la API se mostraran correctamente utilizando Postman.",
+                "Reduje el número de compilaciones rechazadas por el equipo de control de calidad externo en más del 90%, garantizando que las actualizaciones se entregaran a tiempo.",
+                "Resolví numerosos errores de prioridad baja a media en la aplicación complementaria de CoD, lo que permitió al equipo de desarrollo centrarse en funciones más importantes y errores críticos de la aplicación.",
+                "Agregué etiquetas de accesibilidad a los componentes existentes en la aplicación complementaria de CoD.",
+                "Aplicación para crear localizadores estables para los scripts de prueba, lo que ayudó a los usuarios con problemas de accesibilidad.",
+                "Se amplió y mantuvo el script de automatización para redimensionar imágenes y adaptarlas a dispositivos móviles y de escritorio, reduciendo el tiempo que los desarrolladores tenían que dedicar a este proceso, permitiéndoles concentrarse en problemas y funciones más importantes.",
+                "Se implementó un marco de pruebas y scripts de redimensionamiento de imágenes en un Mac mini remoto para ejecutar pruebas nocturnas en la última rama de desarrollo y se enviaron los resultados a un canal de Slack dedicado.",
+                "Se aumentó la eficiencia del equipo de desarrollo al reducir el tiempo de respuesta para los errores detectados, garantizando el cumplimiento de los plazos de lanzamiento de cada nueva actualización de la aplicación.",
+                "Se gestionaron todos los correos electrónicos y mensajes directos de consultas de los usuarios sobre la aplicación y se respondieron de manera oportuna."
+            ]
+        },
+        "sqaSquared": {
+            "positionTitle": "Ingeniero de software junior en prueba",
+            "startDate": "Mayo 2019",
+            "endDate": "Enero 2020",
+            "bulletPoints": [
+                "Mantuve la automatización de pruebas web para Ticketmaster, asegurando que el sitio web permaneciera libre de errores y manteniendo un proceso de compra de entradas sin problemas para los clientes.",
+                "Mantuve la automatización de pruebas de aplicaciones para OSHI Health, ayudando al equipo de desarrollo a crear la mejor aplicación posible durante la fase de desarrollo y evitando que se encontraran errores en la versión de producción.",
+                "Resolví un problema relacionado con las ventanas emergentes de permisos de Android que bloqueaban las pruebas de la aplicación OSHI Health, eliminando un problema importante que impedía que la automatización registrara los errores con precisión y retrasaba las correcciones por parte del equipo de desarrollo."
+            ]
+        },
+        "movingMindz": {
+            "positionTitle": "Desarrollador web / Tutor",
+            "startDate": "Junio 2018",
+            "endDate": "Marzo 2020",
+            "bulletPoints": [
+                "Desarrollé la interfaz de usuario y el sistema de gestión del sitio web de la empresa. Esto facilitó que las escuelas interesadas, los padres potenciales y los padres de alumnos actuales pudieran obtener más información sobre los programas extraescolares disponibles y las sesiones de tutoría individual.",
+                "Dirigí clubes extraescolares para niños, enseñando Python y contribuyendo a construir relaciones positivas con las escuelas asociadas y los padres de los niños matriculados en las clases."
+            ]
+        }
+    },
+    "personalProjects": {
+        "zombies": {
+            "description": [
+                "Un juego de supervivencia contra zombis sin fin creado en Godot 4."
+            ],
+            "imageAlt": "GIF del juego de supervivencia contra zombis"
+        },
+        "wellnessApp": {
+            "description": [
+                "Una aplicación de bienestar creada con React Native.",
+                "El objetivo de este proyecto es crear una aplicación que ayude a los usuarios a hacer un seguimiento de los síntomas de sus enfermedades crónicas.",
+                "Ayudando a los usuarios a registrar y visualizar los síntomas que han experimentado durante el último día, semana, mes, año, etc."
+            ],
+            "imageAlt": "Pantalla de inicio de la aplicación de salud"
+        }
+    },
+    "linkedinRecommendations": {
+        "timJung": {
+            "bodyText": [
+                "Trabajé con Brandon en proyectos de ingeniería en Activision y es un excelente ingeniero.",
+                "Pero nuestra historia se remonta a mucho antes.",
+                "Conocí a Brandon porque era un asistente habitual y entusiasta de la Community Hack Night de Los Ángeles, una reunión mensual de ingenieros y entusiastas de la tecnología que yo organizaba en el campus de Riot Games (mientras aún trabajaba en Activision).",
+                "Brandon tenía un interés genuino en Call of Duty y la ingeniería.",
+                "Y se propuso demostrarlo.",
+                "Una noche, en la Community Hack Night, se me acercó y me mostró un proyecto que había creado él mismo: automatizaba una gran cantidad de pruebas en la aplicación complementaria de Call of Duty (el producto en el que trabajaba en Activision).",
+                "Francamente, ni siquiera sabía que era posible hacer algo así sin el código fuente.",
+                "Me quedé asombrado. Brandon se había esforzado en su tiempo libre para crear algo realmente útil para un proyecto en el que yo trabajaba, simplemente porque le importaba.",
+                "Al día siguiente se lo mostré a mi director y él también quedó impresionado.",
+                "Decidió entrevistar a Brandon y finalmente lo contrató para que se uniera a nuestro equipo que trabajaba en la aplicación de Call of Duty.",
+                "Brandon desarrolló un conjunto de excelentes pruebas para el proyecto que nos ayudaron a mejorar la baja calificación de la aplicación en la tienda y a subirla a 4.8 estrellas.",
+                "Luego se convirtió en un ingeniero de pleno derecho, desarrollando funciones para los jugadores.",
+                "Gracias a su capacidad para combinar sus pasiones con su ambición de mejorar continuamente sus habilidades, Brandon ha demostrado una sólida trayectoria en la creación de productos de ingeniería de alta calidad.",
+                "Es un ejemplo excepcional de alguien que encuentra la manera de abrirse camino incluso cuando no hay un camino evidente.",
+                "Sin duda, querrás a Brandon en cualquier equipo en el que esté interesado en participar."
+            ]
+        },
+        "shadaeKawaguchi": {
+            "bodyText": [
+                "He tenido el placer de trabajar con Brandon durante los últimos años y hemos colaborado en varios proyectos, algunos de los cuales se pueden ver en el juego.",
+                "Trabajar con Brandon en estos proyectos ha sido un proceso muy fluido.",
+                "Como desarrollador, tomaba los diseños que le proporcionábamos y los implementaba en código para darles vida.",
+                "Tiene un amplio conocimiento y experiencia, y siempre está dispuesto a ayudar y a responder cualquier pregunta que le haga.",
+                "Su sentido del humor y su actitud positiva hicieron que fuera muy fácil trabajar con él, y sería una valiosa incorporación para cualquier equipo."
+            ]
+        }
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "language": {
+        "language": "en",
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "folder": {
+        "workHistory": "Work History",
+        "personalProjects": "Personal Projects",
+        "linkedinReviews": "Linkedin Recommendations"
+    },
+    "navBar": {
+        "file": "File",
+        "view": "View",
+        "socials": "Socials",
+        "language": "Langauge"
+    },
+    "textFiles": {
+        "langauges/frameworks": "langauges/frameworks",
+        "reviewedBy": "Reviewed by",
+        "techStack": "Tech Stack",
+        "changeLog": "Change Log"
+    },
+    "work": {
+        "activision": {
+            "positionTitle": "Software Engineer",
+            "startDate": "January 2020",
+            "endDate": "January 2024",
+            "bulletPoints": [
+                "Created Top 250 Multiplayer and Warzone Leaderboards for Call of Duty (CoD): Modern Warfare 3, allowing users to see the best players in the world and highlighting pro players from the Call of Duty Esport scene.",
+                "Created Zombie Leaderboard for CoD: Modern Warfare 3, which allowed users to compare their progress against friends and the others in the CoD Community.",
+                "Collaborated with team to bring stats and leaderboards screens to Call of Duty series allowing users to compare themselves to friends, favorite streamers, and top players in the community, increasing user engagement when comparing stats to others.",
+                "Resolved styling and functionality issues for End User License Agreement for CoD: Modern Warfare 2 and Modern Warfare 3 producing easier to read legal agreement, helping company avoid potentially costly legal issues.",
+                "Collaborated with marketing team to promote new features that were introduced with each season, creating Message of the Day highlighting new features (including Black Cell Battle Pass, Limited Time Game Modes) that were launched with each new season of Modern Warfare 2 and Modern Warfare 3.",
+                "Designed, developed and maintained an internal QA testing framework with over 300 test cases for the CoD Companion App, Message of the Day, myCoD (web version of the Companion App), and various game promotional websites (Tony Hawk Pro Skater, Crash Bandicoot, Spyro, etc).",
+                "Used Appium and Python for the CoD Companion App and tested on both iOS and Android devices with emulators and physical devices.",
+                "Utilized Playwright and TypeScript for test cases for the promotional game websites, myCoD, and Message of the Day.",
+                "Knowledge share with the dev team so they understood Appium/Selenium and how to run the test scripts on their own branches.",
+                "Updated and maintained internal docs for the Call of Duty Companion App, helping to prevent the team from having any gap in knowledge about the code base.",
+                "Worked with the development team to ensure API data was appearing correctly using Postman.",
+                "Reduced the number of builds rejected by the external QA team by more than 90% ensuring that updates were delivered on time.",
+                "Resolved numerous small to medium priority bug fixes in CoD Companion App, allowing Dev team to focus on bigger features and app breaking bugs.",
+                "Added accessibility labels to existing components in the CoD Companion App to create stable locators for the test scripts and helped users that have accessibility issues.",
+                "Expanded on and maintained automation script for resizing images to be mobile / desktop friendly, reducing amount of time developers had to divert from more critical issues and features.",
+                "Deployed testing framework and resizing image scripts to a remote mac mini, to run nightly testing on the latest feature branch and sent results to a dedicated slack channel.",
+                "Increased Dev team efficiency by reducing turnaround time for discovered bugs, ensuring release deadline for each new app update was met.",
+                "Managed all email/DMs from user inquiries regarding the app and responded in a timely manner."
+            ]
+        },
+        "sqaSquared": {
+            "positionTitle": "Junior Software Engineer in Test",
+            "startDate": "May 2019",
+            "endDate": "January 2020",
+            "bulletPoints": [
+                "Maintained web testing automation for Ticketmaster, ensuring website remained bug-free, maintaining a hassle-free ticket buying process for customers.",
+                "Maintained app testing automation for OSHI Health, helping the dev team produce the best possible app while in development, and preventing any bugs from being found in production.",
+                "Resolved issue regarding Android permission popups form blocking OSHI Health app ttesting, elimintating a major issue that prevented automation from accurately logging bugs and delaying fixes from the dev team."
+            ]
+        },
+        "movingMindz": {
+            "positionTitle": "Web Developer / Tutor",
+            "startDate": "June 2018",
+            "endDate": "March 2020",
+            "bulletPoints": [
+                "Created front and back end for the Company's website. This allowed easy access for interested schools, potential new parents, and current parents to obtain more information about available after school programs and 1 on 1 tutoring sessions.",
+                "Led after school clubs for children, teaching Python and helping build positive relations with partner schools and parents of children enrolled in classes."
+            ]
+        }
+    },
+    "personalProjects": {
+        "zombies": {
+            "description": [
+                "A endless zombie survival game created in Godot 4."
+            ],
+            "imageAlt": "Zombie survival game gif"
+        },
+        "wellnessApp": {
+            "description": [
+                "A wellness app created in React Native. ",
+                "The goal of this project is to create an app to help users track their chronic illness symptoms. ",
+                "Assisting users by tracking and displaying symptoms they recorded over the past day, week, month, year, etc. "
+            ],
+            "imageAlt": "Health App Homescreen"
+        }
+    },
+    "linkedinRecommendations": {
+        "timJung": {
+            "bodyText": [
+                "I worked with Brandon on engineering projects at Activision and he's a great engineer. ",
+                "But our story actually goes back further than that. ",
+                "I originally met Brandon because he was an enthusiastic regular attendee of LA's Community Hack Night - a monthly meeting of engineering and tech devotees - which I hosted on Riot Games campus (while I was still an Activision employee). ",
+                "Brandon had a sincere interest in Call of Duty and engineering. ",
+                "And he set out to prove it. ",
+                "One night at Community Hack Night he came up to me and showed me a project he had built himself - it took the Call of Duty Companion App (the product I worked on at Activision) and automated a ton of tests on it. ",
+                "Frankly - I didn't even know it was possible to do something like that without the source code. ",
+                "I was astonished. Brandon had gone out of his way in his free time to create something genuinely useful for a project I worked on simply because he cared about it. ",
+                "I went and showed it to my director the next day and he was impressed too. ",
+                "He decided to interview Brandon and ultimately hired him to join our team working on the Call of Duty app. ",
+                "\nBrandon went on to build out a suite of excellent tests for the project that helped us clean up our low app store rating and raise it to 4.8 stars. ",
+                "Then he transitioned into a fully fledged engineer delivering features for players. ",
+                "Through his ability to weave his passions together with his ambitious drive to continuously improve his craft, Brandon has demonstrated a proven track record of materializing shipped engineering output. ",
+                "He's a rare example of someone who will find a way to forge a path even when a path is not obvious. ",
+                "You absolutely want Brandon as a part of any team he's interested in putting his mind to."
+            ]
+        },
+        "shadaeKawaguchi": {
+            "bodyText": [
+                "I have had the pleasure of working with Brandon over the past few years, and have worked on multiple projects together several of which can be viewed in-game. ",
+                "Working with Brandon on those projects has been a seamless process. ",
+                "As a developer, he would take the designs we've provided and implement them in code to bring them to life. ",
+                "He has a breadth of knowledge and experience and is always willing to help whenever possible and answer any questions I come up with. ",
+                "His humor and positive attitude made him so easy to work with, and he would be an asset to any team."
+            ]
+        }
+    }
+}

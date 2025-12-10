@@ -1,18 +1,18 @@
 import { useState } from "react";
-import workHistory from "../data/workHistory";
-import personalProjects from "../data/personalProjects";
-import linkedinRecommendations from "../data/linkedinRecommendations";
+import { workHistoryData } from "../data/workHistory";
+import { personalProjectsData } from "../data/personalProjects";
+import { linkedinRecommendationsData } from "../data/linkedinRecommendations";
 
 export function handleChildWindow() {
     const [isJobWindowOpen, setIsJobWindowOpen] = useState(
-        Array(workHistory.length).fill(false)
+        Array(workHistoryData.length).fill(false)
     );
 
     const [isPersonalProjectWindowOpen, setIsPersonalProjectWindowOpen] =
-        useState(Array(personalProjects.length).fill(false));
+        useState(Array(personalProjectsData.length).fill(false));
 
     const [isLinkedInRecommendationOpen, setIsLinkedInRecommendationOpen] =
-        useState(Array(linkedinRecommendations.length).fill(false));
+        useState(Array(linkedinRecommendationsData.length).fill(false));
 
     const handleWorkHistoryOpen = (index: number) => {
         setIsJobWindowOpen((prev) => {
@@ -39,9 +39,9 @@ export function handleChildWindow() {
     };
 
     return {
-        workHistory,
-        personalProjects,
-        linkedinRecommendations,
+        workHistoryData,
+        personalProjectsData,
+        linkedinRecommendationsData,
         isJobWindowOpen,
         isPersonalProjectWindowOpen,
         isLinkedInRecommendationOpen,
