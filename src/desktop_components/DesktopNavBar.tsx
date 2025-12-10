@@ -102,10 +102,16 @@ function DesktopNavBar() {
                 </div>
                 {isLangaugeMenuOpen && (
                     <div className="dropdown-language-menu">
-                        <div className="dropdown-language-list active" onClick={() => setI18nLanguage("en")}>
+                        <div
+                            className="dropdown-language-list active"
+                            onClick={() => setI18nLanguage("en")}
+                        >
                             🇺🇸 {t("language.english")}
                         </div>
-                        <div className="dropdown-language-list" onClick={() => setI18nLanguage("es")}>
+                        <div
+                            className="dropdown-language-list"
+                            onClick={() => setI18nLanguage("es")}
+                        >
                             🇲🇽 {t("language.spanish")}
                         </div>
                     </div>
@@ -113,7 +119,7 @@ function DesktopNavBar() {
             </div>
             <div id="clock">
                 {currentTime
-                    .toLocaleDateString([], {
+                    .toLocaleDateString(t("language.language"), {
                         weekday: "short",
                         month: "short",
                         day: "numeric",

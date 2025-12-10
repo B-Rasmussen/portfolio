@@ -84,6 +84,32 @@
             "imageAlt": "Pantalla de inicio de la aplicación de salud"
         }
     },
+    "zombiesChangeLog": {
+        "version": "Versión",
+        "version0.1": {
+            "changeLog": [
+                "Las estadísticas de las armas, el jugador y los zombis estaban programadas directamente en el código. 🫣",
+                "Se añadieron mecánicas de movimiento y disparo al juego para mando, teclado y ratón.",
+                "Se añadieron efectos de sonido provisionales para disparar y recargar.",
+                "Se añadió una animación de recarga al estilo Doom.",
+                "Se añadió un sistema de detección de impactos mediante raycasting para saber cuándo se golpea a un enemigo."
+            ]
+        },
+        "version0.2": {
+            "changeLog": [
+                "Iluminación global añadida",
+                "Puntos de aparición de enemigos",
+                "Lógica para que los zombis aparezcan continuamente y persigan al jugador",
+                "Nuevo modelo de arma con un láser de puntería que ayuda a los jugadores a apuntar",
+                "El láser se apaga cuando el arma no está en pantalla"
+            ]
+        },
+        "version0.3": {
+            "changeLog": [
+                "Se ha reescrito la lógica tanto para los enemigos como para las armas para que utilicen el sistema de recursos de Godot (similar a los planos en Unreal Engine)."
+            ]
+        }
+    },
     "linkedinRecommendations": {
         "timJung": {
             "bodyText": [

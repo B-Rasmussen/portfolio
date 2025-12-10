@@ -39,9 +39,6 @@ export function handleChildWindow() {
     };
 
     return {
-        workHistoryData,
-        personalProjectsData,
-        linkedinRecommendationsData,
         isJobWindowOpen,
         isPersonalProjectWindowOpen,
         isLinkedInRecommendationOpen,

@@ -1,6 +1,6 @@
 import Draggable from "react-draggable";
 import { useState, useRef, useEffect, SetStateAction } from "react";
-import zombieGameChangeLog from "../data/zombieGameChangeLog";
+import {zombieGameChangeLogData, useZombieGameChangeLog} from "../data/zombieGameChangeLog";
 import TitleBarIcon from "../components/TitleBarIcon";
 import { useTranslation } from "react-i18next";
 import "../style/textFileStyle.css";
@@ -32,6 +32,7 @@ function PersonalProjectTextFile({
     imageAlt,
 }: PersonalProjectTextFileProps) {
     const { t } = useTranslation();
+    const zombiesGame = useZombieGameChangeLog();
     const nodeRef = useRef(null);
     const [childPosition, setChildPosition] = useState({
         x: -600,
@@ -128,9 +129,9 @@ function PersonalProjectTextFile({
                         {projectName === "Zombie survival game" ? (
                             <div>
                                 <h3>{t("textFiles.changeLog")}:</h3>
-                                {zombieGameChangeLog.map((item: any) => (
+                                {zombiesGame.map((item: any) => (
                                     <div key={item.id}>
-                                        <h4>Version {item.versionNumber}</h4>
+                                        <h4>{t("zombiesChangeLog.version")} {item.versionNumber}</h4>
                                         <ul>
                                             {item.changeLog.map(
                                                 (

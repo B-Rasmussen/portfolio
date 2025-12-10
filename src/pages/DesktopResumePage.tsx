@@ -33,9 +33,6 @@ function DesktopResumePage() {
     } = handleOpenAndCloseFolder();
 
     const {
-        workHistoryData,
-        personalProjectsData,
-        linkedinRecommendationsData,
         isJobWindowOpen,
         isPersonalProjectWindowOpen,
         isLinkedInRecommendationOpen,
@@ -46,9 +43,7 @@ function DesktopResumePage() {
 
     return (
         <div id="interactive-resume-page">
-            <DesktopNavBar
-            // navigateTo={navigateTo}
-            />
+            <DesktopNavBar />
             <FolderIcon
                 onClick={openWorkHistory}
                 folderName={t("folder.workHistory")}
