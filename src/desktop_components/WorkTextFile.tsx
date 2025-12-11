@@ -89,7 +89,7 @@ function WorkTextFile({
                             {startDate} - {endDate}
                         </div>
                         <div>
-                            {t("textFiles.languages/frameworks")}:&nbsp;
+                            {t("textFiles.langauges_frameworks")}:&nbsp;
                             {langaugesUsed?.map(
                                 (item: string, index: number) => (
                                     <span key={index}>

@@ -16,10 +16,11 @@
         "language": "Langauge"
     },
     "textFiles": {
-        "langauges/frameworks": "langauges/frameworks",
+        "langauges_frameworks": "langauges/frameworks",
         "reviewedBy": "Reviewed by",
         "techStack": "Tech Stack",
-        "changeLog": "Change Log"
+        "changeLog": "Change Log",
+        "rating": "Rating"
     },
     "work": {
         "activision": {
@@ -110,6 +111,7 @@
         }
     },
     "linkedinRecommendations": {
+        "reviews": "Reviews",
         "timJung": {
             "bodyText": [
                 "I worked with Brandon on engineering projects at Activision and he's a great engineer. ",

@@ -1,6 +1,7 @@
-import personalProjects from "../data/personalProjects";
-import zombieGameChangeLog from "../data/zombieGameChangeLog";
+import { usePersonalProjects } from "../data/personalProjects";
+import { useZombieGameChangeLog } from "../data/zombieGameChangeLog";
 import { MobileInAppNavBar } from "./MobileInAppNavBar";
+import { useTranslation } from "react-i18next";
 import "../style/mobileAppStyle.css";
 
 type MobileProjectsAppProps = {
@@ -12,6 +13,9 @@ export function MobileProjectsApp({
     appNavigateTo,
     idNumber,
 }: MobileProjectsAppProps) {
+    const { t } = useTranslation();
+    const personalProjects = usePersonalProjects();
+    const zombieGameChangeLog = useZombieGameChangeLog();
     return (
         <>
             <MobileInAppNavBar
@@ -22,7 +26,7 @@ export function MobileProjectsApp({
             <div className="app-body">
                 <div>{personalProjects[idNumber].description}</div>
                 <div>
-                    Tech Stack:{" "}
+                    {t("textFiles.techStack")}:{" "}
                     {personalProjects[idNumber].technologies.map(
                         (item: string, index: number) => {
                             return (
@@ -57,10 +61,10 @@ export function MobileProjectsApp({
                 </div>
                 {personalProjects[idNumber].projectNameAbbr === "Zombies" ? (
                     <div>
-                        <h3>Change Log:</h3>
+                        <h3>{t("textFiles.changeLog")}</h3>
                         {zombieGameChangeLog.map((item: any) => (
                             <div key={item.id}>
-                                <h4>Version {item.versionNumber}</h4>
+                                <h4>{t("zombiesChangeLog.version")} {item.versionNumber}</h4>
                                 <ul>
                                     {item.changeLog.map(
                                         (change: string, idx: number) => (

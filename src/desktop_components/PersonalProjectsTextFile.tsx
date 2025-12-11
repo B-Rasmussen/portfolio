@@ -1,6 +1,6 @@
 import Draggable from "react-draggable";
 import { useState, useRef, useEffect, SetStateAction } from "react";
-import {zombieGameChangeLogData, useZombieGameChangeLog} from "../data/zombieGameChangeLog";
+import { useZombieGameChangeLog } from "../data/zombieGameChangeLog";
 import TitleBarIcon from "../components/TitleBarIcon";
 import { useTranslation } from "react-i18next";
 import "../style/textFileStyle.css";
@@ -79,7 +79,9 @@ function PersonalProjectTextFile({
                 >
                     <div className="grabbable-area">
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
-                        <div className="title-bar-text">{projectName.replace(/\ /g, "_")}.txt</div>
+                        <div className="title-bar-text">
+                            {projectName.replace(/\ /g, "_")}.txt
+                        </div>
                     </div>
                     <div className="child-window-main-content">
                         <div>{projectName}</div>
@@ -131,7 +133,10 @@ function PersonalProjectTextFile({
                                 <h3>{t("textFiles.changeLog")}:</h3>
                                 {zombiesGame.map((item: any) => (
                                     <div key={item.id}>
-                                        <h4>{t("zombiesChangeLog.version")} {item.versionNumber}</h4>
+                                        <h4>
+                                            {t("zombiesChangeLog.version")}{" "}
+                                            {item.versionNumber}
+                                        </h4>
                                         <ul>
                                             {item.changeLog.map(
                                                 (

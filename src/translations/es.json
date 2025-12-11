@@ -16,10 +16,11 @@
         "language": "Idioma"
     },
     "textFiles": {
-        "langauges/frameworks": "lenguajes/marcos de trabajo",
+        "langauges_frameworks": "lenguajes/marcos de trabajo",
         "reviewedBy": "Revisado por",
         "techStack": "Pila tecnológica",
-        "changeLog": "Registro de cambios"
+        "changeLog": "Registro de cambios",
+        "rating": "Clasificación"
     },
     "work": {
         "activision": {
@@ -111,6 +112,7 @@
         }
     },
     "linkedinRecommendations": {
+        "reviews": "Reseñas",
         "timJung": {
             "bodyText": [
                 "Trabajé con Brandon en proyectos de ingeniería en Activision y es un excelente ingeniero.",

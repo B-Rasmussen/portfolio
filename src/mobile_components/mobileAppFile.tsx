@@ -1,4 +1,5 @@
 import { MobileAppIcon } from "./MobileAppIcon";
+import { useTranslation } from "react-i18next";
 import review_logo from "../assets/review_logo.png";
 import "../style/mobileAppStyle.css";
 
@@ -8,52 +9,47 @@ type mobileAppFileProps = {
     dataName: string;
 };
 
-export function MobileAppFile({ appNavigateTo, data, dataName }: mobileAppFileProps) {
+export function MobileAppFile({
+    appNavigateTo,
+    data,
+    dataName,
+}: mobileAppFileProps) {
+    const { t } = useTranslation();
     return (
         <div className="app-icon-layout">
             {dataName === "Work History"
-                ? data.map(
-                    (
-                        item: any,
-                        index: number
-                    ) => (
-                        <div
-                            key={item.id}
-                            onClick={() => {
-                                appNavigateTo("MobileWorkHistory", index);
-                            }}
-                            className=""
-                        >
-                            <MobileAppIcon
-                                appIcon={item.companyAppIcon}
-                                name={item.companyName}
-                                nameAbbr={item.companyNameAbbr}
-                            />
-                        </div>
-                    )
-                )
+                ? data.map((item: any, index: number) => (
+                      <div
+                          key={item.id}
+                          onClick={() => {
+                              appNavigateTo("MobileWorkHistory", index);
+                          }}
+                          className=""
+                      >
+                          <MobileAppIcon
+                              appIcon={item.companyAppIcon}
+                              name={item.companyName}
+                              nameAbbr={item.companyNameAbbr}
+                          />
+                      </div>
+                  ))
                 : null}
             {dataName === "Personal Projects"
-                ? data.map(
-                    (
-                        item: any,
-                        index: number
-                    ) => (
-                        <div
-                            key={item.id}
-                            onClick={() => {
-                                appNavigateTo("MobilePersonalProjects", index);
-                            }}
-                            className=""
-                        >
-                            <MobileAppIcon
-                                appIcon={item.projectAppLogo}
-                                name={item.projectName}
-                                nameAbbr={item.projectNameAbbr}
-                            />
-                        </div>
-                    )
-                )
+                ? data.map((item: any, index: number) => (
+                      <div
+                          key={item.id}
+                          onClick={() => {
+                              appNavigateTo("MobilePersonalProjects", index);
+                          }}
+                          className=""
+                      >
+                          <MobileAppIcon
+                              appIcon={item.projectAppLogo}
+                              name={item.projectName}
+                              nameAbbr={item.projectNameAbbr}
+                          />
+                      </div>
+                  ))
                 : null}
             {dataName === "Linkedin Recommendations" ? (
                 <div
@@ -63,7 +59,11 @@ export function MobileAppFile({ appNavigateTo, data, dataName }: mobileAppFilePr
                     }}
                     className=""
                 >
-                    <MobileAppIcon appIcon={review_logo} name="Reviews" nameAbbr="Reviews"/>
+                    <MobileAppIcon
+                        appIcon={review_logo}
+                        name={t("linkedinRecommendations.reviews")}
+                        nameAbbr={t("linkedinRecommendations.reviews")}
+                    />
                 </div>
             ) : null}
         </div>

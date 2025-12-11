@@ -33,9 +33,37 @@
 }
 
 /* APP DOCK STYLE */
-#mobile-social-logos {
+.mobile-social-logos {
     height: 50px;
 }
+
+/* #mobile-language-icon{} */
+
+.mobile-dropdown-language-menu {
+    position: absolute;
+    bottom: 115%;
+    right: 45%;
+    background-color: rgba(255, 255, 255, 0.2);
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    gap: 13px;
+    padding: 10px 20px 10px 20px;
+}
+
+.mobile-dropdown-language-menu::after {
+    content: "";
+    position: absolute;
+    bottom: -13%;
+    right: 40%;
+    border-width: 10px 10px 0px 10px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.2) transparent transparent ;
+}
+
+/* .mobile-dropdown-language-menu.active{} */
 
 #mobile-app-dock {
     width: 90vw;

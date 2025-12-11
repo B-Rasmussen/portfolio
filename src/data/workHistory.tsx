@@ -34,7 +34,7 @@ export const workHistoryData: Omit<
     {
         id: 0,
         companyName: "Activision Blizzard",
-        companyNameAbbr: "ATVI",
+        companyNameAbbr: "Activsion",
         companyLogo: activisionLogo,
         companyLogoAlt: "Activision Blizzard Logo",
         companyAppIcon: activisionAppIcon,

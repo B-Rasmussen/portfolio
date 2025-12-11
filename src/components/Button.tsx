@@ -34,7 +34,7 @@ const Button = ({
                 <img
                     src={imageName}
                     alt={buttonName}
-                    id={
+                    className={
                         isDesktopNavBarButton
                             ? "interactive-social-logos"
                             : isMobileAppDockButton

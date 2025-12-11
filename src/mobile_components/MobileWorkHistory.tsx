@@ -1,5 +1,6 @@
-import workHistory from "../data/workHistory";
+import { useWorkHistory } from "../data/workHistory";
 import { MobileInAppNavBar } from "./MobileInAppNavBar";
+import { useTranslation } from "react-i18next";
 import "../style/mobileAppStyle.css";
 
 type MobileWorkHistoryAppProps = {
@@ -11,6 +12,8 @@ export function MobileWorkHistoryApp({
     appNavigateTo,
     idNumber,
 }: MobileWorkHistoryAppProps) {
+    const { t } = useTranslation();
+    const workHistory = useWorkHistory();
     return (
         <>
             <MobileInAppNavBar
@@ -30,7 +33,7 @@ export function MobileWorkHistoryApp({
                     {workHistory[idNumber].endDate}
                 </div>
                 <div>
-                    Languages/Frameworks:
+                    {t("textFiles.langauges_frameworks")}:
                     <br />
                     {workHistory[idNumber].languagesUsed.map(
                         (item: string, index: number) => {
