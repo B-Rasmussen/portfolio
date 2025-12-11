@@ -14,6 +14,7 @@ export function MobileWorkHistoryApp({
 }: MobileWorkHistoryAppProps) {
     const { t } = useTranslation();
     const workHistory = useWorkHistory();
+    const bulletPoints = workHistory[idNumber].bulletPoints[0] as any;
     return (
         <>
             <MobileInAppNavBar
@@ -51,11 +52,9 @@ export function MobileWorkHistoryApp({
                     )}
                 </div>
                 <ul>
-                    {workHistory[idNumber].bulletPoints.map(
-                        (item: string, index: number) => {
-                            return <li key={index}>{item}</li>;
-                        }
-                    )}
+                    {bulletPoints.map((item: string, index: number) => {
+                        return <li key={index}>{item}</li>;
+                    })}
                 </ul>
             </div>
         </>

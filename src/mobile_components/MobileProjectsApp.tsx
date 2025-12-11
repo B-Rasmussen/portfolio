@@ -66,7 +66,7 @@ export function MobileProjectsApp({
                             <div key={item.id}>
                                 <h4>{t("zombiesChangeLog.version")} {item.versionNumber}</h4>
                                 <ul>
-                                    {item.changeLog.map(
+                                    {item.changeLog[0].map(
                                         (change: string, idx: number) => (
                                             <li key={idx}>{change}</li>
                                         )

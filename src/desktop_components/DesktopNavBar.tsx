@@ -103,7 +103,7 @@ function DesktopNavBar() {
                 {isLangaugeMenuOpen && (
                     <div className="dropdown-language-menu">
                         <div
-                            className="dropdown-language-list active"
+                            className="dropdown-language-list"
                             onClick={() => setI18nLanguage("en")}
                         >
                             🇺🇸 {t("language.english")}

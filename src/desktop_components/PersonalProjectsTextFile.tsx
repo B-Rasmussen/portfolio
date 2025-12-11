@@ -138,7 +138,7 @@ function PersonalProjectTextFile({
                                             {item.versionNumber}
                                         </h4>
                                         <ul>
-                                            {item.changeLog.map(
+                                            {item.changeLog[0].map(
                                                 (
                                                     change: string,
                                                     idx: number

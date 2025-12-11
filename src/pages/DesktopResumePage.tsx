@@ -43,7 +43,8 @@ function DesktopResumePage() {
 
     return (
         <div id="interactive-resume-page">
-            <DesktopNavBar />
+            <DesktopNavBar
+            />
             <FolderIcon
                 onClick={openWorkHistory}
                 folderName={t("folder.workHistory")}
@@ -134,7 +135,7 @@ function DesktopResumePage() {
                                   langaugesUsed={
                                       workHistory[index].languagesUsed
                                   }
-                                  bulletPoints={workHistory[index].bulletPoints}
+                                  bulletPoints={workHistory[index].bulletPoints[0]}
                               />
                           )
                         : null

@@ -16,8 +16,8 @@ type WorkTextFileProps = {
     location: string;
     startDate: string;
     endDate: string;
-    langaugesUsed?: string[];
-    bulletPoints?: string[];
+    langaugesUsed: string[];
+    bulletPoints: any;
 };
 
 function WorkTextFile({
@@ -90,7 +90,7 @@ function WorkTextFile({
                         </div>
                         <div>
                             {t("textFiles.langauges_frameworks")}:&nbsp;
-                            {langaugesUsed?.map(
+                            {langaugesUsed.map(
                                 (item: string, index: number) => (
                                     <span key={index}>
                                         {item}
@@ -102,7 +102,7 @@ function WorkTextFile({
                             )}
                         </div>
                         <ul className="job-list-container">
-                            {bulletPoints?.map((item: any, index: any) => (
+                            {bulletPoints.map((item: string, index: number) => (
                                 <li key={index} className="job-bullet-points">
                                     {item}
                                 </li>
