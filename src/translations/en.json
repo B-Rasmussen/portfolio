@@ -13,7 +13,8 @@
         "file": "File",
         "view": "View",
         "socials": "Socials",
-        "language": "Langauge"
+        "language": "Langauge",
+        "back": "⬅ Back"
     },
     "textFiles": {
         "langauges_frameworks": "langauges/frameworks",

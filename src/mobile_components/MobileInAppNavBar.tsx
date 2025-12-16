@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import "../style/mobileAppStyle.css";
 
 type MobileInAppNavBarProps = {
@@ -13,6 +14,7 @@ export function MobileInAppNavBar({
     appName,
     backButtonColor,
 }: MobileInAppNavBarProps) {
+    const { t } = useTranslation()
     return (
         <div id="in-app-nav-bar">
             <div
@@ -22,7 +24,7 @@ export function MobileInAppNavBar({
                 id="back-button"
                 style={{ backgroundColor: backButtonColor }}
             >
-                <div id="back-button-text">{"⬅ Back"}</div>
+                <div id="back-button-text">{t("navBar.back")}</div>
             </div>
             {companyImage ? (
                 <img src={companyImage} className="app-title-image" />

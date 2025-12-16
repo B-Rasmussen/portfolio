@@ -13,7 +13,8 @@
         "file": "Archivo",
         "view": "Pantalla",
         "socials": "Sociales",
-        "language": "Idioma"
+        "language": "Idioma",
+        "back": "⬅ Atrás"
     },
     "textFiles": {
         "langauges_frameworks": "lenguajes/marcos de trabajo",
