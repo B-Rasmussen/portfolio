@@ -68,7 +68,7 @@ export function MobileAppDock() {
                     imageName={linkedinDarkMode}
                     onButtonPressed={() => {
                         window.open(
-                            "https://www.linkedin.com/in/brandonrasmussen91/",
+                            "https://www.linkedin.com/in/b-rasmussen/",
                             "_blank"
                         );
                     }}
