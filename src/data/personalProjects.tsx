@@ -1,6 +1,10 @@
-import zombie_gif from "../assets/personalProjects/zombies_project.gif";
-import health_app from "../assets/personalProjects/health_app_homescreen.png";
-import health_app_monthly_view from "../assets/personalProjects/health_app_monthly_view.png";
+import zombie_gif from "../assets/personalProjects/zombieGame/zombies_project.gif";
+import health_home from "../assets/personalProjects/healthApp/health_home.png";
+import health_monthly_view from "../assets/personalProjects/healthApp/health_monthly_view.png";
+import health_log_entry from "../assets/personalProjects/healthApp/health_log_entry.png";
+import health_report from "../assets/personalProjects/healthApp/health_report.png";
+import health_settings from "../assets/personalProjects/healthApp/health_settings.png";
+import health_weekly_view from "../assets/personalProjects/healthApp/health_weekly_view.png";
 import godot_icon from "../assets/godot_icon.svg";
 import { useTranslation } from "react-i18next";
 
@@ -40,7 +44,14 @@ export const personalProjectsData: Omit<
         link: "https://github.com/B-Rasmussen/symptom-tracker",
         linkName: "Symptom Tracker Repo",
         technologies: ["React Native", "JavaScript", "TypeScript"],
-        image: [health_app, health_app_monthly_view],
+        image: [
+            health_home,
+            health_log_entry,
+            health_weekly_view,
+            health_monthly_view,
+            health_report,
+            health_settings,
+        ],
     },
 ];
 
@@ -74,7 +85,14 @@ export function usePersonalProjects(): personalProjects[] {
             link: "https://github.com/B-Rasmussen/symptom-tracker",
             linkName: "Symptom Tracker Repo",
             technologies: ["React Native", "JavaScript", "TypeScript"],
-            image: [health_app, health_app_monthly_view],
+            image: [
+                health_home,
+                health_log_entry,
+                health_weekly_view,
+                health_monthly_view,
+                health_report,
+                health_settings,
+            ],
             imageAlt: t("personalProjects.wellnessApp.imageAlt"),
         },
     ];

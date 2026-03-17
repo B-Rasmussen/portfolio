@@ -71,6 +71,9 @@
         }
     },
     "personalProjects": {
+        "general": {
+            "close": "Cerrado"
+        },
         "zombies": {
             "description": [
                 "Un juego de supervivencia contra zombis sin fin creado en Godot 4."

@@ -54,7 +54,7 @@ function PersonalProjectTextFile({
 
     const handleStop = (
         _event: any,
-        dragElement: { x: SetStateAction<number>; y: SetStateAction<number> }
+        dragElement: { x: SetStateAction<number>; y: SetStateAction<number> },
     ) => {
         setChildPosition({
             x: dragElement.x as number,
@@ -84,7 +84,17 @@ function PersonalProjectTextFile({
                         </div>
                     </div>
                     <div className="child-window-main-content">
-                        <div>{projectName}</div>
+                        <div
+                            style={{
+                                justifyContent: "center",
+                                display: "flex",
+                                fontWeight: "bold",
+                                fontSize: 20,
+                                paddingBottom: 8,
+                            }}
+                        >
+                            {projectName}
+                        </div>
                         {/* {link && (
                             <Button
                                 buttonName={linkName}
@@ -103,11 +113,17 @@ function PersonalProjectTextFile({
                                             ? ", "
                                             : ""}
                                     </span>
-                                )
+                                ),
                             )}
                         </div>
                         <div>{description}</div>
-                        <div>
+                        <div
+                            style={{
+                                display: "flex",
+                                overflowX: "auto",
+                                paddingBottom: 8,
+                            }}
+                        >
                             {image &&
                                 image.map((imgSrc, idx) => (
                                     <img
@@ -141,10 +157,10 @@ function PersonalProjectTextFile({
                                             {item.changeLog[0].map(
                                                 (
                                                     change: string,
-                                                    idx: number
+                                                    idx: number,
                                                 ) => (
                                                     <li key={idx}>{change}</li>
-                                                )
+                                                ),
                                             )}
                                         </ul>
                                     </div>
@@ -185,7 +201,7 @@ function PersonalProjectTextFile({
                             zIndex: 10000,
                         }}
                     >
-                        Close
+                        {t("personalProjects.general.close")}
                     </button>
 
                     <img

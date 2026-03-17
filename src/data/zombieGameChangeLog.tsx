@@ -1,4 +1,4 @@
-import zombie_gif from "../assets/personalProjects/zombies_project.gif";
+import zombie_gif from "../assets/personalProjects/zombieGame/zombies_project.gif";
 import { useTranslation } from "react-i18next";
 
 type ChangeLog = {

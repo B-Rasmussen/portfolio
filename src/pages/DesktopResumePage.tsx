@@ -7,8 +7,8 @@ import WorkTextFile from "../desktop_components/WorkTextFile";
 import PersonalProjectTextFile from "../desktop_components/PersonalProjectsTextFile";
 import LinkedInRecommendationsTextFile from "../desktop_components/LinkedInRecommendationsTextFile";
 // HOOKS
-import { handleOpenAndCloseFolder } from "../desktop_hooks/handleOpenAndCloseFolder";
-import { handleChildWindow } from "../desktop_hooks/handleChildWindow";
+import { handleOpenAndCloseFolder } from "../desktop_state/handleOpenAndCloseFolder";
+import { handleChildWindow } from "../desktop_state/handleChildWindow";
 import { useWorkHistory } from "../data/workHistory";
 import { usePersonalProjects } from "../data/personalProjects";
 import { useLinkedinRecommendations } from "../data/linkedinRecommendations";
