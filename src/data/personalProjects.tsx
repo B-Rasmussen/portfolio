@@ -6,6 +6,13 @@ import health_report from "../assets/personalProjects/healthApp/health_report.pn
 import health_settings from "../assets/personalProjects/healthApp/health_settings.png";
 import health_weekly_view from "../assets/personalProjects/healthApp/health_weekly_view.png";
 import godot_icon from "../assets/godot_icon.svg";
+import brew_details from "../assets/personalProjects/brewBuddy/brew_details_screen.png";
+import brew_history from "../assets/personalProjects/brewBuddy/brew_history.png";
+import brew_home_screen from "../assets/personalProjects/brewBuddy/brew_home_screen.png";
+import calculator_screen from "../assets/personalProjects/brewBuddy/calculator_screen.png";
+import lifetime_stats_screen from "../assets/personalProjects/brewBuddy/lifetime_stats_screen.png";
+import settings_screen from "../assets/personalProjects/brewBuddy/settings_screen.png";
+import create_brew_screen from "../assets/personalProjects/brewBuddy/create_brew_screen.png";
 import { useTranslation } from "react-i18next";
 
 type personalProjects = {
@@ -43,7 +50,7 @@ export const personalProjectsData: Omit<
         buttonColor: "#004d40",
         link: "https://github.com/B-Rasmussen/symptom-tracker",
         linkName: "Symptom Tracker Repo",
-        technologies: ["React Native", "JavaScript", "TypeScript"],
+        technologies: ["React Native", "JavaScript", "TypeScript", "SQLite"],
         image: [
             health_home,
             health_log_entry,
@@ -51,6 +58,22 @@ export const personalProjectsData: Omit<
             health_monthly_view,
             health_report,
             health_settings,
+        ],
+    },
+    {
+        id: 3,
+        projectName: "Brew Buddy (WIP)",
+        projectNameAbbr: "Brew Buddy",
+        buttonColor: "#FFD393",
+        technologies: ["React Native", "JavaScript", "TypeScript", "SQLite"],
+        image: [
+            brew_home_screen,
+            create_brew_screen,
+            brew_history,
+            brew_details,
+            calculator_screen,
+            lifetime_stats_screen,
+            settings_screen,
         ],
     },
 ];
@@ -84,7 +107,12 @@ export function usePersonalProjects(): personalProjects[] {
             description: [t("personalProjects.wellnessApp.description")],
             link: "https://github.com/B-Rasmussen/symptom-tracker",
             linkName: "Symptom Tracker Repo",
-            technologies: ["React Native", "JavaScript", "TypeScript"],
+            technologies: [
+                "React Native",
+                "JavaScript",
+                "TypeScript",
+                "SQLite",
+            ],
             image: [
                 health_home,
                 health_log_entry,
@@ -94,6 +122,29 @@ export function usePersonalProjects(): personalProjects[] {
                 health_settings,
             ],
             imageAlt: t("personalProjects.wellnessApp.imageAlt"),
+        },
+        {
+            id: 3,
+            projectName: "Brew Buddy (WIP)",
+            projectNameAbbr: "Brew Buddy",
+            buttonColor: "#FFD393",
+            description: [t("personalProjects.brewBuddy.description")],
+            technologies: [
+                "React Native",
+                "JavaScript",
+                "TypeScript",
+                "SQLite",
+            ],
+            image: [
+                brew_home_screen,
+                create_brew_screen,
+                brew_history,
+                brew_details,
+                calculator_screen,
+                lifetime_stats_screen,
+                settings_screen,
+            ],
+            imageAlt: t("personalProjects.brewBuddy.imageAlt"),
         },
     ];
 }

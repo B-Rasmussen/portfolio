@@ -80,7 +80,7 @@ function PersonalProjectTextFile({
                     <div className="grabbable-area">
                         <TitleBarIcon closeWindow={closeWindow} index={index} />
                         <div className="title-bar-text">
-                            {projectName.replace(/\ /g, "_")}.txt
+                            {projectName.replace(/\ /g, "_")}.proj
                         </div>
                     </div>
                     <div className="child-window-main-content">

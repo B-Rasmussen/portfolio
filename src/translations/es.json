@@ -87,6 +87,15 @@
                 "Ayudando a los usuarios a registrar y visualizar los síntomas que han experimentado durante el último día, semana, mes, año, etc."
             ],
             "imageAlt": "Pantalla de inicio de la aplicación de salud"
+        },
+        "brewBuddy": {
+            "description": [
+                "Una aplicación móvil de seguimiento casera creada en React Native. ",
+                "Permite al usuario realizar un seguimiento de las etapas del ciclo de vida de la elaboración (fecha de inicio del lote, fecha de transferencia a fermentación secundaria y fecha de finalización). ",
+                "Además, se realizará un seguimiento de los tipos de ingredientes y de las cantidades para mantener registros precisos. ",
+                "Permitir a los usuarios replicar con éxito una elaboración casera anterior que disfrutaron."
+            ],
+            "imageAlt": "Pantalla de inicio de Brew Buddy"
         }
     },
     "zombiesChangeLog": {

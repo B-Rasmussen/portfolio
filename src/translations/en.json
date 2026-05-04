@@ -86,6 +86,15 @@
                 "Assisting users by tracking and displaying symptoms they recorded over the past day, week, month, year, etc. "
             ],
             "imageAlt": "Health App Homescreen"
+        },
+        "brewBuddy": {
+            "description": [
+                "A homebrew tracking mobile app created in React Native. ",
+                "Allows the user to track brew lifecycle stages (batch start date, date transferred to secondary, and completion date). ",
+                "Additionally will track the ingredient types, and the quantities for accurate record keeping. ",
+                "Enabling users to successfully repeat a previous homebrew that they enjoyed."
+            ],
+            "imageAlt": "Brew Buddy Homescreen"
         }
     },
     "zombiesChangeLog": {
