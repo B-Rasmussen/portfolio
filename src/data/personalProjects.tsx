@@ -9,9 +9,8 @@ import godot_icon from "../assets/godot_icon.svg";
 import brew_details from "../assets/personalProjects/brewBuddy/brew_details_screen.png";
 import brew_history from "../assets/personalProjects/brewBuddy/brew_history.png";
 import brew_home_screen from "../assets/personalProjects/brewBuddy/brew_home_screen.png";
-import calculator_screen from "../assets/personalProjects/brewBuddy/calculator_screen.png";
-import lifetime_stats_screen from "../assets/personalProjects/brewBuddy/lifetime_stats_screen.png";
-import settings_screen from "../assets/personalProjects/brewBuddy/settings_screen.png";
+import brew_calculator from "../assets/personalProjects/brewBuddy/brew_calculator.png";
+import brew_lifetime_stats from "../assets/personalProjects/brewBuddy/brew_lifetime_stats.png";
 import create_brew_screen from "../assets/personalProjects/brewBuddy/create_brew_screen.png";
 import { useTranslation } from "react-i18next";
 
@@ -71,9 +70,8 @@ export const personalProjectsData: Omit<
             create_brew_screen,
             brew_history,
             brew_details,
-            calculator_screen,
-            lifetime_stats_screen,
-            settings_screen,
+            brew_calculator,
+            brew_lifetime_stats,
         ],
     },
 ];
@@ -140,9 +138,8 @@ export function usePersonalProjects(): personalProjects[] {
                 create_brew_screen,
                 brew_history,
                 brew_details,
-                calculator_screen,
-                lifetime_stats_screen,
-                settings_screen,
+                brew_calculator,
+                brew_lifetime_stats,
             ],
             imageAlt: t("personalProjects.brewBuddy.imageAlt"),
         },
