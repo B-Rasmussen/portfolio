@@ -14,6 +14,7 @@ export function MobileAppIcon({ appIcon, name, nameAbbr }: MobileAppIconProps) {
             <img
                 src={!appIcon ? missingAppLogo : appIcon}
                 className="app-icon"
+                style={{ borderRadius: "30%" }}
             />
             <div>{name!.length > 10 ? nameAbbr : name}</div>
         </div>

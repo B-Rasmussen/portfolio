@@ -6,6 +6,7 @@ import health_report from "../assets/personalProjects/healthApp/health_report.pn
 import health_settings from "../assets/personalProjects/healthApp/health_settings.png";
 import health_weekly_view from "../assets/personalProjects/healthApp/health_weekly_view.png";
 import godot_icon from "../assets/godot_icon.svg";
+import brew_buddy_icon from "../assets/personalProjects/brewBuddy/brew-buddy-icon.png";
 import brew_details from "../assets/personalProjects/brewBuddy/brew_details_screen.png";
 import brew_history from "../assets/personalProjects/brewBuddy/brew_history.png";
 import brew_home_screen from "../assets/personalProjects/brewBuddy/brew_home_screen.png";
@@ -61,8 +62,9 @@ export const personalProjectsData: Omit<
     },
     {
         id: 3,
-        projectName: "Brew Buddy (WIP)",
+        projectName: "Brew Buddy",
         projectNameAbbr: "Brew Buddy",
+        projectAppLogo: brew_buddy_icon,
         buttonColor: "#FFD393",
         technologies: ["React Native", "JavaScript", "TypeScript", "SQLite"],
         image: [
@@ -123,8 +125,9 @@ export function usePersonalProjects(): personalProjects[] {
         },
         {
             id: 3,
-            projectName: "Brew Buddy (WIP)",
+            projectName: "Brew Buddy",
             projectNameAbbr: "Brew Buddy",
+            projectAppLogo: brew_buddy_icon,
             buttonColor: "#FFD393",
             description: [t("personalProjects.brewBuddy.description")],
             technologies: [
