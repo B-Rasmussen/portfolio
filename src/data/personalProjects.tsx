@@ -14,6 +14,8 @@ import brew_calculator from "../assets/personalProjects/brewBuddy/brew_calculato
 import brew_lifetime_stats from "../assets/personalProjects/brewBuddy/brew_lifetime_stats.png";
 import create_brew_screen from "../assets/personalProjects/brewBuddy/create_brew_screen.png";
 import { useTranslation } from "react-i18next";
+import create_recipe_screen from "../assets/personalProjects/brewBuddy/create_recipe_screen.png";
+import recipe_list from "../assets/personalProjects/brewBuddy/recipe_list.png";
 
 type personalProjects = {
     id: number;
@@ -69,9 +71,11 @@ export const personalProjectsData: Omit<
         technologies: ["React Native", "JavaScript", "TypeScript", "SQLite"],
         image: [
             brew_home_screen,
-            create_brew_screen,
-            brew_history,
             brew_details,
+            create_brew_screen,
+            create_recipe_screen,
+            brew_history,
+            recipe_list,
             brew_calculator,
             brew_lifetime_stats,
         ],
@@ -138,9 +142,11 @@ export function usePersonalProjects(): personalProjects[] {
             ],
             image: [
                 brew_home_screen,
-                create_brew_screen,
-                brew_history,
                 brew_details,
+                create_brew_screen,
+                create_recipe_screen,
+                brew_history,
+                recipe_list,
                 brew_calculator,
                 brew_lifetime_stats,
             ],
