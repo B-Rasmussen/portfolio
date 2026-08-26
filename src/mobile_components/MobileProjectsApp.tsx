@@ -3,6 +3,7 @@ import { useZombieGameChangeLog } from "../data/zombieGameChangeLog";
 import { MobileInAppNavBar } from "./MobileInAppNavBar";
 import { useTranslation } from "react-i18next";
 import "../style/mobileAppStyle.css";
+import Button from "../components/Button";
 
 type MobileProjectsAppProps = {
     appNavigateTo: (path: string, index: number) => void;
@@ -16,60 +17,73 @@ export function MobileProjectsApp({
     const { t } = useTranslation();
     const personalProjects = usePersonalProjects();
     const zombieGameChangeLog = useZombieGameChangeLog();
+    const selectedProject = personalProjects[idNumber];
+
     return (
         <>
             <MobileInAppNavBar
                 appNavigateTo={appNavigateTo}
-                appName={personalProjects[idNumber].projectName}
-                backButtonColor={personalProjects[idNumber].buttonColor}
+                appName={selectedProject.projectName}
+                backButtonColor={selectedProject.buttonColor}
             />
             <div className="app-body">
-                <div>{personalProjects[idNumber].description}</div>
+                {selectedProject.link && (
+                    <Button
+                        buttonName={selectedProject.linkName}
+                        isMobileView={true}
+                        isOnPlayStore={true}
+                        onButtonPressed={() => {
+                            window.open(selectedProject.link, "_blank");
+                        }}
+                    />
+                )}
+                <div>{selectedProject.description}</div>
                 <div>
                     {t("textFiles.techStack")}:{" "}
-                    {personalProjects[idNumber].technologies.map(
+                    {selectedProject.technologies.map(
                         (item: string, index: number) => {
                             return (
                                 <span key={index}>
                                     {item}
                                     {index <
-                                    personalProjects[idNumber].technologies
-                                        .length -
-                                        1
+                                    selectedProject.technologies.length - 1
                                         ? ", "
                                         : ""}
                                 </span>
                             );
-                        }
+                        },
                     )}
                 </div>
                 <div className="image-container">
-                    {personalProjects[idNumber].image &&
-                        personalProjects[idNumber].image.map((imgSrc, idx) => (
+                    {selectedProject.image &&
+                        selectedProject.image.map((imgSrc, idx) => (
                             <img
                                 key={idx}
                                 className={
-                                    personalProjects[idNumber].projectName ===
+                                    selectedProject.projectName ===
                                     "Zombie survival game"
                                         ? "zombie-image-content"
                                         : "image-content"
                                 }
                                 src={imgSrc}
-                                alt={personalProjects[idNumber].imageAlt}
+                                alt={selectedProject.imageAlt}
                             />
                         ))}
                 </div>
-                {personalProjects[idNumber].projectNameAbbr === "Zombies" ? (
+                {selectedProject.projectNameAbbr === "Zombies" ? (
                     <div>
                         <h3>{t("textFiles.changeLog")}</h3>
                         {zombieGameChangeLog.map((item: any) => (
                             <div key={item.id}>
-                                <h4>{t("zombiesChangeLog.version")} {item.versionNumber}</h4>
+                                <h4>
+                                    {t("zombiesChangeLog.version")}{" "}
+                                    {item.versionNumber}
+                                </h4>
                                 <ul>
                                     {item.changeLog[0].map(
                                         (change: string, idx: number) => (
                                             <li key={idx}>{change}</li>
-                                        )
+                                        ),
                                     )}
                                 </ul>
                             </div>

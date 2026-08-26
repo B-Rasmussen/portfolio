@@ -28,7 +28,6 @@
 
 .child-window-main-content {
     overflow-y: scroll;
-    margin-top: 40px;
 }
 .child-window-contents {
     display: flex;

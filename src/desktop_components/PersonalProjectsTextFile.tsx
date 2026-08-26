@@ -4,7 +4,7 @@ import { useZombieGameChangeLog } from "../data/zombieGameChangeLog";
 import TitleBarIcon from "../components/TitleBarIcon";
 import { useTranslation } from "react-i18next";
 import "../style/textFileStyle.css";
-// import Button from "../components/Button";
+import Button from "../components/Button";
 
 type PersonalProjectTextFileProps = {
     index: number;
@@ -26,8 +26,8 @@ function PersonalProjectTextFile({
     projectName,
     technologies,
     description,
-    // link,
-    // linkName,
+    link,
+    linkName,
     image,
     imageAlt,
 }: PersonalProjectTextFileProps) {
@@ -95,15 +95,20 @@ function PersonalProjectTextFile({
                         >
                             {projectName}
                         </div>
-                        {/* {link && (
+                        {link && (
                             <Button
                                 buttonName={linkName}
+                                isOnPlayStore={true}
                                 onButtonPressed={() => {
                                     window.open(`${link}`, "_blank");
                                 }}
                             />
-                        )} */}
-                        <div>
+                        )}
+                        <div
+                            style={{
+                                paddingBottom: 8,
+                            }}
+                        >
                             {t("textFiles.techStack")}:{" "}
                             {technologies?.map(
                                 (item: string, index: number) => (

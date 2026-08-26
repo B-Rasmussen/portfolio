@@ -50,8 +50,8 @@ export const personalProjectsData: Omit<
         projectName: "Wellness App (name tbd)",
         projectNameAbbr: "Health",
         buttonColor: "#004d40",
-        link: "https://github.com/B-Rasmussen/symptom-tracker",
-        linkName: "Symptom Tracker Repo",
+        // link: "https://github.com/B-Rasmussen/symptom-tracker",
+        // linkName: "Symptom Tracker Repo",
         technologies: ["React Native", "JavaScript", "TypeScript", "SQLite"],
         image: [
             health_home,
@@ -68,6 +68,8 @@ export const personalProjectsData: Omit<
         projectNameAbbr: "Brew Buddy",
         projectAppLogo: brew_buddy_icon,
         buttonColor: "#FFD393",
+        link: "https://play.google.com/store/apps/details?id=com.brrasdev.brewbuddy",
+        linkName: "Brew Buddy",
         technologies: ["React Native", "JavaScript", "TypeScript", "SQLite"],
         image: [
             brew_home_screen,
@@ -109,8 +111,8 @@ export function usePersonalProjects(): personalProjects[] {
             projectNameAbbr: "Health",
             buttonColor: "#004d40",
             description: [t("personalProjects.wellnessApp.description")],
-            link: "https://github.com/B-Rasmussen/symptom-tracker",
-            linkName: "Symptom Tracker Repo",
+            // link: "https://github.com/B-Rasmussen/symptom-tracker",
+            // linkName: "Symptom Tracker Repo",
             technologies: [
                 "React Native",
                 "JavaScript",
@@ -133,6 +135,8 @@ export function usePersonalProjects(): personalProjects[] {
             projectNameAbbr: "Brew Buddy",
             projectAppLogo: brew_buddy_icon,
             buttonColor: "#FFD393",
+            link: "https://play.google.com/store/apps/details?id=com.brrasdev.brewbuddy",
+            linkName: "Brew Buddy",
             description: [t("personalProjects.brewBuddy.description")],
             technologies: [
                 "React Native",
